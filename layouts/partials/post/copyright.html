@@ -1,0 +1,33 @@
+{{ if and .Site.Copyright (ne .Params.copyright false) }}
+{{ $lang := .Site.Data.even.default -}}
+<div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">{{ $lang.copyright.author }}: </span>
+    <span>{{ if .Params.author }}{{ .Params.author | safeHTML }}{{ else }}{{ .Site.Author.name | safeHTML }}{{ end }}</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">{{ $lang.copyright.lastMod }}: </span>
+    {{ .Lastmod.Format "2006-01-02" }}
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">{{ $lang.copyright.link }}: </span>
+    <a href="{{ .Permalink }}">{{ .Permalink }}</a>
+  </p>
+  {{ if $.Site.Params.linkToMarkDown -}}
+    {{ with $.OutputFormats.Get "markdown" -}}
+    <p class="copyright-item">
+      <span class="item-title">{{ $lang.copyright.markdown }}: </span>
+      <a class="link-to-markdown" href="{{ .Permalink }}" target="_blank">{{ $lang.posts.seeMarkDown }}</a>
+    </p>
+    {{- end }}
+  {{- end }}
+  <p class="copyright-item lincese">
+    <span class="item-title">{{ $lang.copyright.lincese }}: </span>
+    {{ if .Params.copyright -}}
+      {{ .Params.copyright | safeHTML }}
+    {{ else -}}
+      {{ .Site.Copyright | safeHTML }}
+    {{- end }}
+  </p>
+</div>
+{{- end }}

@@ -1,0 +1,55 @@
+<!-- js -->
+<script src="/lib/highlight/highlight.pack.js"></script>
+{{ if .Site.Params.bootcdn -}}
+  <!-- script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script -->
+  <script type="text/javascript" src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+  <script type="text/javascript" src="https://cdn.bootcss.com/slideout/1.0.1/slideout.min.js"></script>
+  {{ if .Site.Params.fancybox }}<script type="text/javascript" src="https://cdn.bootcss.com/fancybox/3.1.20/jquery.fancybox.min.js"></script>{{ end }}
+  <script type="text/javascript" src="/dist/even.v{{ .Site.Params.version }}.js"></script>
+{{ else -}}
+  <script type="text/javascript" src="/lib/jquery/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="/lib/slideout/slideout-1.0.1.min.js"></script>
+  {{ if .Site.Params.fancybox }}<script type="text/javascript" src="/lib/fancybox/jquery.fancybox-3.1.20.min.js"></script>{{ end }}
+  <script type="text/javascript" src="/dist/even.v{{ .Site.Params.version }}.js"></script>
+{{- end }}
+
+{{ if and (and .Site.Params.mathjax (ne .Params.mathjax false)) (or .IsPage .IsHome) -}}
+  <script async src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML'></script>
+{{- end }}
+
+<!-- Analytics -->
+{{- if .Site.GoogleAnalytics -}}
+  {{ template "_internal/google_analytics_async.html" . }}
+{{- end -}}
+
+{{- with .Site.Params.baidu_analytics -}}
+<script id="baidu_analytics">
+  var _hmt = _hmt || [];
+  (function() {
+    if (window.location.hostname === 'localhost') return;
+    var hm = document.createElement("script"); hm.async = true;
+    hm.src = "https://hm.baidu.com/hm.js?{{.}}";
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(hm, s);
+  })();
+</script>
+{{- end }}
+
+<!-- baidu_push -->
+{{- if .Site.Params.baidu_push -}}
+<script id="baidu_push">
+  (function(){
+    if (window.location.hostname === 'localhost') return;
+    var bp = document.createElement('script'); bp.async = true;
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+      bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    }
+    else {
+      bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+  })();
+</script>
+{{- end }}

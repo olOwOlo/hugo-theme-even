@@ -1,0 +1,2 @@
+User-agent: *
+Sitemap: {{ .Site.BaseURL }}sitemap.xml

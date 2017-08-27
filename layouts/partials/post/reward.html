@@ -1,0 +1,19 @@
+{{ if and .Site.Params.reward.enable (ne .Params.reward false) }}
+<div class="post-reward">
+  <input type="checkbox" name="reward" id="reward" hidden />
+  <label class="reward-button" for="reward">{{ .Site.Data.even.default.posts.reward }}</label>
+  <div class="qr-code">
+    {{ $qrCode := .Site.Params.reward }}
+    {{ with $qrCode.wechat }}
+      <label class="qr-code-image" for="reward">
+        <img class="image" src="{{ . }}" title="wechat">
+      </label>
+    {{- end }}
+    {{ with $qrCode.alipay }}
+      <label class="qr-code-image" for="reward">
+        <img class="image" src="{{ . }}" title="alipay">
+      </label>
+    {{- end }}
+  </div>
+</div>
+{{- end }}

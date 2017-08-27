@@ -1,0 +1,12 @@
+{
+  "name": "hugo-theme-even",
+  "version": "1.0.0",
+  "description": "A super simple theme for Hugo",
+  "main": "index.js",
+  "keywords": [
+    "hugo",
+    "theme"
+  ],
+  "author": "olOwOlo",
+  "license": "MIT"
+}

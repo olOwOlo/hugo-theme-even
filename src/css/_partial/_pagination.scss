@@ -1,0 +1,36 @@
+// ==============================
+// Pagination
+// ==============================
+
+.pagination {
+  margin: $pagination-margin;
+  @include clearfix;
+
+  .prev,
+  .next {
+    font-weight: 600;
+    font-size: $pagination-font-size;
+    font-family: $global-serif-font-family;
+    transition-property: transform;
+    transition-timing-function: ease-out;
+    transition-duration: 0.3s;
+  }
+
+  .prev {
+    float: left;
+
+    &:hover {
+      color: $theme-color;
+      transform: translateX(-4px); 
+    }
+  }
+
+  .next {
+    float: right;
+
+    &:hover {
+      color: $theme-color;
+      transform: translateX(4px); 
+    }
+  }
+}

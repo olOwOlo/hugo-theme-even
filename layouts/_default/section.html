@@ -1,0 +1,56 @@
+{{ define "title" }}{{ .Site.Data.even.default.archive }} - {{ .Site.Title }}{{ end }}
+
+{{ define "content"}}
+{{- $lang := .Site.Data.even.default }}
+{{- $paginator := .Paginate (where .Data.Pages.ByDate.Reverse "Type" "post") (index .Site.Params "archive-paginate") }}
+<section id="archive" class="archive">
+  {{- if not $paginator.HasPrev }}
+    <div class="archive-title">
+      <span class="archive-post-counter">
+        {{- $length := len .Data.Pages }}
+        {{- if eq $length 0 }}
+          {{ $lang.counter.archives.zero }}
+        {{ else }}
+          {{ printf $lang.counter.archives.other $length }}
+        {{ end -}}
+      </span>
+    </div>
+  {{- end -}}
+
+  {{- range $index, $element := $paginator.Pages -}}
+    {{- $thisYear := $element.Date.Format "2006" }}
+    {{- $lastElement := $index | add -1 | index $paginator.Pages }}
+    {{ if or (eq $index 0) ( ne ($lastElement.Date.Format "2006") $thisYear ) }}
+      <div class="collection-title">
+        <h2 class="archive-year">{{ $thisYear }}</h2>
+      </div>
+    {{- end }}
+
+    <div class="archive-post">
+      <span class="archive-post-time">
+        {{ $element.Date.Format "01-02" }}
+      </span>
+      <span class="archive-post-title">
+        <a href="{{ $element.URL }}" class="archive-post-link">
+          {{ .Title }}
+        </a>
+      </span>
+    </div>
+  {{- end -}}
+</section>
+<!-- pagination -->
+<nav class="pagination">
+  {{ with $paginator.Prev -}}
+    <a class="prev" href="{{ .URL }}">
+      <i class="iconfont icon-left"></i>
+      <span class="prev-text">{{ $lang.posts.prev }}</span>
+    </a>
+  {{- end }}
+  {{ with $paginator.Next -}}
+    <a class="next" href="{{ .URL }}">
+      <span class="next-text">{{ $lang.posts.next }}</span>
+      <i class="iconfont icon-right"></i>
+    </a>
+  {{- end }}
+</nav>
+{{ end }}

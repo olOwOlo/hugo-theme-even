@@ -1,0 +1,64 @@
+{{ define "content" -}}
+  {{ $lang := .Site.Data.even.default -}}
+  <article class="post">
+    <!-- post-header -->
+    <header class="post-header">
+      <h1 class="post-title">{{ .Title }}</h1>
+
+      <div class="post-meta">
+        <span class="post-time">
+          {{ .Date.Format "2006-01-02" }}
+        </span>
+        {{ with .Params.categories -}}
+          <div class="post-category">
+            {{ range . -}}
+              <a href="/categories/{{ . | urlize }}">{{ . }}</a>
+            {{- end }}
+          </div>
+        {{- end }}
+      </div>
+    </header>
+
+    <!-- TOC -->
+    {{ partial "post/toc.html" . }}
+
+    <!-- Content -->
+    <div class="post-content">
+      {{ .Content }}
+    </div>
+
+    <!-- Copyright -->
+    {{ partial "post/copyright.html" . }}
+
+    <!-- Reward -->
+    {{ partial "post/reward.html" . }}
+
+    <footer class="post-footer">
+      {{ with .Params.tags -}}
+        <div class="post-tags">
+          {{ range . }}
+          <a href="/tags/{{ . | urlize }}">{{ . }}</a>
+          {{ end }}
+        </div>
+      {{- end }}
+
+      <!-- Post Pagination -->
+      <nav class="post-nav">
+        {{ with .NextInSection }}
+          <a class="prev" href="{{ .URL }}">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">{{ .Title }}</span>
+            <span class="prev-text nav-mobile">{{ $lang.posts.prev_post }}</span>
+          </a>
+        {{- end }}
+        {{ with .PrevInSection }}
+          <a class="next" href="{{ .URL }}">
+            <span class="next-text nav-default">{{ .Title }}</span>
+            <span class="prev-text nav-mobile">{{ $lang.posts.next_post }}</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+        {{- end }}
+      </nav>
+    </footer>
+  </article>
+{{- end }}

@@ -1,0 +1,37 @@
+<div class="social-links">
+  {{- range $name, $path := .Site.Params.social }}
+    {{- if $path }}
+      {{- $realName := slicestr $name 2 }}
+      {{- if eq $realName "email" }}
+        <a href="mailto:{{ $path }}" class="iconfont icon-{{ $realName }}" title="{{ $realName }}"></a>
+      {{- else }}
+        <a href="{{ $path }}" class="iconfont icon-{{ $realName }}" title="{{ $realName }}"></a>
+      {{- end }}
+    {{- end }}
+  {{- end }}
+  <a href="{{ .Site.RSSLink }}" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    {{ (printf .Site.Data.even.default.footer.powered `<a class="hexo-link" href="https://gohugo.io">Hugo</a>`) | safeHTML }}
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    {{ .Site.Data.even.default.footer.theme }} - 
+    <a class="theme-link" href="https://github.com/ahonn/hexo-theme-even">Even</a>
+  </span>
+
+  <span class="copyright-year">
+    {{- $current := now.Format "2006" }}
+    &copy; 
+    {{ if ne .Site.Params.since $current }}
+      {{ .Site.Params.since }} - 
+    {{ end }}
+    {{- $current }}
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">{{ .Site.Author.name }}</span>
+  </span>
+</div>

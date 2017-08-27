@@ -1,0 +1,37 @@
+archive = "Archive"
+tags = "Tags"
+categories = "Categories"
+
+[footer]
+  powered = "Powered by %s"
+  theme = "Theme"
+
+[posts]
+  prev = "Prev"
+  next = "Next"
+  prev_post = "Prev"
+  next_post = "Next"
+  toc = "Contents"
+  readmore = "Read more.."
+  reward = "Reward"
+  seeMarkDown = "The Markdown version »"
+
+[copyright]
+  author = "Author"
+  link = "Link"
+  lastMod = "LastMod"
+  markdown = "Markdown"
+  lincese = "Lincese"
+
+[counter]
+  [archives]
+    zero = "No Posts"
+    other = "%d Posts In Total"
+
+  [tagcloud]
+    zero = "No tags"
+    other = "%d Tags In Total"
+
+  [categories]
+    zero =  "No Categories"
+    other = "%d Categories In Total"
