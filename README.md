@@ -33,6 +33,8 @@ defaultContentLanguage = "zh-CN"
 title = "olOwOlo"
 enableRobotsTXT = true
 enableEmoji = true
+# 自动检测是否包含 中文\韩文\日文
+hasCJKLanguage = true
 
 theme = "even"
 
@@ -182,7 +184,6 @@ copyright = "<a rel=\"license\" href=\"http://creativecommons.org/licenses/by-nc
     date: {{ .Date }}
     lastmod: {{ .Date }}
     draft: true
-    isCJKLanguage: true
     keywords: []
     description: ""
     tags: []
@@ -221,6 +222,8 @@ defaultContentLanguage = "zh-CN"
 title = "olOwOlo"
 enableRobotsTXT = true
 enableEmoji = true
+# 自动检测是否包含 中文\韩文\日文
+hasCJKLanguage = true
 
 theme = "even"
 
@@ -325,12 +328,12 @@ copyright = "<a rel=\"license\" href=\"http://creativecommons.org/licenses/by-nc
 ```
 ## License
 
-Released under the MIT License.
+Released under the [MIT](./LICENSE.md) License.
 
 ## 表示感谢
 
-> 移植主题时参考了不少...
+> 移植主题时参考了不少（字母顺序排列）...
 
-1. 一个好看的国语主题： [hugo-nuo](https://github.com/laozhu/hugo-nuo)
-2. 一个好看的出现在 Quick Start 里的主题： [ananke](https://github.com/budparr/gohugo-theme-ananke)
-3. 一个好看的源主题： [hexo-theme-even](https://github.com/ahonn/hexo-theme-even)
+- 一个好看的出现在 Quick Start 里的主题： [ananke](https://github.com/budparr/gohugo-theme-ananke)
+- 一个好看的源主题： [hexo-theme-even](https://github.com/ahonn/hexo-theme-even)
+- 一个好看的国语主题： [hugo-nuo](https://github.com/laozhu/hugo-nuo)
