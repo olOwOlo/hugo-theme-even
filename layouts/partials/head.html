@@ -43,19 +43,20 @@
 {{ end -}}
 
 <!-- Favicon and Touch icons -->
-<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-<link rel="icon" href="/favicon.ico" />
-<link rel="manifest" href="/manifest.json">
-<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+<link rel="apple-touch-icon" sizes="180x180" href="{{ "apple-touch-icon.png" | relURL }}">
+<link rel="icon" type="image/png" sizes="32x32" href="{{ "favicon-32x32.png" | relURL }}">
+<link rel="icon" type="image/png" sizes="16x16" href="{{ "favicon-16x16.png" | relURL }}">
+<link rel="icon" href="{{ "favicon.ico" | relURL }}" />
+<link rel="manifest" href="{{ "manifest.json" | relURL }}">
+<link rel="mask-icon" href="{{ "safari-pinned-tab.svg" | relURL }}" color="#5bbad5">
 
-<!-- Styles --> 
-<link href="/dist/even.v{{ .Site.Params.version }}.css" rel="stylesheet">
+<!-- Styles -->
+{{ $themeVersion := .Site.Params.version }}
+<link href="{{ relURL (printf "dist/even.v%s.css" $themeVersion) }}" rel="stylesheet">
 {{ if .Site.Params.bootcdn -}}
   {{ if .Site.Params.fancybox }}<link href="https://cdn.bootcss.com/fancybox/3.1.20/jquery.fancybox.min.css" rel="stylesheet">{{ end }}
 {{ else -}}
-  {{ if .Site.Params.fancybox }}<link href="/lib/fancybox/jquery.fancybox-3.1.20.min.css" rel="stylesheet">{{ end }}
+  {{ if .Site.Params.fancybox }}<link href="{{ "lib/fancybox/jquery.fancybox-3.1.20.min.css" | relURL }}" rel="stylesheet">{{ end }}
 {{- end }}
 
 {{/* NOTE: These Hugo Internal Templates can be found starting at https://github.com/spf13/hugo/blob/master/tpl/tplimpl/template_embedded.go#L158 */}}
@@ -66,6 +67,6 @@
 
 <!-- Polyfill for old browsers -->
 {{ `<!--[if lt IE 9]>
-  <script src="//cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-  <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+  <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+  <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
 <![endif]-->` | safeHTML }}

@@ -1,16 +1,17 @@
 <!-- js -->
-<script src="/lib/highlight/highlight.pack.js"></script>
+{{ $themeVersion := .Site.Params.version }}
+<script src="{{ "lib/highlight/highlight.pack.js" | relURL }}"></script>
 {{ if .Site.Params.bootcdn -}}
   <!-- script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script -->
   <script type="text/javascript" src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
   <script type="text/javascript" src="https://cdn.bootcss.com/slideout/1.0.1/slideout.min.js"></script>
   {{ if .Site.Params.fancybox }}<script type="text/javascript" src="https://cdn.bootcss.com/fancybox/3.1.20/jquery.fancybox.min.js"></script>{{ end }}
-  <script type="text/javascript" src="/dist/even.v{{ .Site.Params.version }}.js"></script>
+  <script type="text/javascript" src="{{ relURL (printf "dist/even.v%s.js" $themeVersion) }}"></script>
 {{ else -}}
-  <script type="text/javascript" src="/lib/jquery/jquery-3.2.1.min.js"></script>
-  <script type="text/javascript" src="/lib/slideout/slideout-1.0.1.min.js"></script>
-  {{ if .Site.Params.fancybox }}<script type="text/javascript" src="/lib/fancybox/jquery.fancybox-3.1.20.min.js"></script>{{ end }}
-  <script type="text/javascript" src="/dist/even.v{{ .Site.Params.version }}.js"></script>
+  <script type="text/javascript" src="{{ "lib/jquery/jquery-3.2.1.min.js" | relURL }}"></script>
+  <script type="text/javascript" src="{{ "lib/slideout/slideout-1.0.1.min.js" | relURL }}"></script>
+  {{ if .Site.Params.fancybox }}<script type="text/javascript" src="{{ "lib/fancybox/jquery.fancybox-3.1.20.min.js" | relURL }}"></script>{{ end }}
+  <script type="text/javascript" src="{{ relURL (printf "dist/even.v%s.js" $themeVersion) }}"></script>
 {{- end }}
 
 {{ if and (and .Site.Params.mathjax (ne .Params.mathjax false)) (or .IsPage .IsHome) -}}
