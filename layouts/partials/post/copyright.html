@@ -1,4 +1,4 @@
-{{ if and .Site.Copyright (ne .Params.copyright false) }}
+{{ if and .Site.Params.contentCopyright (ne .Params.contentCopyright false) }}
 {{ $lang := .Site.Data.even.default -}}
 <div class="post-copyright">
   <p class="copyright-item">
@@ -23,10 +23,10 @@
   {{- end }}
   <p class="copyright-item lincese">
     <span class="item-title">{{ $lang.copyright.lincese }}: </span>
-    {{ if .Params.copyright -}}
-      {{ .Params.copyright | safeHTML }}
+    {{ if .Params.contentCopyright -}}
+      {{ .Params.contentCopyright | safeHTML }}
     {{ else -}}
-      {{ .Site.Copyright | safeHTML }}
+      {{ .Site.Params.contentCopyright | safeHTML }}
     {{- end }}
   </p>
 </div>
