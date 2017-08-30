@@ -18,20 +18,20 @@ categories = "Categories"
 
 [copyright]
   author = "Author"
-  link = "Link"
   lastMod = "LastMod"
+  link = "Link"
   markdown = "Markdown"
   lincese = "Lincese"
 
 [counter]
-  [archives]
+  [counter.archives]
     zero = "No Posts"
     other = "%d Posts In Total"
 
-  [tagcloud]
+  [counter.tagcloud]
     zero = "No tags"
     other = "%d Tags In Total"
 
-  [categories]
+  [counter.categories]
     zero =  "No Categories"
     other = "%d Categories In Total"
