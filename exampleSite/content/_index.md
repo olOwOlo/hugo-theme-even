@@ -1,0 +1,3 @@
+---
+mathjax: false
+---
