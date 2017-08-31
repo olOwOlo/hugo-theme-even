@@ -4,8 +4,8 @@
 name = "Even"
 license = "MIT"
 licenselink = "https://github.com/olOwOlo/hugo-theme-even/blob/master/LICENSE.md"
-description = " A super simple theme for Hugo"
-homepage = "http://example.com/"
+description = "A super concise theme for Hugo"
+homepage = "https://github.com/olOwOlo/hugo-theme-even"
 tags = ["responsive", "blog", "simple", "clean", "highlight.js", "syntax highlighting"]
 features = ["responsive", "blog", "simple", "clean", "highlight.js", "syntax highlighting"]
 min_version = "0.26"
