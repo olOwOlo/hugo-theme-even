@@ -21,7 +21,7 @@ categories = "分类"
   lastMod = "上次更新"
   link = "原始链接"
   markdown = "原始文档"
-  lincese = "许可协议"
+  license = "许可协议"
 
 [counter]
   [counter.archives]

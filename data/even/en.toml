@@ -21,7 +21,7 @@ categories = "Categories"
   lastMod = "LastMod"
   link = "Link"
   markdown = "Markdown"
-  lincese = "Lincese"
+  license = "License"
 
 [counter]
   [counter.archives]
