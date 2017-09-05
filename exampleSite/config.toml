@@ -42,12 +42,11 @@ copyright = ""            # default: author.name ↓        # 默认为下面配
   url = "/categories/"
 
 [params]
-  version = "2.5.0" # theme version, don't change it!     # 请勿更改
   since = "2017"    # Site creation time                  # 站点建立时间
   
   # site info (option)                                    # 站点信息（可选）
-  keywords = ["olOwOlo", "blog"]
-  description = "olOwOlo blog."
+  keywords = ["Hugo", "theme","even"]
+  description = "Hugo theme even example site."
 
   # paginate of archives, tags and categories             # 归档、标签、分类每页显示的文章数目
   archive-paginate = 3

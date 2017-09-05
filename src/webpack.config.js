@@ -2,11 +2,8 @@ const path = require('path');
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
 const UglifyJSPlugin = require('uglifyjs-webpack-plugin')
 
-// theme version
-const version = 'v2.5.0'
-
 const extractSass = new ExtractTextPlugin({
-  filename: `even.${version}.css`
+  filename: `even.min.css`
 });
 
 module.exports = {
@@ -16,7 +13,7 @@ module.exports = {
   },
   output: {
     path: path.join(__dirname, '../static/dist'),
-    filename: `[name].${version}.js`
+    filename: `[name].min.js`
   },
   module: {
     rules: [
@@ -31,10 +28,14 @@ module.exports = {
           use: [{
             loader: 'css-loader',
             options: {
-              minimize: true
+              minimize: true,
+              sourceMap: true
             }
           }, {
-            loader: 'sass-loader'
+            loader: 'sass-loader',
+            options: {
+              sourceMap: true
+            }
           }],
           fallback: 'style-loader'
         })
