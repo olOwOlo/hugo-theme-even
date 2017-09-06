@@ -114,13 +114,13 @@ Even.fancybox = function () {
   if ($.fancybox) {
     $('.post').each(function () {
       $(this).find('img').each(function () {
-        $(this).wrap('<a class="fancybox" href="' + this.src + '" title="' + this.alt + '"></a>')
+        $(this).wrap(`<a class="fancybox" href="${this.src}" data-fancybox="gallery" data-caption="${this.title}"></a>`)
       })
     })
 
     $('.fancybox').fancybox({
-      openEffect: 'elastic',
-      closeEffect: 'elastic'
+      selector: '.fancybox',
+      protect: true
     })
   }
 }
