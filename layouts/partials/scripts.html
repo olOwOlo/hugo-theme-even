@@ -11,7 +11,13 @@
 {{- end }}
 <script type="text/javascript" src="{{ "dist/even.min.js?v=2.5.0" | relURL }}"></script>
 
-{{ if and (and .Site.Params.mathjax (ne .Params.mathjax false)) (or .IsPage .IsHome) -}}
+{{- if and (and .Site.Params.mathjax (ne .Params.mathjax false)) (or .IsPage .IsHome) }}
+  <script type="text/javascript">
+    window.MathJax = {
+      showProcessingMessages: false,
+      messageStyle: 'none'
+    };
+  </script>
   <script async src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML'></script>
 {{- end }}
 
