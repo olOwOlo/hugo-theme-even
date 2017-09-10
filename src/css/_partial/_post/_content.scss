@@ -58,6 +58,10 @@
 
   @import 'code';
 
+  .post-summary {
+    margin-bottom: 1em;
+  }
+
   .read-more {
     .read-more-link {
       color: $theme-color;
