@@ -19,7 +19,6 @@ categories = "分类"
 [copyright]
   author = "文章作者"
   lastMod = "上次更新"
-  link = "原始链接"
   markdown = "原始文档"
   license = "许可协议"
 

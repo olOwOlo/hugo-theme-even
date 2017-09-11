@@ -18,7 +18,6 @@ categories = "Categories"
 
 [copyright]
   author = "Author"
-  link = "Link"
   lastMod = "LastMod"
   markdown = "Markdown"
   license = "License"
