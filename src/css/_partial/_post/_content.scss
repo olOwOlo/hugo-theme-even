@@ -49,10 +49,18 @@
     margin: 10px 0;
     border-spacing: 0;
     box-shadow: 2px 2px 3px rgba(0,0,0,.125);
-    
+
+    thead {
+      background: $deputy-color;
+    }
+
     th, td {
       padding: 5px 15px;
       border: 1px double $content-table-border-color;
+    }
+
+    tr:hover {
+      background-color: $deputy-color;
     }
   }
 
