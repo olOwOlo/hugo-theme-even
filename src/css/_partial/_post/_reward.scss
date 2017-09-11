@@ -32,12 +32,12 @@
 
   .qr-code {
     display: none;
-    margin-top: 15px;
 
     .qr-code-image {
       display: inline-block;
       min-width: 200px;
       width: 40%;
+      margin-top: 15px;
     }
 
     .image {
