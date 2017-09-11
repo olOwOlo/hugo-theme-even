@@ -13,15 +13,15 @@
   }
 
   .post-meta {
+    font-size: 14px;
+    color: $post-meta-font-color;
+
     .post-time {
       font-size: 15px;
-      color: $post-time-font-color;
     }
 
     .post-category {
       display: inline;
-      font-size: 14px;
-      color: $post-category-font-color;
 
       &::before {
         content: '·';
@@ -35,5 +35,12 @@
         }
       }
     }
+
+    .more-meta {
+      &::before {
+        content: '·';
+      }
+    }
+
   }
 }

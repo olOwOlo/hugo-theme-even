@@ -16,6 +16,10 @@ categories = "分类"
   reward = "赞赏支持"
   seeMarkDown = "查看本文 Markdown 版本 »"
 
+  [posts.header]
+    wordCount = "约 %d 字"
+    readingTime = "预计阅读 %d 分钟"
+
 [copyright]
   author = "文章作者"
   lastMod = "上次更新"
