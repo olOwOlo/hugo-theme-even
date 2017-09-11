@@ -86,6 +86,7 @@ copyright = ""            # default: author.name ↓        # 默认为下面配
     j-douban = "http://localhost:1313"
     k-pocket = "http://localhost:1313"
     l-tumblr = "http://localhost:1313"
+    m-instagram = "http://localhost:1313"
 
 # 将下面这段配置取消注释可以使 hugo 生成 .md 文件
 # Uncomment these options to make hugo output .md files.
