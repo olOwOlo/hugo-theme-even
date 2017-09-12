@@ -8,7 +8,7 @@ A super concise theme for Hugo
 
 ## Screenshots
 
-![even-screenshots](https://raw.githubusercontent.com/olOwOlo/hugo-theme-even/master/images/screenshot.png)
+![even-showcase](https://raw.githubusercontent.com/olOwOlo/hugo-theme-even/master/images/showcase.png)
 
 ## Feature
 
