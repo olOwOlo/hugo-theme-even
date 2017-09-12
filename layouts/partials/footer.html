@@ -2,11 +2,7 @@
   {{- range $name, $path := .Site.Params.social }}
     {{- if $path }}
       {{- $realName := slicestr $name 2 }}
-      {{- if eq $realName "email" }}
-        <a href="mailto:{{ $path }}" class="iconfont icon-{{ $realName }}" title="{{ $realName }}"></a>
-      {{- else }}
-        <a href="{{ $path }}" class="iconfont icon-{{ $realName }}" title="{{ $realName }}"></a>
-      {{- end }}
+      <a href="{{ $path | safeURL }}" class="iconfont icon-{{ $realName }}" title="{{ $realName }}"></a>
     {{- end }}
   {{- end }}
   <a href="{{ .Site.RSSLink }}" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
