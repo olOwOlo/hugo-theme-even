@@ -4,11 +4,19 @@
 
 @font-face {
   font-family: 'iconfont';  /* project id 96542 */
-  src: url('//at.alicdn.com/t/font_96542_ixz9jngnf1sb57b9.eot');
-  src: url('//at.alicdn.com/t/font_96542_ixz9jngnf1sb57b9.eot?#iefix') format('embedded-opentype'),
-  url('//at.alicdn.com/t/font_96542_ixz9jngnf1sb57b9.woff') format('woff'),
-  url('//at.alicdn.com/t/font_96542_ixz9jngnf1sb57b9.ttf') format('truetype'),
-  url('//at.alicdn.com/t/font_96542_ixz9jngnf1sb57b9.svg#iconfont') format('svg');
+
+  src: url('../fonts/iconfont/iconfont.eot');
+  src: url('../fonts/iconfont/iconfont.eot#iefix') format('embedded-opentype'), // not '?#iefix', because webpack will add '?hash=[hash]'
+  url('../fonts/iconfont/iconfont.woff') format('woff'),
+  url('../fonts/iconfont/iconfont.ttf') format('truetype'),
+  url('../fonts/iconfont/iconfont.svg#iconfont') format('svg');
+
+  // Uncomment these code and comment upper code if you want to use alicdn
+  // src: url('//at.alicdn.com/t/font_96542_ixz9jngnf1sb57b9.eot');
+  // src: url('//at.alicdn.com/t/font_96542_ixz9jngnf1sb57b9.eot?#iefix') format('embedded-opentype'),
+  // url('//at.alicdn.com/t/font_96542_ixz9jngnf1sb57b9.woff') format('woff'),
+  // url('//at.alicdn.com/t/font_96542_ixz9jngnf1sb57b9.ttf') format('truetype'),
+  // url('//at.alicdn.com/t/font_96542_ixz9jngnf1sb57b9.svg#iconfont') format('svg');
 }
 
 .iconfont {
