@@ -11,7 +11,7 @@
 <nav id="mobile-menu" class="mobile-menu slideout-menu">
   <ul class="mobile-menu-list">
     {{ range .Site.Menus.main -}}
-      <a href="{{ .URL }}">
+      <a href="{{ .URL | safeURL }}">
         <li class="mobile-menu-item">{{ .Name }}</li>
       </a>
     {{- end }}
