@@ -1,6 +1,12 @@
 <div id="mobile-navbar" class="mobile-navbar">
   <div class="mobile-header-logo">
-    <a href="{{ "/" | relURL }}" class="logo">{{ .Site.Title }}</a>
+    <a href="{{ "/" | relURL }}" class="logo">
+      {{- if .Site.Params.logoTitle -}}
+        {{ .Site.Params.logoTitle }}
+      {{- else -}}
+        {{ .Site.Title }}
+      {{- end -}}
+    </a>
   </div>
   <div class="mobile-navbar-icon">
     <span></span>

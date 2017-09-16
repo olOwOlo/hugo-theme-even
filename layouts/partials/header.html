@@ -1,5 +1,11 @@
 <div class="logo-wrapper">
-  <a href="{{ "/" | relURL }}" class="logo">{{ .Site.Title }}</a>
+  <a href="{{ "/" | relURL }}" class="logo">
+    {{- if .Site.Params.logoTitle -}}
+      {{ .Site.Params.logoTitle }}
+    {{- else -}}
+      {{ .Site.Title }}
+    {{- end -}}
+  </a>
 </div>
 
 <nav class="site-navbar">

@@ -1,7 +1,7 @@
 baseURL = "http://localhost:1313/"
 languageCode = "en"
 defaultContentLanguage = "en"
-title = "Even"
+title = "Even - A super concise theme for Hugo"
 enableRobotsTXT = true
 enableEmoji = true
 theme = "even"
@@ -42,9 +42,10 @@ copyright = ""            # default: author.name ↓        # 默认为下面配
   url = "/categories/"
 
 [params]
-  since = "2017"    # Site creation time                  # 站点建立时间
-  
+  since = "2017"            # Site creation time          # 站点建立时间
+
   # site info (option)                                    # 站点信息（可选）
+  logoTitle = "Even"        # default: the title value    # 默认值: 上面设置的title值
   keywords = ["Hugo", "theme","even"]
   description = "Hugo theme even example site."
 
