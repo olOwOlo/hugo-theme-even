@@ -14,6 +14,8 @@ categories = "分类"
   toc = "文章目录"
   readmore = "阅读更多"
   reward = "赞赏支持"
+  rewardAlipay = "支付宝打赏"
+  rewardWechat = "微信打赏"
   seeMarkDown = "查看本文 Markdown 版本 »"
 
   [posts.header]
