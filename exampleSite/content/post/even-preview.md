@@ -15,8 +15,8 @@ comment: false
 # mathjax: false
 
 # you can define another contentCopyright. e.g. contentCopyright: "This is an another copyright."
-author: <a href="https://laozhu.me" target="_blank">米老朱</a>
-contentCopyright: <a href="https://laozhu.me/post/hugo-nuo-post-preview/" target="_blank">See origin</a>
+author: '<a href="https://laozhu.me" rel="noopener" target="_blank">米老朱</a>'
+contentCopyright: '<a href="https://laozhu.me/post/hugo-nuo-post-preview/" rel="noopener" target="_blank">See origin</a>'
 ---
 > Copy from [《Hugo 主题 Nuo 文章样式预览》](https://laozhu.me/post/hugo-nuo-post-preview/)
 
@@ -133,11 +133,11 @@ if (document.getElementById('my-player') !== null) {
 
 不带标题的图片，如下图👇
 
-![这是一张图片](https://raw.githubusercontent.com/olOwOlo/hugo-theme-even/master/images/screenshot.png)
+![hugo even showcase](https://raw.githubusercontent.com/olOwOlo/hugo-theme-even/master/images/showcase.png "showcase.png")
 
 带标题的图片，如下图👇
 
-{{% figure src="https://raw.githubusercontent.com/olOwOlo/hugo-theme-even/master/images/screenshot.png" alt="这是一张图片" title="screenshot.png" %}}
+{{% figure src="https://raw.githubusercontent.com/olOwOlo/hugo-theme-even/master/images/showcase.png" alt="hugo even showcase" title="showcase.png" %}}
 
 ## 8. 表格
 

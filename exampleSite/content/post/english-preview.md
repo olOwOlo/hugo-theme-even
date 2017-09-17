@@ -14,7 +14,7 @@ toc: false
 mathjax: false
 
 # you can define another contentCopyright. e.g. contentCopyright: "This is an another copyright."
-contentCopyright: "Maybe MIT ? I don't know.."
+contentCopyright: '<a href="https://github.com/gohugoio/hugoBasicExample" rel="noopener" target="_blank">See origin</a>'
 ---
 
 ## Introduction
