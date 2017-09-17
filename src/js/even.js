@@ -127,8 +127,8 @@ Even.fancybox = function () {
 
 Even.highlight = function () {
   const blocks = document.querySelectorAll('pre code')
-  for (const block of blocks) {
-    const classList = block.classList
+  for (let i = 0; i < blocks.length; i++) {
+    const block = blocks[i]
     const rootElement = block.parentElement
     const lineCodes = block.innerHTML.split(/\n/).slice(0, -1)
     const lineLength = lineCodes.length
@@ -139,13 +139,13 @@ Even.highlight = function () {
     }
 
     let codeHtml = ''
-    for (const lineCode of lineCodes) {
-      codeHtml += `<div class="line">${lineCode}</div>`
+    for (let i = 0; i < lineLength; i++) {
+      codeHtml += `<div class="line">${lineCodes[i]}</div>`
     }
 
-    classList.add('highlight')
+    block.className += ' highlight'
     const figure = document.createElement('figure')
-    figure.classList = classList
+    figure.className = block.className
     figure.innerHTML = `<table><tbody><tr><td class="gutter"><pre>${codeLineHtml}</pre></td><td class="code"><pre>${codeHtml}</pre></td></tr></tbody></table>`
 
     rootElement.parentElement.replaceChild(figure, rootElement)
@@ -154,11 +154,12 @@ Even.highlight = function () {
 
 Even.beforeToc = function () {
   const links = document.querySelectorAll('#TableOfContents a')
-  for (const link of links) link.classList.add('toc-link')
+  for (let i = 0; i < links.length; i++) links[i].className += ' toc-link'
 
-  for (const num of [1, 2, 3, 4, 5, 6]) {
+  for (let num = 1; num <= 6; num++) {
     const headers = document.querySelectorAll('.post-content>h' + num)
-    for (const header of headers) {
+    for (let i = 0; i < headers.length; i++) {
+      const header = headers[i]
       header.innerHTML = `<a href="#${header.id}" class="headerlink" title="${header.innerHTML}"></a>${header.innerHTML}`
     }
   }
