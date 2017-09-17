@@ -1,4 +1,4 @@
-{{ "<?" | safeHTML }}xml-stylesheet type="text/xsl" href="{{ .Site.BaseURL }}sitemap.xsl"{{ "?>" | safeHTML }}
+{{ "<?" | safeHTML }}xml-stylesheet type="text/xsl" href="{{ "sitemap.xsl" | absURL }}"{{ "?>" | safeHTML }}
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   {{ range .Data.Pages }}
   <url>
