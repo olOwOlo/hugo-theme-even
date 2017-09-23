@@ -7,7 +7,7 @@
   </p>
   <p class="copyright-item">
     <span class="item-title">{{ $lang.copyright.lastMod }}</span>
-    <span class="item-content">{{ .Lastmod.Format "2006-01-02" }}</span>
+    <span class="item-content">{{ .Lastmod.Format (.Site.Params.dateFormatToUse | default "2006-01-02") }}</span>
   </p>
   {{ if $.Site.Params.linkToMarkDown -}}
     {{ with $.OutputFormats.Get "markdown" -}}
