@@ -18,7 +18,7 @@
   {{ range $paginator.Pages }}
     <div class="archive-post">
       <span class="archive-post-time">
-        {{ .Date.Format "2006-01-02" }}
+        {{ .Date.Format (.Site.Params.dateFormatToUse | default "2006-01-02") }}
       </span>
       <span class="archive-post-title">
         <a href="{{ .URL }}" class="archive-post-link">
