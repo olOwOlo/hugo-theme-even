@@ -39,43 +39,6 @@ code {
     &.#{$sign} > table::after {
       content: $text;
     }
-
-    &.#{$sign} > figcaption > span::after {
-      content: ' · ' + $text;
-    }
-
-    &.#{$sign} figcaption + table {
-      &::after {
-        display: none;
-      }
-    }
-  }
-
-  figcaption {
-    position: absolute;
-    top: 0;
-    width: 100%;
-    padding: 2px 7px;
-    font-size: $code-font-size;
-    font-weight: bold;
-    color: darken($gray, 10%);
-    background: darken($code-background, 3%);
-    z-index: 20;
-    overflow-x: hidden;
-    box-sizing: border-box;
-
-    & > a {
-      position: absolute;
-      right: 0;
-      display: inline-box;
-      margin-right: 7px;
-      font-weight: 400;
-
-      &:hover {
-        text-decoration: none;
-        border: 0;
-      }
-    }
   }
 
   .code {
