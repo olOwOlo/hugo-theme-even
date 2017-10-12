@@ -5,7 +5,6 @@ import '../css/style.scss'
 $(document).ready(function () {
   Even.backToTop()
   Even.mobileNavbar()
-  Even.beforeToc()
   Even.toc()
   Even.fancybox()
 })

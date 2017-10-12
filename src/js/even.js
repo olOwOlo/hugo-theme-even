@@ -48,7 +48,7 @@ Even.mobileNavbar = function () {
   })
 }
 
-Even.toc = function () {
+Even._initToc = function () {
   var SPACING = 20
   var $toc = $('.post-toc')
   var $footer = $('.post-footer')
@@ -152,7 +152,21 @@ Even.highlight = function () {
   }
 }
 
-Even.beforeToc = function () {
+Even.toc = function () {
+  const tocContainer = document.getElementById('post-toc')
+  if (tocContainer !== null) {
+    const toc = document.getElementById('TableOfContents')
+    if (toc === null) {
+      // toc = true, but there are no headings
+      tocContainer.parentNode.removeChild(tocContainer)
+    } else {
+      this._linkToc()
+      this._initToc()
+    }
+  }
+}
+
+Even._linkToc = function () {
   const links = document.querySelectorAll('#TableOfContents a')
   for (let i = 0; i < links.length; i++) links[i].className += ' toc-link'
 
