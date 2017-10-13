@@ -42,6 +42,8 @@ copyright = ""            # default: author.name ↓        # 默认为下面配
   url = "/categories/"
 
 [params]
+  debug = false             # If true, load `eruda.min.js`. See https://github.com/liriliri/eruda
+
   since = "2017"            # Site creation time          # 站点建立时间
 
   # site info (option)                                    # 站点信息（可选）
@@ -51,7 +53,7 @@ copyright = ""            # default: author.name ↓        # 默认为下面配
 
   # paginate of archives, tags and categories             # 归档、标签、分类每页显示的文章数目
   archive-paginate = 3
-  
+
   # The date format to use; for a list of valid formats, see https://gohugo.io/functions/format/
   dateFormatToUse = "2006-01-02"
 
