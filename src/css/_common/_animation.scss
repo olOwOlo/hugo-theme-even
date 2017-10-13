@@ -96,6 +96,9 @@
 
   span {
     position: absolute;
+    /* fallback for browsers which still doesn't support for `calc()` */
+    left: 15px;
+    top: 25px;
     left: calc((100% - 20px) / 2);
     top: calc((100% - 1px) / 2);
     width: 20px;
