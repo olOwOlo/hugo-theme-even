@@ -100,10 +100,15 @@
     content: ':';
   }
 
-  figure figcaption h4 {
-    color: #b5b5b5;
-    font-size: 0.9rem;
-    text-align: center;
+  figure {
+    &.center {
+      text-align: center;
+    }
+
+    figcaption h4 {
+      color: #b5b5b5;
+      font-size: 0.9rem;
+    }
   }
 
   .task-list {

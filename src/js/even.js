@@ -1,9 +1,9 @@
 'use strict'
 
-var Even = {}
+const Even = {}
 
 Even.backToTop = function () {
-  var $backToTop = $('#back-to-top')
+  const $backToTop = $('#back-to-top')
 
   $(window).scroll(function () {
     if ($(window).scrollTop() > 100) {
@@ -19,9 +19,9 @@ Even.backToTop = function () {
 }
 
 Even.mobileNavbar = function () {
-  var $mobileNav = $('#mobile-navbar')
-  var $mobileNavIcon = $('.mobile-navbar-icon')
-  var slideout = new Slideout({
+  const $mobileNav = $('#mobile-navbar')
+  const $mobileNavIcon = $('.mobile-navbar-icon')
+  const slideout = new Slideout({
     'panel': document.getElementById('mobile-panel'),
     'menu': document.getElementById('mobile-menu'),
     'padding': 180,
@@ -49,15 +49,15 @@ Even.mobileNavbar = function () {
 }
 
 Even._initToc = function () {
-  var SPACING = 20
-  var $toc = $('.post-toc')
-  var $footer = $('.post-footer')
+  const SPACING = 20
+  const $toc = $('.post-toc')
+  const $footer = $('.post-footer')
 
   if ($toc.length) {
-    var minScrollTop = $toc.offset().top - SPACING
-    var maxScrollTop = $footer.offset().top - $toc.height() - SPACING
+    const minScrollTop = $toc.offset().top - SPACING
+    const maxScrollTop = $footer.offset().top - $toc.height() - SPACING
 
-    var tocState = {
+    const tocState = {
       start: {
         'position': 'absolute',
         'top': minScrollTop
@@ -73,7 +73,7 @@ Even._initToc = function () {
     }
 
     $(window).scroll(function () {
-      var scrollTop = $(window).scrollTop()
+      const scrollTop = $(window).scrollTop()
 
       if (scrollTop < minScrollTop) {
         $toc.css(tocState.start)
@@ -85,21 +85,21 @@ Even._initToc = function () {
     })
   }
 
-  var HEADERFIX = 30
-  var $toclink = $('.toc-link')
-  var $headerlink = $('.headerlink')
+  const HEADERFIX = 30
+  const $toclink = $('.toc-link')
+  const $headerlink = $('.headerlink')
 
-  var headerlinkTop = $.map($headerlink, function (link) {
+  const headerlinkTop = $.map($headerlink, function (link) {
     return $(link).offset().top
   })
 
   $(window).scroll(function () {
-    var scrollTop = $(window).scrollTop()
+    const scrollTop = $(window).scrollTop()
 
-    for (var i = 0; i < $toclink.length; i++) {
-      var isLastOne = i + 1 === $toclink.length
-      var currentTop = headerlinkTop[i] - HEADERFIX
-      var nextTop = isLastOne ? Infinity : headerlinkTop[i + 1] - HEADERFIX
+    for (let i = 0; i < $toclink.length; i++) {
+      const isLastOne = i + 1 === $toclink.length
+      const currentTop = headerlinkTop[i] - HEADERFIX
+      const nextTop = isLastOne ? Infinity : headerlinkTop[i + 1] - HEADERFIX
 
       if (currentTop < scrollTop && scrollTop <= nextTop) {
         $($toclink[i]).addClass('active')
