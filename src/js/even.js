@@ -160,10 +160,22 @@ Even.toc = function () {
       // toc = true, but there are no headings
       tocContainer.parentNode.removeChild(tocContainer)
     } else {
+      this._refactorToc(toc)
       this._linkToc()
       this._initToc()
     }
   }
+}
+
+Even._refactorToc = function (toc) {
+  const oldTocList = toc.children[0]
+  let newTocList = oldTocList
+  let temp
+  while (newTocList.children.length === 1 && (temp = newTocList.children[0].children[0]).tagName === 'UL')
+    newTocList = temp
+
+  if (newTocList !== oldTocList)
+    toc.replaceChild(newTocList, oldTocList)
 }
 
 Even._linkToc = function () {
