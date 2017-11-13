@@ -6,9 +6,9 @@
       <span class="post-time"> {{ .Date.Format (.Site.Params.dateFormatToUse | default "2006-01-02") }} </span>
       {{ with .Params.categories -}}
         <div class="post-category">
-          {{ range . -}}
+          {{ range . }}
             <a href="{{ "categories" | relURL }}/{{ . | urlize }}/">{{ . }}</a>
-          {{- end }}
+          {{ end }}
         </div>
       {{- end }}
       {{ if .Site.Params.moreMeta -}}
