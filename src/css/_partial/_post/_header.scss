@@ -23,12 +23,12 @@
     .post-category {
       display: inline;
 
-      &::before {
-        content: '·';
-      }
-
       a {
         color: inherit;
+
+        &::before {
+          content: '·';
+        }
 
         &:hover {
           color: $theme-color;
