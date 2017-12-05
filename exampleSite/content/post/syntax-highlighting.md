@@ -33,6 +33,14 @@ public class HelloWorld {
 }
 ```
 
+```kotlin
+package hello
+
+fun main(args: Array<String>) {
+  println("Hello World!")
+}
+```
+
 ```c
 #include <stdio.h>
 

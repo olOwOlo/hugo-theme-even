@@ -4,13 +4,14 @@ date: 2017-08-23T18:03:09+08:00
 lastmod: 2017-08-23T18:03:09+08:00
 draft: false
 tags: ["preview", "Theme preview", "tag-3"]
-categories: ["Theme preview"]
+categories: ["Theme preview", "category-2", "category-3"]
 
 weight: 10
 
 # you can close something for this content if you open it in config.toml.
 comment: false
 # toc: false
+autoCollapseToc: false
 # reward: false
 # mathjax: false
 
@@ -137,7 +138,7 @@ if (document.getElementById('my-player') !== null) {
 
 带标题的图片，如下图👇
 
-{{% figure src="https://raw.githubusercontent.com/olOwOlo/hugo-theme-even/master/images/showcase.png" alt="hugo even showcase" title="showcase.png" %}}
+{{% figure class="center" src="https://raw.githubusercontent.com/olOwOlo/hugo-theme-even/master/images/showcase.png" alt="hugo even showcase" title="showcase.png" %}}
 
 ## 8. 表格
 

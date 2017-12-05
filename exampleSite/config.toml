@@ -7,15 +7,15 @@ enableEmoji = true
 theme = "even"
 
 hasCJKLanguage = true     # has chinese/japanese/korean ? # 自动检测是否包含 中文\日文\韩文
-paginate = 3                                              # （可选）首页显示的文章条目数量，默认为10
+paginate = 3                                              # 首页每页显示的文章数
 disqusShortname = ""      # disqus_shortname
 googleAnalytics = ""      # UA-XXXXXXXX-X
 copyright = ""            # default: author.name ↓        # 默认为下面配置的author.name ↓
 
-[author]                  # require                       # 必需
+[author]                  # essential                     # 必需
   name = "olOwOlo"
 
-[sitemap]                 # require                       # 必需
+[sitemap]                 # essential                     # 必需
   changefreq = "weekly"
   priority = 0.5
   filename = "sitemap.xml"
@@ -46,12 +46,12 @@ copyright = ""            # default: author.name ↓        # 默认为下面配
 
   since = "2017"            # Site creation time          # 站点建立时间
 
-  # site info (option)                                    # 站点信息（可选）
+  # site info (optional)                                  # 站点信息（可选，不需要的可以直接注释掉）
   logoTitle = "Even"        # default: the title value    # 默认值: 上面设置的title值
   keywords = ["Hugo", "theme","even"]
   description = "Hugo theme even example site."
 
-  # paginate of archives, tags and categories             # 归档、标签、分类每页显示的文章数目
+  # paginate of archives, tags and categories             # 归档、标签、分类每页显示的文章数目，建议修改为一个较大的值
   archive-paginate = 3
 
   # The date format to use; for a list of valid formats, see https://gohugo.io/functions/format/
