@@ -20,6 +20,10 @@
   .post-toc-content {
     font-size: $post-toc-content;
 
+    &.always-active ul {
+      display: block;
+    }
+
     >nav>ul {
       margin: 10px 0;
     }
@@ -27,9 +31,14 @@
     ul {
       padding-left: 20px;
       list-style: $post-toc-list-style;
-  
+
       ul {
         padding-left: 15px;
+        display: none;
+      }
+
+      .has-active > ul {
+        display: block;
       }
     }
 

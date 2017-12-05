@@ -88,23 +88,37 @@ Even._initToc = function () {
   const HEADERFIX = 30
   const $toclink = $('.toc-link')
   const $headerlink = $('.headerlink')
+  const $tocLinkLis = $('.post-toc-content li')
 
   const headerlinkTop = $.map($headerlink, function (link) {
     return $(link).offset().top
   })
 
+  const headerLinksOffsetForSearch = $.map(headerlinkTop, function (offset) {
+    return offset - HEADERFIX
+  })
+
+  const searchActiveTocIndex = function (array, target) {
+    for (let i = 0; i < array.length - 1; i++) {
+      if (target > array[i] && target <= array[i + 1]) return i
+    }
+    if (target > array[array.length - 1]) return array.length - 1
+    return -1
+  }
+
   $(window).scroll(function () {
     const scrollTop = $(window).scrollTop()
+    const activeTocIndex = searchActiveTocIndex(headerLinksOffsetForSearch, scrollTop)
 
-    for (let i = 0; i < $toclink.length; i++) {
-      const isLastOne = i + 1 === $toclink.length
-      const currentTop = headerlinkTop[i] - HEADERFIX
-      const nextTop = isLastOne ? Infinity : headerlinkTop[i + 1] - HEADERFIX
+    $($toclink).removeClass('active')
+    $($tocLinkLis).removeClass('has-active')
 
-      if (currentTop < scrollTop && scrollTop <= nextTop) {
-        $($toclink[i]).addClass('active')
-      } else {
-        $($toclink[i]).removeClass('active')
+    if (activeTocIndex !== -1) {
+      $($toclink[activeTocIndex]).addClass('active')
+      let ancestor = $toclink[activeTocIndex].parentNode
+      while (ancestor.tagName !== 'NAV') {
+        $(ancestor).addClass('has-active')
+        ancestor = ancestor.parentNode.parentNode
       }
     }
   })
@@ -171,11 +185,9 @@ Even._refactorToc = function (toc) {
   const oldTocList = toc.children[0]
   let newTocList = oldTocList
   let temp
-  while (newTocList.children.length === 1 && (temp = newTocList.children[0].children[0]).tagName === 'UL')
-    newTocList = temp
+  while (newTocList.children.length === 1 && (temp = newTocList.children[0].children[0]).tagName === 'UL') newTocList = temp
 
-  if (newTocList !== oldTocList)
-    toc.replaceChild(newTocList, oldTocList)
+  if (newTocList !== oldTocList) toc.replaceChild(newTocList, oldTocList)
 }
 
 Even._linkToc = function () {

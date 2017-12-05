@@ -63,6 +63,7 @@ copyright = ""            # default: author.name ↓        # 默认为下面配
   # 一些全局开关，你可以在每一篇内容的 front matter 中单独关闭某些选项
   # Some global options, you can close something in front matter.
   toc = true                                                                            # 是否开启目录
+  autoCollapseToc = true    # Auto expand and collapse toc                              # 目录自动展开/折叠
   fancybox = true           # see https://github.com/fancyapps/fancybox                 # 是否启用fancybox（图片可点击）
   bootcdn = false           # In china. @Deprecated: use [params.publicCDN]             # 是否使用bootcdn(@Deprecated: 请使用[params.publicCDN])
   mathjax = true            # see https://www.mathjax.org/                              # 是否使用mathjax（数学公式）
