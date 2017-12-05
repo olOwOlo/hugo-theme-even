@@ -1,8 +1,9 @@
 {{ if and .Site.Params.toc (ne .Params.toc false) }}
 <div class="post-toc" id="post-toc">
   <h2 class="post-toc-title">{{ .Site.Data.even.default.posts.toc }}</h2>
-  <div class="post-toc-content{{ if or .Params.autoCollapseToc (and .Site.Params.autoCollapseToc (ne .Params.autoCollapseToc false)) | not }} always-active{{ end }}">
-      {{.TableOfContents}}
+  {{ $globalAutoCollapseToc := .Site.Params.autoCollapseToc | default true }}
+  <div class="post-toc-content{{ if not (or .Params.autoCollapseToc (and $globalAutoCollapseToc (ne .Params.autoCollapseToc false))) }} always-active{{ end }}">
+    {{.TableOfContents}}
   </div>
 </div>
 {{- end }}
