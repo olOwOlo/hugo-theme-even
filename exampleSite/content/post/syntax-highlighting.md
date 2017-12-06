@@ -6,14 +6,15 @@ draft: false
 tags: ["preview", "Syntax Highlighting", "tag-5"]
 categories: ["Syntax Highlighting"]
 
-# you can close something for this content if you open it in config.toml.
-comment: false
+# You can also close(false) or open(true) something for this content.
+# P.S. comment can only be closed
+# comment: false
 toc: false
-# reward: false
-mathjax: false
-
-# you can define another contentCopyright. e.g. contentCopyright: "This is an another copyright."
+# autoCollapseToc: false
+# You can also define another contentCopyright. e.g. contentCopyright: "This is another copyright."
 # contentCopyright: false
+# reward: false
+# mathjax: false
 ---
 
 

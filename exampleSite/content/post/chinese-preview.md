@@ -6,14 +6,16 @@ draft: false
 tags: ["preview", "中文", "tag-1"]
 categories: ["中文"]
 author: "Wikipedia"
-# you can close something for this content if you open it in config.toml.
-comment: false
-# toc: false
-# reward: false
-mathjax: false
 
-# you can define another contentCopyright. e.g. contentCopyright: "This is an another copyright."
+# You can also close(false) or open(true) something for this content.
+# P.S. comment can only be closed
+# comment: false
+# toc: false
+# autoCollapseToc: false
+# You can also define another contentCopyright. e.g. contentCopyright: "This is another copyright."
 contentCopyright: '<a rel="license noopener" href="https://en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License" target="_blank">Creative Commons Attribution-ShareAlike License</a>'
+# reward: false
+# mathjax: false
 ---
 
 >《长恨歌》是中国唐朝诗人白居易的一首长篇叙事诗。

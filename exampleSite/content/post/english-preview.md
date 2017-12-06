@@ -7,14 +7,15 @@ tags: ["preview", "English", "tag-2"]
 categories: ["English"]
 author: "Michael Henderson"
 
-# you can close something for this content if you open it in config.toml.
-comment: false
+# You can also close(false) or open(true) something for this content.
+# P.S. comment can only be closed
+# comment: false
 # toc: false
-# reward: false
-mathjax: false
-
-# you can define another contentCopyright. e.g. contentCopyright: "This is an another copyright."
+autoCollapseToc: true
+# You can also define another contentCopyright. e.g. contentCopyright: "This is another copyright."
 contentCopyright: '<a href="https://github.com/gohugoio/hugoBasicExample" rel="noopener" target="_blank">See origin</a>'
+# reward: false
+# mathjax: false
 ---
 
 ## Introduction

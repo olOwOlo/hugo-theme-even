@@ -1,4 +1,4 @@
-{{ if and .Site.Params.reward.enable (ne .Params.reward false) }}
+{{ if or .Params.reward (and .Site.Params.reward.enable (ne .Params.reward false)) }}
 <div class="post-reward">
   {{- $lang := .Site.Data.even.default }}
   <input type="checkbox" name="reward" id="reward" hidden />

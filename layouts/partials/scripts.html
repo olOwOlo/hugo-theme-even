@@ -15,7 +15,7 @@
 {{- end }}
 <script type="text/javascript" src="{{ "dist/even.min.js?v=2.7.0" | relURL }}"></script>
 
-{{- if and (and .Site.Params.mathjax (ne .Params.mathjax false)) (or .IsPage .IsHome) }}
+{{- if and (or .Params.mathjax (and .Site.Params.mathjax (ne .Params.mathjax false))) (or .IsPage .IsHome) }}
   <script type="text/javascript">
     window.MathJax = {
       showProcessingMessages: false,

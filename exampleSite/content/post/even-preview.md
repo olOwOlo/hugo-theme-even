@@ -5,19 +5,19 @@ lastmod: 2017-08-23T18:03:09+08:00
 draft: false
 tags: ["preview", "Theme preview", "tag-3"]
 categories: ["Theme preview", "category-2", "category-3"]
+author: '<a href="https://laozhu.me" rel="noopener" target="_blank">米老朱</a>'
 
 weight: 10
 
-# you can close something for this content if you open it in config.toml.
-comment: false
+# You can also close(false) or open(true) something for this content.
+# P.S. comment can only be closed
+# comment: false
 # toc: false
-autoCollapseToc: false
-# reward: false
-# mathjax: false
-
-# you can define another contentCopyright. e.g. contentCopyright: "This is an another copyright."
-author: '<a href="https://laozhu.me" rel="noopener" target="_blank">米老朱</a>'
+# autoCollapseToc: false
+# You can also define another contentCopyright. e.g. contentCopyright: "This is another copyright."
 contentCopyright: '<a href="https://laozhu.me/post/hugo-nuo-post-preview/" rel="noopener" target="_blank">See origin</a>'
+# reward: false
+mathjax: true
 ---
 > Copy from [《Hugo 主题 Nuo 文章样式预览》](https://laozhu.me/post/hugo-nuo-post-preview/)
 

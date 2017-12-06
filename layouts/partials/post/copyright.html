@@ -1,4 +1,4 @@
-{{ if and .Site.Params.contentCopyright (ne .Params.contentCopyright false) }}
+{{ if or .Params.contentCopyright (and .Site.Params.contentCopyright (ne .Params.contentCopyright false)) }}
 {{ $lang := .Site.Data.even.default -}}
 <div class="post-copyright">
   <p class="copyright-item">

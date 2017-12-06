@@ -9,14 +9,15 @@ tags: ["preview", "日本語", "tag-4"]
 categories: ["日本語"]
 author: "Wikipedia"
 
-# you can close something for this content if you open it in config.toml.
-comment: false
+# You can also close(false) or open(true) something for this content.
+# P.S. comment can only be closed
+# comment: false
 # toc: false
-# reward: false
-mathjax: false
-
-# you can define another contentCopyright. e.g. contentCopyright: "This is an another copyright."
+# autoCollapseToc: false
+# You can also define another contentCopyright. e.g. contentCopyright: "This is another copyright."
 contentCopyright: '<a rel="license noopener" href="https://en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License" target="_blank">Creative Commons Attribution-ShareAlike License</a>'
+# reward: false
+# mathjax: false
 ---
 
 > 日本語の敬語体系は、一般に、大きく尊敬語・謙譲語・丁寧語に分類される。文化審議会国語分科会は、2007年2月に「敬語の指針」を答申し、これに丁重語および美化語を含めた5分類を示している。
