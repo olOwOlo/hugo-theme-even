@@ -17,6 +17,9 @@
         {{ if .Site.Params.moreMeta -}}
         <span class="more-meta"> {{ printf $lang.posts.header.wordCount .WordCount }} </span>
         <span class="more-meta"> {{ printf $lang.posts.header.readingTime .ReadingTime }} </span>
+        	{{ if .Site.Params.busuanzi -}}
+        	<span class="more-meta" id="busuanzi_value_page_pv"></span>次访问
+        	{{- end }}
         {{- end }}
       </div>
     </header>

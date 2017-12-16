@@ -18,12 +18,14 @@
     <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
   </span>
 
-<!-- 不蒜子显示站点总访问量 -->
-<br />
-<span id="busuanzi_container_site_pv">本站总访问量<span id="busuanzi_value_site_pv"></span>次</span>
-<span class="division">|</span>
-<span id="busuanzi_container_site_uv">本站访客数<span id="busuanzi_value_site_uv"></span>人次</span>
-<!-- 不蒜子结束 -->
+{{ if .Site.Params.busuanzi -}}
+	<!-- 不蒜子显示站点总访问量 -->
+	<br />
+	<span id="busuanzi_container_site_pv">本站总访问量<span id="busuanzi_value_site_pv"></span>次</span>
+	<span class="division">|</span>
+	<span id="busuanzi_container_site_uv">本站访客数<span id="busuanzi_value_site_uv"></span>人次</span>
+	<!-- 不蒜子结束 -->
+{{- end }}
 
   <span class="copyright-year">
     {{- $current := now.Format "2006" }}

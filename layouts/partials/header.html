@@ -1,6 +1,8 @@
-<!-- 要使用不蒜子必须在页面中引入busuanzi.js，目前最新版如下。 -->
-<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-<!-- 不蒜子结束 -->
+{{ if .Site.Params.busuanzi -}}
+	<!-- 要使用不蒜子必须在页面中引入busuanzi.js，目前最新版如下。 -->
+	<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+	<!-- 不蒜子结束 -->
+{{- end }}
 
 <div class="logo-wrapper">
   <a href="{{ "/" | relURL }}" class="logo">
