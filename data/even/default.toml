@@ -40,3 +40,8 @@ categories = "分类"
   [counter.categories]
     zero =  "暂无分类"
     other = "共计 %d 个分类"
+
+[traffic]
+  siteUV = "本站总访客数 %s 人"
+  sitePV = "本站总访问量 %s 次"
+  pagePV = "%s 次阅读"
