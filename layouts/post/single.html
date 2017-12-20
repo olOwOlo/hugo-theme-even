@@ -17,9 +17,10 @@
         {{ if .Site.Params.moreMeta -}}
         <span class="more-meta"> {{ printf $lang.posts.header.wordCount .WordCount }} </span>
         <span class="more-meta"> {{ printf $lang.posts.header.readingTime .ReadingTime }} </span>
-        	{{ if .Site.Params.busuanzi -}}
-        	<span class="more-meta" id="busuanzi_value_page_pv"></span>次访问
-        	{{- end }}
+        {{- end }}
+        {{ if and .Site.Params.busuanzi.enable .Site.Params.busuanzi.pagePV -}}
+        {{ $valueSpan := printf `<span id="busuanzi_value_page_pv"><img src="%s" alt="spinner.svg"/></span>` ("img/spinner.svg" | relURL) -}}
+        <span id="busuanzi_container_page_pv" class="more-meta"> {{ printf $lang.traffic.pagePV $valueSpan | safeHTML }} </span>
         {{- end }}
       </div>
     </header>

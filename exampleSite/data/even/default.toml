@@ -40,3 +40,8 @@ categories = "Categories"
   [counter.categories]
     zero =  "No Categories"
     other = "%d Categories In Total"
+
+[traffic]
+  siteUV = "site uv: %s"
+  sitePV = "site pv: %s"
+  pagePV = "%s times read"
