@@ -4,24 +4,23 @@
     <div id="disqus_thread"></div>
     <script type="text/javascript">
     (function() {
-        // Don't ever inject Disqus on localhost--it creates unwanted
-        // discussions from 'localhost:1313' on your Disqus account...
-        if (window.location.hostname === 'localhost') return;
+      // Don't ever inject Disqus on localhost--it creates unwanted
+      // discussions from 'localhost:1313' on your Disqus account...
+      if (window.location.hostname === 'localhost') return;
 
-        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-        var disqus_shortname = '{{ .Site.DisqusShortname }}';
-        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      var disqus_shortname = '{{ .Site.DisqusShortname }}';
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
     })();
     </script>
     <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-    <a href="http://disqus.com/" class="dsq-brlink" target="_blank">comments powered by <span class="logo-disqus">Disqus</span></a>
   {{- end }}
 
   <!-- changyan -->
   {{- if and .Site.Params.changyanAppid .Site.Params.changyanAppkey -}}
-    <div id="SOHUCS"></div> 
-    <script type="text/javascript"> 
+    <div id="SOHUCS"></div>
+    <script type="text/javascript">
     (function(){
       if (window.location.hostname === 'localhost') return;
 
@@ -32,11 +31,10 @@
     })();
     </script>
   {{- end }}
-  
-  <!-- 来必力 -->
-  {{- if .Site.Params.LivereUID -}}  
-	<!-- 来必力City版安装代码 -->
-	<div id="lv-container" data-id="city" data-uid="{{ .Site.Params.LivereUID }}">
+
+  <!-- LiveRe -->
+  {{- if .Site.Params.livereUID -}}
+	<div id="lv-container" data-id="city" data-uid="{{ .Site.Params.livereUID }}">
 	<script type="text/javascript">
 	   (function(d, s) {
 		   var j, e = d.getElementsByTagName(s)[0];
@@ -50,8 +48,7 @@
 		   e.parentNode.insertBefore(j, e);
 	   })(document, 'script');
 	</script>
-	<noscript>为正常使用来必力评论功能请激活JavaScript</noscript>
+	<noscript>Please enable JavaScript to view the comments powered by <a href="https://livere.com/">LiveRe.</a></noscript>
 	</div>
-	<!-- City版安装代码已完成 -->
   {{- end }}
 {{- end }}
