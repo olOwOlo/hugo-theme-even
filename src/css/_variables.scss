@@ -210,6 +210,10 @@ $code-highlight-color: (
 // Code type list.
 $code-type-list: (
   // Custom code type
+  language-ahk: "AutoHotKey",
+  language-autohotkey: "AutoHotKey",
+  language-applescript: "AppleScript",
+  language-vbs: "Visual Basic Script",
   language-bash: "Bash",
   language-c: "C",
   language-cs: "C#",
@@ -224,6 +228,7 @@ $code-type-list: (
   language-js: "JavaScript",
   language-javascript: "JavaScript",
   language-makefile: "Makefile",
+  language-md: "Markdown",
   language-markdown: "Markdown",
   language-objectivec: "Objective-C",
   language-php: "PHP",
