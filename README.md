@@ -47,7 +47,7 @@ if you change any file under `/src/`, you need to rebuild.
 ```bash
 cd ./themes/even/src/
 npm install
-npm start
+npm run build
 ```
 
 ## License

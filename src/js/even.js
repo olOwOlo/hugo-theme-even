@@ -144,7 +144,8 @@ Even.highlight = function () {
   for (let i = 0; i < blocks.length; i++) {
     const block = blocks[i]
     const rootElement = block.parentElement
-    const lineCodes = block.innerHTML.split(/\n/).slice(0, -1)
+    const lineCodes = block.innerHTML.split(/\n/)
+    if (lineCodes[lineCodes.length - 1] === '') lineCodes.pop()
     const lineLength = lineCodes.length
 
     let codeLineHtml = ''

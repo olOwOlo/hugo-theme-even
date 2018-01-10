@@ -47,7 +47,7 @@ $ git clone https://github.com/olOwOlo/hugo-theme-even themes/even
 ```bash
 cd ./themes/even/src/
 npm install
-npm start
+npm run build
 ```
 
 ## License
