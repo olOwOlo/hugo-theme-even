@@ -183,6 +183,7 @@ Even.toc = function () {
 }
 
 Even._refactorToc = function (toc) {
+  // when headings do not start with `h1`
   const oldTocList = toc.children[0]
   let newTocList = oldTocList
   let temp
@@ -192,14 +193,14 @@ Even._refactorToc = function (toc) {
 }
 
 Even._linkToc = function () {
-  const links = document.querySelectorAll('#TableOfContents a')
+  const links = document.querySelectorAll('#TableOfContents a:first-child')
   for (let i = 0; i < links.length; i++) links[i].className += ' toc-link'
 
   for (let num = 1; num <= 6; num++) {
     const headers = document.querySelectorAll('.post-content>h' + num)
     for (let i = 0; i < headers.length; i++) {
       const header = headers[i]
-      header.innerHTML = `<a href="#${header.id}" class="headerlink" title="${header.innerHTML}"></a>${header.innerHTML}`
+      header.innerHTML = `<a href="#${header.id}" class="headerlink"></a>${header.innerHTML}`
     }
   }
 }
