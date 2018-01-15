@@ -18,6 +18,7 @@ autoCollapseToc: false
 contentCopyright: false
 reward: false
 mathjax: false
+mathjaxEnableSingleDollar: false
 ---
 
 <!--more-->

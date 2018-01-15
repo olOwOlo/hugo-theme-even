@@ -16,13 +16,16 @@
 <script type="text/javascript" src="{{ "dist/even.min.js?v=2.7.2" | relURL }}"></script>
 
 {{- if and (or .Params.mathjax (and .Site.Params.mathjax (ne .Params.mathjax false))) (or .IsPage .IsHome) }}
-  <script type="text/javascript">
-    window.MathJax = {
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      {{ if or .Params.mathjaxEnableSingleDollar (and .Site.Params.mathjaxEnableSingleDollar (ne .Params.mathjaxEnableSingleDollar false)) -}}
+        tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]},
+      {{ end -}}
       showProcessingMessages: false,
       messageStyle: 'none'
-    };
+    });
   </script>
-  <script async src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML'></script>
+  <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML"></script>
 {{- end }}
 
 <!-- Analytics -->
