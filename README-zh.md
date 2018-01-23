@@ -24,18 +24,15 @@ A super concise theme for Hugo
 ```bash
 $ git clone https://github.com/olOwOlo/hugo-theme-even themes/even
 ```
+**重要:** 在主题的 [`exampleSite`](https://github.com/olOwOlo/hugo-theme-even/tree/master/exampleSite) 目录下有一个 [`config.toml`](https://github.com/olOwOlo/hugo-theme-even/blob/master/exampleSite/config.toml) 文件，**将这个 [`config.toml`](https://github.com/olOwOlo/hugo-theme-even/blob/master/exampleSite/config.toml) 文件复制到你的站点目录下**，根据自己的需求更改即可。
 
 ## Configuration
-
-将 `exampleSite` 目录下的 `config.toml` 文件复制到你的站点目录下，根据自己的需求进行更改即可。
-
-### More Configuration
 
 - **favicon.ico:** 将你的 favicon.ico 放置在 `/static` 目录下即可，支持 apple-touch-icon、32x32、16x16、manifest.json、safari-pinned-tab.svg
 
 - **Front matter:** 将主题目录下 `archetypes` 中的 `default.md` 文件复制到你的 `archetypes` 目录下。
 
-- **Language:** 语言文件在 `/themes/even/data/even/` 目录下。在你的 `data` 目录下创建一个 `even` 目录并复制 `default.toml` 文件到你的 `/data/even/` 目录下，之后你可以按照自己需求更改它。
+- **Language:** 语言文件在 [`/themes/even/data/even/`](https://github.com/olOwOlo/hugo-theme-even/tree/master/data/even) 目录下。在你的 `data` 目录下创建一个 `even` 目录并复制 `default.toml` 文件到你的 `/data/even/` 目录下，之后你可以按照自己需求更改它。
 
 - **Theme color:** Default | Mint Green | Cobalt Blue | Hot Pink | Dark Violet 
 

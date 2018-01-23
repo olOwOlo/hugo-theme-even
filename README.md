@@ -25,21 +25,19 @@ A super concise theme for Hugo
 $ git clone https://github.com/olOwOlo/hugo-theme-even themes/even
 ```
 
+**Important:** Take a look inside the [`exampleSite`](https://github.com/olOwOlo/hugo-theme-even/tree/master/exampleSite) folder of this theme. You'll find a file called [`config.toml`](https://github.com/olOwOlo/hugo-theme-even/blob/master/exampleSite/config.toml). **To use it, copy the [`config.toml`](https://github.com/olOwOlo/hugo-theme-even/blob/master/exampleSite/config.toml) in the root folder of your Hugo site.** Feel free to change it.
+
 ## Configuration
-
-Copy the `config.toml` file from the `exampleSite` directory to your site directory and change it.
-
-### More Configuration
 
 - **favicon.ico:** Just put your favicon.ico under the `/static` directory if you want to change the default favicon.ico.
 
 - **Front matter:** Copy the `default.md` file from the `archetypes` directory to your `archetypes`.
 
-- **Language:** Language files are under `/themes/even/data/even/` directory. Create a new directory `even` under your `data` directory and copy the `default.toml` to your `/data/even/`, and then you can change it if you want.
+- **Language:** Language files are under [`/themes/even/data/even/`](https://github.com/olOwOlo/hugo-theme-even/tree/master/data/even) directory. Create a new directory `even` under your `data` directory and copy the `default.toml` to your `/data/even/`, and then you can change it if you want.
 
 - **Theme color:** Default | Mint Green | Cobalt Blue | Hot Pink | Dark Violet 
 
-    You can config it by change the `$theme-color-config` value in `/src/css/_variable.scss`.
+    You can config it by changing the `$theme-color-config` value in `/src/css/_variable.scss`.
     
 ### Build
 
