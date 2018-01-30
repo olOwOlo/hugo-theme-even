@@ -6,7 +6,11 @@
       <a href="{{ $path | safeURL }}" class="iconfont icon-{{ $realName }}" title="{{ $realName }}"></a>
     {{- end }}
   {{- end }}
-  <a href="{{ .Site.RSSLink }}" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+  {{ if .Site.LanguagePrefix -}}
+    <a href="{{ .Site.LanguagePrefix | absURL }}/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+  {{- else -}}
+    <a href="{{ .Site.RSSLink }}" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+  {{- end }}
 </div>
 
 <div class="copyright">

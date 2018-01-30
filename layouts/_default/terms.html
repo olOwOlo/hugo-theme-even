@@ -16,7 +16,7 @@
       </div>
       <div class="categories-tags">
         {{ range $key, $value := $terms }}
-          <a class="category-link" href="{{ $name | urlize | relURL }}/{{ $value.Term | urlize }}/">
+          <a class="category-link" href="{{ $name | relLangURL }}/{{ $value.Term | urlize }}/">
             {{ $value.Term }}
             <span class="category-count">{{ len $value.Pages }}</span>
           </a>
@@ -34,7 +34,7 @@
       </div>
       <div class="tag-cloud-tags">
         {{ range $key, $value := $terms }}
-          <a href="{{ $name | urlize | relURL }}/{{ $value.Term | urlize }}/">
+          <a href="{{ $name | relLangURL }}/{{ $value.Term | urlize }}/">
             {{ $value.Term }}
             <span class="tag-count">{{ len $value.Pages }}</span>
           </a>

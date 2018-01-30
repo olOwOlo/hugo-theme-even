@@ -10,7 +10,7 @@
         {{ with .Params.categories -}}
           <div class="post-category">
             {{ range . }}
-              <a href="{{ "categories" | relURL }}/{{ . | urlize }}/"> {{ . }} </a>
+              <a href="{{ "categories" | relLangURL }}/{{ . | urlize }}/"> {{ . }} </a>
             {{ end }}
           </div>
         {{- end }}
@@ -43,7 +43,7 @@
       {{ with .Params.tags -}}
         <div class="post-tags">
           {{ range . }}
-          <a href="{{ "tags" | relURL }}/{{ . | urlize }}/">{{ . }}</a>
+          <a href="{{ "tags" | relLangURL }}/{{ . | urlize }}/">{{ . }}</a>
           {{ end }}
         </div>
       {{- end }}
