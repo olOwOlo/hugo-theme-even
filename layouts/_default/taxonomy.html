@@ -30,16 +30,15 @@
 </section>
 <!-- pagination -->
 <nav class="pagination">
-  {{- $lang := .Site.Data.even.default -}}
   {{ with $paginator.Prev }}
     <a class="prev" href="{{ .URL }}">
       <i class="iconfont icon-left"></i>
-      <span class="prev-text">{{ $lang.posts.prev }}</span>
+      <span class="prev-text">{{ T "prevPage" }}</span>
     </a>
   {{- end }}
   {{ with $paginator.Next }}
     <a class="next" href="{{ .URL }}">
-      <span class="next-text">{{ $lang.posts.next }}</span>
+      <span class="next-text">{{ T "nextPage" }}</span>
       <i class="iconfont icon-right"></i>
     </a>
   {{- end }}

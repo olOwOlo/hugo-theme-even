@@ -1,7 +1,6 @@
-{{ define "title" }}{{ index .Site.Data.even.default .Data.Plural }} - {{ .Site.Title }}{{ end }}
+{{ define "title" }}{{ T .Data.Plural }} - {{ .Site.Title }}{{ end }}
 
 {{ define "content" }}
-  {{ $lang := .Site.Data.even.default -}}
   {{ $name := .Data.Plural -}}
   {{ $terms := .Data.Terms.ByCount -}}
   {{ $length := len $terms -}}
@@ -9,9 +8,9 @@
     <div class="categories">
       <div class="categories-title">
         {{ if eq $length 0 }}
-          {{ $lang.counter.categories.zero }}
+          {{ T "zeroCategoryCounter" }}
         {{ else }}
-          {{ printf $lang.counter.categories.other $length }}
+          {{ T "categoryCounter" $length }}
         {{ end }}
       </div>
       <div class="categories-tags">
@@ -26,10 +25,10 @@
   {{ else if eq $name "tags" }}
     <div class="tag-cloud">
       <div class="tag-cloud-title">
-          {{ if eq $length 0 }}
-          {{ $lang.counter.tagcloud.zero }}
+        {{ if eq $length 0 }}
+          {{ T "zeroTagCounter" }}
         {{ else }}
-          {{ printf $lang.counter.tagcloud.other $length}}
+          {{ T "tagCounter" $length }}
         {{ end }}
       </div>
       <div class="tag-cloud-tags">

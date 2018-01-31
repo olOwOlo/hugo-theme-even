@@ -1,4 +1,3 @@
-{{ $lang := .Site.Data.even.default -}}
 <div class="social-links">
   {{- range $name, $path := .Site.Params.social }}
     {{- if $path }}
@@ -15,11 +14,11 @@
 
 <div class="copyright">
   <span class="power-by">
-    {{ (printf $lang.footer.powered `<a class="hexo-link" href="https://gohugo.io">Hugo</a>`) | safeHTML }}
+    {{ (printf (T "powered") `<a class="hexo-link" href="https://gohugo.io">Hugo</a>`) | safeHTML }}
   </span>
   <span class="division">|</span>
   <span class="theme-info">
-    {{ $lang.footer.theme }} - 
+    {{ T "theme" }} - 
     <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
   </span>
 
@@ -28,12 +27,12 @@
     {{ $spinner := "img/spinner.svg" | relURL -}}
     {{ if and .Site.Params.busuanzi.enable .Site.Params.busuanzi.sitePV -}}
     {{ $valueSpan := printf `<span id="busuanzi_value_site_pv"><img src="%s" alt="spinner.svg"/></span>` $spinner -}}
-    <span id="busuanzi_container_site_pv"> {{ printf $lang.traffic.sitePV $valueSpan | safeHTML }} </span>
+    <span id="busuanzi_container_site_pv"> {{ printf (T "sitePV") $valueSpan | safeHTML }} </span>
     {{ if .Site.Params.busuanzi.siteUV }}<span class="division">|</span>{{ end }}
     {{- end }}
     {{ if and .Site.Params.busuanzi.enable .Site.Params.busuanzi.siteUV -}}
     {{ $valueSpan := printf `<span id="busuanzi_value_site_uv"><img src="%s" alt="spinner.svg"/></span>` $spinner -}}
-    <span id="busuanzi_container_site_uv"> {{ printf $lang.traffic.siteUV $valueSpan | safeHTML }} </span>
+    <span id="busuanzi_container_site_uv"> {{ printf (T "siteUV") $valueSpan | safeHTML }} </span>
     {{- end }}
   </div>
   {{- end }}

@@ -1,0 +1,96 @@
+# ===== title =====
+archive:
+  other: "Archive"
+
+tags:
+  other: "Tags"
+
+categories:
+  other: "Categories"
+
+# ===== footer =====
+powered:
+  other: "Powered by %s"
+
+theme:
+  other: "Theme"
+
+siteUV:
+  other: "site uv: %s"
+
+sitePV:
+  other: "site pv: %s"
+
+pagePV:
+  other: "%s times read"
+
+# ===== post =====
+prevPage:
+  other: "Prev"
+
+nextPage:
+  other: "Next"
+
+prevPost:
+  other: "Prev"
+  
+nextPost:
+  other: "Next"
+  
+toc:
+  other: "Contents"
+
+readMore:
+  other: "Read more.."
+
+reward:
+  other: "Reward"
+
+rewardAlipay:
+  other: "alipay"
+
+rewardWechat:
+  other: "wechat"
+
+wordCount:
+  one: "{{ .Count }} word"
+  other: "{{ .Count }} words"
+
+readingTime:
+  one: "{{ .Count }} min read"
+  other: "{{ .Count }} mins read"
+
+# ===== content license =====
+author:
+  other: "Author"
+
+lastMod:
+  other: "LastMod"
+
+markdown:
+  other: "Markdown"
+
+seeMarkDown:
+  other: "The Markdown version »"
+
+license:
+  other: "License"
+
+# ===== counter =====
+archiveCounter:
+  one: "{{ .Count }} Post In Total"
+  other: "{{ .Count }} Posts In Total"
+
+tagCounter:
+  one: "{{ .Count }} Tag In Total"
+  other: "{{ .Count }} Tags In Total"
+
+zeroTagCounter:
+  other: "No tags"
+
+categoryCounter:
+  one: "{{ .Count }} Category In Total"
+  other: "{{ .Count }} Categories In Total"
+
+zeroCategoryCounter:
+  other: "No categories"

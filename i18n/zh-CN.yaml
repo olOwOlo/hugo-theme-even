@@ -1,0 +1,96 @@
+# ===== title =====
+archive:
+  other: "归档"
+
+tags:
+  other: "标签"
+
+categories:
+  other: "分类"
+
+# ===== footer =====
+powered:
+  other: "由 %s 强力驱动"
+
+theme:
+  other: "主题"
+
+siteUV:
+  other: "本站总访客数 %s 人"
+
+sitePV:
+  other: "本站总访问量 %s 次"
+
+pagePV:
+  other: "%s 次阅读"
+
+# ===== post =====
+prevPage:
+  other: "上一页"
+
+nextPage:
+  other: "下一页"
+
+prevPost:
+  other: "上一篇"
+  
+nextPost:
+  other: "下一篇"
+  
+toc:
+  other: "文章目录"
+
+readMore:
+  other: "阅读更多"
+
+reward:
+  other: "赞赏支持"
+
+rewardAlipay:
+  other: "支付宝打赏"
+
+rewardWechat:
+  other: "微信打赏"
+
+wordCount:
+  one: "约 {{ .Count }} 字"
+  other: "约 {{ .Count }} 字"
+
+readingTime:
+  one: "预计阅读 {{ .Count }} 分钟"
+  other: "预计阅读 {{ .Count }} 分钟"
+
+# ===== content license =====
+author:
+  other: "文章作者"
+
+lastMod:
+  other: "上次更新"
+
+markdown:
+  other: "原始文档"
+
+seeMarkDown:
+  other: "查看本文 Markdown 版本 »"
+
+license:
+  other: "许可协议"
+
+# ===== counter =====
+archiveCounter:
+  one: "共计 {{ .Count }} 篇文章"
+  other: "共计 {{ .Count }} 篇文章"
+
+tagCounter:
+  one: "共计 {{ .Count }} 个标签"
+  other: "共计 {{ .Count }} 个标签"
+
+zeroTagCounter:
+  other: "暂无标签"
+
+categoryCounter:
+  one: "共计 {{ .Count }} 个分类"
+  other: "共计 {{ .Count }} 个分类"
+
+zeroCategoryCounter:
+  other: "暂无分类"
