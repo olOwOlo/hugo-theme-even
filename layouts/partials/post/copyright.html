@@ -1,4 +1,4 @@
-{{ if or .Params.contentCopyright (and .Site.Params.contentCopyright (ne .Params.contentCopyright false)) }}
+{{ if or .Params.postMetaInFooter (and .Site.Params.postMetaInFooter (ne .Params.postMetaInFooter false)) -}}
 <div class="post-copyright">
   <p class="copyright-item">
     <span class="item-title">{{ T "author" }}</span>
@@ -16,6 +16,7 @@
     </p>
     {{- end }}
   {{- end }}
+  {{ if or .Params.contentCopyright (and .Site.Params.contentCopyright (ne .Params.contentCopyright false)) -}}
   <p class="copyright-item">
     <span class="item-title">{{ T "license" }}</span>
     <span class="item-content">
@@ -26,5 +27,6 @@
     {{- end -}}
     </span>
   </p>
+  {{- end }}
 </div>
 {{- end }}
