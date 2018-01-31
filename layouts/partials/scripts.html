@@ -1,10 +1,6 @@
 <!-- js -->
 <script src="{{ "lib/highlight/highlight.pack.js?v=20171001" | relURL }}"></script>
-{{ if .Site.Params.bootcdn -}}
-  <script type="text/javascript" src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js" crossorigin="anonymous"></script>
-  <script type="text/javascript" src="https://cdn.bootcss.com/slideout/1.0.1/slideout.min.js" crossorigin="anonymous"></script>
-  {{ if .Site.Params.fancybox }}<script type="text/javascript" src="https://cdn.bootcss.com/fancybox/3.1.20/jquery.fancybox.min.js" crossorigin="anonymous"></script>{{ end }}
-{{- else if .Site.Params.publicCDN.enable -}}
+{{- if .Site.Params.publicCDN.enable }}
   {{ .Site.Params.publicCDN.jquery | safeHTML }}
   {{ .Site.Params.publicCDN.slideout | safeHTML }}
   {{ if .Site.Params.fancybox }}{{ .Site.Params.publicCDN.fancyboxJs | safeHTML }}{{ end }}
