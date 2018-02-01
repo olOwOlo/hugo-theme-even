@@ -1,6 +1,6 @@
 baseURL = "http://localhost:1313/"
 languageCode = "en"
-defaultContentLanguage = "en"
+defaultContentLanguage = "en"                             # en / zh-cn / ... (This field determines which i18n file to use)
 title = "Even - A super concise theme for Hugo"
 enableRobotsTXT = true
 enableEmoji = true
