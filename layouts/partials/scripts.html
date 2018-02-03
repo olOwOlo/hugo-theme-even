@@ -60,3 +60,8 @@
   })();
 </script>
 {{- end }}
+
+<!-- custom js -->
+{{ range .Site.Params.customJS }}
+<script src="{{ "/js/" | relURL }}{{ . }}"></script>
+{{ end }}
