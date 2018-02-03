@@ -69,7 +69,7 @@
 {{- end }}
 
 <!-- custom css -->
-{{ range .Site.Params.custom_css }}
+{{ range .Site.Params.customCSS }}
 <link rel="stylesheet" href="{{ "/css/" | relURL }}{{ . }}">
 {{ end }}
 
