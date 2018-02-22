@@ -1,6 +1,6 @@
 {
   "name": "even-src",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "description": "even source file",
   "main": "index.js",
   "scripts": {
