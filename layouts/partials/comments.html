@@ -51,4 +51,23 @@
   <noscript>Please enable JavaScript to view the comments powered by <a href="https://livere.com/">LiveRe.</a></noscript>
   </div>
   {{- end }}
+  
+  <!-- gitment -->
+  {{- if .Site.Params.gitmentOwner -}}
+  <div id="comments"></div>
+  <script type="text/javascript" src="{{ .Site.BaseURL }}js/gitment.js"></script>
+  <script type="text/javascript">
+    const gitment = new Gitment({
+    id: '{{ .Date }}',
+    owner: '{{ .Site.Params.gitmentOwner }}',
+    repo: '{{ .Site.Params.gitmentRepo }}',
+    oauth: {
+      client_id: '{{ .Site.Params.gitmentCID }}',
+      client_secret: '{{ .Site.Params.gitmentCSecret }}',
+    },
+  })
+  gitment.render('comments')
+  </script>
+  {{- end }}
+
 {{- end }}

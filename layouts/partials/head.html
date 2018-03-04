@@ -60,6 +60,11 @@
 <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 {{- end }}
 
+<!-- gitment -->
+{{ if and .Site.Params.gitmentOwner (ne .IsHome true) }}
+<link rel="stylesheet" href="{{ .Site.BaseURL }}css/gitment.css">
+{{ end }}
+
 <!-- Styles -->
 <link href="{{ "dist/even.min.css?v=3.0.1" | relURL }}" rel="stylesheet">
 {{ if .Site.Params.publicCDN.enable -}}

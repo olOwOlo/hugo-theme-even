@@ -81,6 +81,12 @@ copyright = ""            # default: author.name ↓        # 默认为下面配
   baidu_verification = ""   # Baidu Verification
   google_verification = ""  # Google_Verification         # 谷歌
 
+  # gitment 评论系统
+  gitmentOwner = ""         # git username 
+  gitmentRepo = ""          # git repo name
+  gitmentCID = ""           # Client ID
+  gitmentCSecret = ""       # Client Secret
+
   # Link custom CSS and JS assets
   #   (relative to /static/css and /static/js respectively)
   customCSS = []
