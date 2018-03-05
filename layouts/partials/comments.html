@@ -53,21 +53,23 @@
   {{- end }}
   
   <!-- gitment -->
-  {{- if .Site.Params.gitmentOwner -}}
-  <div id="comments"></div>
-  <script type="text/javascript" src="{{ .Site.BaseURL }}js/gitment.js"></script>
+  {{- if .Site.Params.gitment.enable -}}
+  <div id="comments-gitment">
+  <script type="text/javascript" src="{{ .Site.BaseURL }}lib/gitment/gitment.js" | relURL ></script>
   <script type="text/javascript">
-    const gitment = new Gitment({
-    id: '{{ .Date }}',
-    owner: '{{ .Site.Params.gitmentOwner }}',
-    repo: '{{ .Site.Params.gitmentRepo }}',
+  const gitment = new Gitment({
+    id: '{{ .Title }}',  // If an error occurred, try to replace the field with '{{ .Date }}'.
+    owner: '{{ .Site.Params.gitment.gitmentOwner }}',
+    repo: '{{ .Site.Params.gitment.gitmentRepo }}',
     oauth: {
-      client_id: '{{ .Site.Params.gitmentCID }}',
-      client_secret: '{{ .Site.Params.gitmentCSecret }}',
+      client_id: '{{ .Site.Params.gitment.gitmentCID }}',
+      client_secret: '{{ .Site.Params.gitment.gitmentCSecret }}',
     },
   })
-  gitment.render('comments')
+  gitment.render('comments-gitment')
   </script>
+  <noscript>Please enable JavaScript to view the <a href="https://github.com/imsun/gitment">comments powered by gitment.</a></noscript>
+  </div>
   {{- end }}
 
 {{- end }}
