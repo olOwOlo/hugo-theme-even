@@ -15,7 +15,7 @@
     })();
     </script>
     <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-  {{- end }}
+  {{- end -}}
 
   <!-- changyan -->
   {{- if and .Site.Params.changyanAppid .Site.Params.changyanAppkey -}}
@@ -30,7 +30,7 @@
       if (width < 960) {window.document.write('<script id="changyan_mobile_js" charset="utf-8" type="text/javascript" src="https://changyan.sohu.com/upload/mobile/wap-js/changyan_mobile.js?client_id=' + appid + '&conf=' + conf + '"><\/script>'); } else { var loadJs=function(d,a){var c=document.getElementsByTagName("head")[0]||document.head||document.documentElement;var b=document.createElement("script");b.setAttribute("type","text/javascript");b.setAttribute("charset","UTF-8");b.setAttribute("src",d);if(typeof a==="function"){if(window.attachEvent){b.onreadystatechange=function(){var e=b.readyState;if(e==="loaded"||e==="complete"){b.onreadystatechange=null;a()}}}else{b.onload=a}}c.appendChild(b)};loadJs("https://changyan.sohu.com/upload/changyan.js",function(){window.changyan.api.config({appid:appid,conf:conf})}); }
     })();
     </script>
-  {{- end }}
+  {{- end -}}
 
   <!-- LiveRe -->
   {{- if .Site.Params.livereUID -}}
@@ -50,26 +50,33 @@
   </script>
   <noscript>Please enable JavaScript to view the comments powered by <a href="https://livere.com/">LiveRe.</a></noscript>
   </div>
-  {{- end }}
-  
+  {{- end -}}
+
   <!-- gitment -->
-  {{- if .Site.Params.gitment.enable -}}
-  <div id="comments-gitment">
-  <script type="text/javascript" src="{{ .Site.BaseURL }}lib/gitment/gitment.js" | relURL ></script>
+  {{- if .Site.Params.gitment.owner -}}
+  <div id="comments-gitment"></div>
+  {{ if .Site.Params.publicCDN.enable -}}
+    {{ .Site.Params.publicCDN.gitmentCSS | safeHTML }}
+    {{ .Site.Params.publicCDN.gitmentJS | safeHTML }}
+  {{- else -}}
+    <link rel="stylesheet" href="{{ "lib/gitment/gitment-0.0.3.min.css" | relURL }}">
+    <script src="{{ "lib/gitment/gitment-0.0.3.min.js" | relURL }}"></script>
+  {{- end }}
   <script type="text/javascript">
   const gitment = new Gitment({
-    id: '{{ .Title }}',  // If an error occurred, try to replace the field with '{{ .Date }}'.
-    owner: '{{ .Site.Params.gitment.gitmentOwner }}',
-    repo: '{{ .Site.Params.gitment.gitmentRepo }}',
+    id: '{{ .URL }}',
+    title: '{{ .Title }}',
+    desc: '{{ .Summary }}',
+    owner: '{{ .Site.Params.gitment.owner }}',
+    repo: '{{ .Site.Params.gitment.repo }}',
     oauth: {
-      client_id: '{{ .Site.Params.gitment.gitmentCID }}',
-      client_secret: '{{ .Site.Params.gitment.gitmentCSecret }}',
-    },
+      client_id: '{{ .Site.Params.gitment.clientId }}',
+      client_secret: '{{ .Site.Params.gitment.clientSecret }}'
+    }
   })
   gitment.render('comments-gitment')
   </script>
   <noscript>Please enable JavaScript to view the <a href="https://github.com/imsun/gitment">comments powered by gitment.</a></noscript>
-  </div>
   {{- end }}
 
 {{- end }}
