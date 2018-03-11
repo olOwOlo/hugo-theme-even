@@ -64,8 +64,9 @@
   {{- end }}
   <script type="text/javascript">
   const gitment = new Gitment({
-    id: '{{ .Title }}',
+    id: '{{ .Date }}',
     title: '{{ .Title }}',
+    link: decodeURI(location.href),
     desc: '{{ .Summary }}',
     owner: '{{ .Site.Params.gitment.owner }}',
     repo: '{{ .Site.Params.gitment.repo }}',
