@@ -9,5 +9,7 @@ $(document).ready(function () {
   Even.fancybox()
 })
 
+Even.flowchart()
+
 hljs.initHighlighting()
 Even.highlight()

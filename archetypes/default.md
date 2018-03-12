@@ -21,6 +21,11 @@ contentCopyright: false
 reward: false
 mathjax: false
 mathjaxEnableSingleDollar: false
+
+flowchartDiagrams:
+  enable: false
+  options: ""
+
 ---
 
 <!--more-->
