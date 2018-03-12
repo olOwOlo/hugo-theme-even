@@ -1,5 +1,5 @@
 ---
-title: "中文 《长恨歌》"
+title: "[中文] 《长恨歌》"
 date: 2017-08-30T01:37:56+08:00
 lastmod: 2017-08-30T01:37:56+08:00
 draft: false
@@ -7,15 +7,8 @@ tags: ["preview", "中文", "tag-1"]
 categories: ["中文"]
 author: "Wikipedia"
 
-# You can also close(false) or open(true) something for this content.
-# P.S. comment can only be closed
-# comment: false
-# toc: false
-# autoCollapseToc: false
-# You can also define another contentCopyright. e.g. contentCopyright: "This is another copyright."
 contentCopyright: '<a rel="license noopener" href="https://en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License" target="_blank">Creative Commons Attribution-ShareAlike License</a>'
-# reward: false
-# mathjax: false
+
 ---
 
 >《长恨歌》是中国唐朝诗人白居易的一首长篇叙事诗。
@@ -29,8 +22,6 @@ contentCopyright: '<a rel="license noopener" href="https://en.wikipedia.org/wiki
 春寒赐浴华清池，温泉水滑洗凝脂。侍儿扶起娇无力，始是新承恩泽时。
 
 云鬓花颜金步摇，芙蓉帐暖度春宵。春宵苦短日高起，从此君王不早朝。
-
-<!--more-->
 
 承欢侍宴无闲暇，春从春游夜专夜。后宫佳丽三千人，三千宠爱在一身。
 
