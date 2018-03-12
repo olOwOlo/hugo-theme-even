@@ -26,6 +26,10 @@ flowchartDiagrams:
   enable: false
   options: ""
 
+sequenceDiagrams: 
+  enable: false
+  options: ""
+
 ---
 
 <!--more-->

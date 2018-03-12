@@ -224,4 +224,23 @@ Even.flowchart = function () {
   }
 }
 
+Even.sequence = function () {
+  if (!window.Diagram) return
+
+  const blocks = document.querySelectorAll('pre code.language-sequence')
+  for (let i = 0; i < blocks.length; i++) {
+    const block = blocks[i]
+    const rootElement = block.parentElement
+
+    const container = document.createElement('div')
+    const id = `js-sequence-diagrams-${i}`
+    container.id = id
+    container.className = 'align-center'
+    rootElement.parentElement.replaceChild(container, rootElement)
+
+    const diagram = Diagram.parse(block.childNodes[0].nodeValue)
+    diagram.drawSVG(id, window.sequenceDiagramsOptions ? window.sequenceDiagramsOptions : {theme: 'simple'})
+  }
+}
+
 export {Even}
