@@ -80,4 +80,22 @@
   <noscript>Please enable JavaScript to view the <a href="https://github.com/imsun/gitment">comments powered by gitment.</a></noscript>
   {{- end }}
 
+<!-- gitalk -->
+  {{- if .Site.Params.gitalk.owner -}}
+  <div id="gitalk-container"></div>
+  <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+  <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+  <script type="text/javascript">
+      var gitalk = new Gitalk({
+        clientID: '{{ .Site.Params.gitalk.clientId }}',
+        clientSecret: '{{ .Site.Params.gitalk.clientSecret }}',
+        repo: '{{ .Site.Params.gitalk.repo }}',
+        owner: '{{ .Site.Params.gitalk.owner }}',
+        admin: ['{{ .Site.Params.gitalk.owner }}'],
+        body: location.href
+      });
+      gitalk.render('gitalk-container');
+ </script>
+  {{- end }}
+
 {{- end }}
