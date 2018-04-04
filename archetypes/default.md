@@ -21,6 +21,7 @@ contentCopyright: false
 reward: false
 mathjax: false
 mathjaxEnableSingleDollar: false
+mathjaxEnableAutoNumber: false
 
 flowchartDiagrams:
   enable: false
