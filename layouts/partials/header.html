@@ -10,9 +10,27 @@
 
 <nav class="site-navbar">
   <ul id="menu" class="menu">
+    {{ $currentPage := . }}
     {{ range .Site.Menus.main -}}
-      <li class="menu-item">
-        <a class="menu-item-link" href="{{ .URL | safeURL }}">{{ .Name }}</a>
+      <li class="menu-item {{ if $currentPage.IsMenuCurrent "main" . }}active{{ end }}">
+        <a class="menu-item-link" href="{{ .URL | safeURL }}">
+          {{ if eq .Identifier "home" }}
+            <i class="menu-item-icon fa fa-fw fa-home"></i>
+          {{ end }}
+          {{ if eq .Identifier "archives" }}
+            <i class="menu-item-icon fa fa-fw fa-archive"></i>
+          {{ end }}
+          {{ if eq .Identifier "tags" }}
+            <i class="menu-item-icon fa fa-fw fa-tags"></i>
+          {{ end }}
+          {{ if eq .Identifier "categories" }}
+            <i class="menu-item-icon fa fa-fw fa-th"></i>
+          {{ end }}
+          {{ if eq .Identifier "about" }}
+            <i class="menu-item-icon fa fa-fw fa-user"></i>
+          {{ end }}
+          {{ .Name }}
+        </a>
       </li>
     {{- end }}
   </ul>

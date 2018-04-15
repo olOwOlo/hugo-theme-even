@@ -8,7 +8,6 @@ theme = "even"
 
 hasCJKLanguage = true     # has chinese/japanese/korean ? # 自动检测是否包含 中文\日文\韩文
 paginate = 5                                              # 首页每页显示的文章数
-disqusShortname = ""      # disqus_shortname
 googleAnalytics = ""      # UA-XXXXXXXX-X
 copyright = ""            # default: author.name ↓        # 默认为下面配置的author.name ↓
 
@@ -83,7 +82,7 @@ copyright = ""            # default: author.name ↓        # 默认为下面配
 
   # Link custom CSS and JS assets
   #   (relative to /static/css and /static/js respectively)
-  customCSS = []
+  customCSS = ["custom.css"]
   customJS = []
 
   [params.publicCDN]        # load these files from public cdn                          # 启用公共CDN，需自行定义
@@ -94,8 +93,6 @@ copyright = ""            # default: author.name ↓        # 默认为下面配
     fancyboxCss = '<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">'
     gitmentJS = '<script src="https://cdn.jsdelivr.net/npm/gitment@0.0.3/dist/gitment.browser.min.js" crossorigin="anonymous"></script>'
     gitmentCSS = '<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitment@0.0.3/style/default.min.css" crossorigin="anonymous">'
-    gitalkJS = '<script src="https://cdn.jsdelivr.net/npm/gitalk@1.2.2/dist/gitalk.min.js" integrity="sha256-DcjhdbufsHMHflFjZtKNFnPKOAL2ybOxGcPOR4MtnJg=" crossorigin="anonymous"></script>'
-    gitalkCSS = '<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1.2.2/dist/gitalk.css" integrity="sha256-rJVe5uyYRXdLM+Kkoj7JtN+9qI0bZTxkYTaNWODpg7U=" crossorigin="anonymous">'
 
   [params.gitment]          # Gitment is a comment system based on GitHub issues. see https://github.com/imsun/gitment
     owner = ""              # Your GitHub ID
@@ -108,6 +105,11 @@ copyright = ""            # default: author.name ↓        # 默认为下面配
     repo = ""               # The repo to store comments
     clientId = ""           # Your client ID
     clientSecret = ""       # Your client secret
+    countSign = "条评论"
+
+  [params.disqus]
+    name = "ehlxr"      # disqus_shortname
+    lazy = true         # lazy to load disqus
 
   [params.flowchartDiagrams]# see https://blog.olowolo.com/example-site/post/js-flowchart-diagrams/
     enable = false
