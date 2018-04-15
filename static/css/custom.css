@@ -43,7 +43,7 @@
 }
 
 .header .site-navbar .menu .menu-item {
-    padding: 0 5px;
+    padding: 0 8px;
 }
 
 .disqus_title {
@@ -70,4 +70,21 @@
 .gitalk-container {
     margin: 20px 0;
     border-bottom: 1px solid #e9e9e9;
+}
+
+.header .active {
+    background-color: #e1e1e1;
+    border: none;
+    border-radius: 2px;
+}
+
+.header .site-navbar .menu .menu-item {
+    -webkit-transform: none;
+    transform: none;
+}
+
+.header .site-navbar .menu .menu-item:hover{
+    background-color: #e1e1e1;
+    border: none;
+    border-radius: 2px;
 }
