@@ -23,6 +23,9 @@ mathjax: false
 mathjaxEnableSingleDollar: false
 mathjaxEnableAutoNumber: false
 
+# You unlisted posts you might want not want the header or footer to show
+hideHeaderAndFooter: false
+
 flowchartDiagrams:
   enable: false
   options: ""
