@@ -3,12 +3,23 @@
 {{- if .Site.Params.publicCDN.enable }}
   {{ .Site.Params.publicCDN.jquery | safeHTML }}
   {{ .Site.Params.publicCDN.slideout | safeHTML }}
+  {{ .Site.Params.publicCDN.timeagoJS | safeHTML }}
+  {{ .Site.Params.publicCDN.timeagoLocalesJS | safeHTML }}
   {{ if .Site.Params.fancybox }}{{ .Site.Params.publicCDN.fancyboxJs | safeHTML }}{{ end }}
 {{- else -}}
   <script type="text/javascript" src="{{ "lib/jquery/jquery-3.2.1.min.js" | relURL }}"></script>
   <script type="text/javascript" src="{{ "lib/slideout/slideout-1.0.1.min.js" | relURL }}"></script>
+  <script type="text/javascript" src="{{ "lib/timeago/timeago-4.0.0.min.js" | relURL }}"></script>
+  <script type="text/javascript" src="{{ "lib/timeago/timeago.locales-4.0.0.min.js" | relURL }}"></script>
   {{ if .Site.Params.fancybox }}<script type="text/javascript" src="{{ "lib/fancybox/jquery.fancybox-3.1.20.min.js" | relURL }}"></script>{{ end }}
 {{- end -}}
+
+<!-- timeago.JS -->
+<script>
+    // NOTE: In order to display Chinese, Hugo site config "languageCode" must be "zh_CN" (case sensitive)
+    timeago().render(document.querySelectorAll('.timeago'), {{ .Site.LanguageCode }});
+    timeago.cancel();  // stop update
+</script>
 
 <!-- flowchart -->
 {{- if and (or .Params.flowchartDiagrams.enable (and .Site.Params.flowchartDiagrams.enable (ne .Params.flowchartDiagrams.enable false))) (or .IsPage .IsHome) -}}
