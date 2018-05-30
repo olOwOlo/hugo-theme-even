@@ -3,23 +3,28 @@
 {{- if .Site.Params.publicCDN.enable }}
   {{ .Site.Params.publicCDN.jquery | safeHTML }}
   {{ .Site.Params.publicCDN.slideout | safeHTML }}
-  {{ .Site.Params.publicCDN.timeagoJS | safeHTML }}
-  {{ .Site.Params.publicCDN.timeagoLocalesJS | safeHTML }}
   {{ if .Site.Params.fancybox }}{{ .Site.Params.publicCDN.fancyboxJs | safeHTML }}{{ end }}
 {{- else -}}
   <script type="text/javascript" src="{{ "lib/jquery/jquery-3.2.1.min.js" | relURL }}"></script>
   <script type="text/javascript" src="{{ "lib/slideout/slideout-1.0.1.min.js" | relURL }}"></script>
-  <script type="text/javascript" src="{{ "lib/timeago/timeago-4.0.0.min.js" | relURL }}"></script>
-  <script type="text/javascript" src="{{ "lib/timeago/timeago.locales-4.0.0.min.js" | relURL }}"></script>
   {{ if .Site.Params.fancybox }}<script type="text/javascript" src="{{ "lib/fancybox/jquery.fancybox-3.1.20.min.js" | relURL }}"></script>{{ end }}
 {{- end -}}
 
 <!-- timeago.JS -->
-<script>
-    // NOTE: In order to display Chinese, Hugo site config "languageCode" must be "zh_CN" (case sensitive)
-    timeago().render(document.querySelectorAll('.timeago'), {{ .Site.LanguageCode }});
-    timeago.cancel();  // stop update
+{{- if and (or .Params.enableOutdatedInfoWarning (and .Site.Params.outdatedInfoWarning.enable (ne .Params.enableOutdatedInfoWarning false))) (or .IsPage .IsHome) }}
+  {{- if .Site.Params.publicCDN.enable }}
+  {{ .Site.Params.publicCDN.timeagoJS | safeHTML }}
+  {{ .Site.Params.publicCDN.timeagoLocalesJS | safeHTML }}
+  {{- else }}
+  <script type="text/javascript" src="{{ "lib/timeago/timeago-3.0.2.min.js" | relURL }}"></script>
+  <script type="text/javascript" src="{{ "lib/timeago/timeago.locales-3.0.2.min.js" | relURL }}"></script>
+  {{- end }}
+<script>  // NOTE: timeago.js uses the language code format like "zh_CN" (underscore and case sensitive)
+  var languageCode = {{ .Site.LanguageCode }}.replace(/-/g, '_').replace(/_(.*)/, function ($0, $1) {return $0.replace($1, $1.toUpperCase());});
+  timeago().render(document.querySelectorAll('.timeago'), languageCode);
+  timeago.cancel();  // stop update
 </script>
+{{- end }}
 
 <!-- flowchart -->
 {{- if and (or .Params.flowchartDiagrams.enable (and .Site.Params.flowchartDiagrams.enable (ne .Params.flowchartDiagrams.enable false))) (or .IsPage .IsHome) -}}
