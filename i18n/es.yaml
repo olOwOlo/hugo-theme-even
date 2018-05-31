@@ -60,6 +60,12 @@ readingTime:
   one: "{{ .Count }} min lectura"
   other: "{{ .Count }} mins lectura"
 
+outdatedInfoWarningBefore:
+  other: "[NOTE] Updated "
+
+outdatedInfoWarningAfter:
+  other: ". This article may have outdated content or subject matter."
+
 # ===== content license =====
 author:
   other: "Autor"

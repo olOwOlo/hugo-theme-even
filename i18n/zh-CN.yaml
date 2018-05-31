@@ -33,10 +33,10 @@ nextPage:
 
 prevPost:
   other: "上一篇"
-  
+
 nextPost:
   other: "下一篇"
-  
+
 toc:
   other: "文章目录"
 
@@ -59,6 +59,12 @@ wordCount:
 readingTime:
   one: "预计阅读 {{ .Count }} 分钟"
   other: "预计阅读 {{ .Count }} 分钟"
+
+outdatedInfoWarningBefore:
+  other: "【注意】最后更新于 "
+
+outdatedInfoWarningAfter:
+  other: "，文中内容可能已过时，请谨慎使用。"
 
 # ===== content license =====
 author:

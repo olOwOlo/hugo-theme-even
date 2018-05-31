@@ -1,0 +1,28 @@
+{{- if or .Params.enableOutdatedInfoWarning (and .Site.Params.outdatedInfoWarning.enable (ne .Params.enableOutdatedInfoWarning false)) }}
+  {{- $daysAgo := div (sub now.Unix .Lastmod.Unix) 86400 }}
+  {{- $hintThreshold := .Site.Params.outdatedInfoWarning.hint | default 30 }}
+  {{- $warnThreshold := .Site.Params.outdatedInfoWarning.warn | default 180 }}
+
+  {{- $updateTime := .Lastmod }}
+  {{- if .GitInfo }}
+    {{- if lt .GitInfo.AuthorDate.Unix .Lastmod.Unix }}
+      {{- $updateTime := .GitInfo.AuthorDate }}
+    {{- end }}
+  {{- end -}}
+
+  {{- if gt $daysAgo $hintThreshold }}
+  <div class="post-outdated">
+    {{- if gt $daysAgo $warnThreshold }}
+    <div class="warn">
+    {{- else }}
+    <div class="hint">
+    {{- end }}
+      <p>{{ T "outdatedInfoWarningBefore" -}}
+        <span class="timeago" datetime="{{ dateFormat "2006-01-02T15:04:05" $updateTime }}" title="{{ dateFormat "January 2, 2006" $updateTime }}">
+        {{- dateFormat "January 2, 2006" $updateTime -}}
+        </span>{{ T "outdatedInfoWarningAfter" -}}
+      </p>
+    </div>
+  </div>
+  {{- end -}}
+{{- end -}}
