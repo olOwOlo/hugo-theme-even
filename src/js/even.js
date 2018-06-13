@@ -144,7 +144,8 @@ Even.highlight = function () {
   for (let i = 0; i < blocks.length; i++) {
     const block = blocks[i]
     const rootElement = block.parentElement
-    const lineCodes = block.innerHTML.split(/\n/).slice(0, -1)
+    const lineCodes = block.innerHTML.split(/\n/)
+    if (lineCodes[lineCodes.length - 1] === '') lineCodes.pop()
     const lineLength = lineCodes.length
 
     let codeLineHtml = ''
@@ -182,6 +183,7 @@ Even.toc = function () {
 }
 
 Even._refactorToc = function (toc) {
+  // when headings do not start with `h1`
   const oldTocList = toc.children[0]
   let newTocList = oldTocList
   let temp
@@ -191,15 +193,53 @@ Even._refactorToc = function (toc) {
 }
 
 Even._linkToc = function () {
-  const links = document.querySelectorAll('#TableOfContents a')
+  const links = document.querySelectorAll('#TableOfContents a:first-child')
   for (let i = 0; i < links.length; i++) links[i].className += ' toc-link'
 
   for (let num = 1; num <= 6; num++) {
     const headers = document.querySelectorAll('.post-content>h' + num)
     for (let i = 0; i < headers.length; i++) {
       const header = headers[i]
-      header.innerHTML = `<a href="#${header.id}" class="headerlink" title="${header.innerHTML}"></a>${header.innerHTML}`
+      header.innerHTML = `<a href="#${header.id}" class="headerlink"></a>${header.innerHTML}`
     }
+  }
+}
+
+Even.flowchart = function () {
+  if (!window.flowchart) return
+
+  const blocks = document.querySelectorAll('pre code.language-flowchart')
+  for (let i = 0; i < blocks.length; i++) {
+    const block = blocks[i]
+    const rootElement = block.parentElement
+
+    const container = document.createElement('div')
+    const id = `js-flowchart-diagrams-${i}`
+    container.id = id
+    container.className = 'align-center'
+    rootElement.parentElement.replaceChild(container, rootElement)
+
+    const diagram = flowchart.parse(block.childNodes[0].nodeValue)
+    diagram.drawSVG(id, window.flowchartDiagramsOptions ? window.flowchartDiagramsOptions : {})
+  }
+}
+
+Even.sequence = function () {
+  if (!window.Diagram) return
+
+  const blocks = document.querySelectorAll('pre code.language-sequence')
+  for (let i = 0; i < blocks.length; i++) {
+    const block = blocks[i]
+    const rootElement = block.parentElement
+
+    const container = document.createElement('div')
+    const id = `js-sequence-diagrams-${i}`
+    container.id = id
+    container.className = 'align-center'
+    rootElement.parentElement.replaceChild(container, rootElement)
+
+    const diagram = Diagram.parse(block.childNodes[0].nodeValue)
+    diagram.drawSVG(id, window.sequenceDiagramsOptions ? window.sequenceDiagramsOptions : {theme: 'simple'})
   }
 }
 

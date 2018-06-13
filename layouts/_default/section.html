@@ -1,18 +1,12 @@
-{{ define "title" }}{{ .Site.Data.even.default.archive }} - {{ .Site.Title }}{{ end }}
+{{ define "title" }}{{ T "archive" }} - {{ .Site.Title }}{{ end }}
 
 {{ define "content"}}
-{{- $lang := .Site.Data.even.default }}
-{{- $paginator := .Paginate (where .Data.Pages.ByDate.Reverse "Type" "post") (index .Site.Params "archive-paginate") }}
+{{- $paginator := .Paginate .Data.Pages.ByDate.Reverse .Site.Params.archivePaginate }}
 <section id="archive" class="archive">
-  {{- if not $paginator.HasPrev }}
+  {{- if and (not $paginator.HasPrev) .Site.Params.showArchiveCount }}
     <div class="archive-title">
       <span class="archive-post-counter">
-        {{- $length := len .Data.Pages }}
-        {{- if eq $length 0 }}
-          {{ $lang.counter.archives.zero }}
-        {{ else }}
-          {{ printf $lang.counter.archives.other $length }}
-        {{ end -}}
+        {{ T "archiveCounter" (len .Data.Pages) }}
       </span>
     </div>
   {{- end -}}
@@ -43,12 +37,12 @@
   {{ with $paginator.Prev -}}
     <a class="prev" href="{{ .URL }}">
       <i class="iconfont icon-left"></i>
-      <span class="prev-text">{{ $lang.posts.prev }}</span>
+      <span class="prev-text">{{ T "prevPage" }}</span>
     </a>
   {{- end }}
   {{ with $paginator.Next -}}
     <a class="next" href="{{ .URL }}">
-      <span class="next-text">{{ $lang.posts.next }}</span>
+      <span class="next-text">{{ T "nextPage" }}</span>
       <i class="iconfont icon-right"></i>
     </a>
   {{- end }}

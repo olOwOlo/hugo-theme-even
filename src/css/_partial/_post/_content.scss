@@ -105,6 +105,14 @@
       text-align: center;
     }
 
+    &.right {
+      text-align: right;
+    }
+
+    &.left {
+      text-align: left;
+    }
+
     figcaption h4 {
       color: #b5b5b5;
       font-size: 0.9rem;
@@ -114,5 +122,22 @@
   .task-list {
     list-style: none;
     padding-left: 1.5rem;
+  }
+
+  .align-center {
+    text-align: center;
+  }
+
+  .align-right {
+    text-align: right;
+  }
+
+  .align-left {
+    text-align: left;
+  }
+
+  .MJXc-display {
+    overflow-x: auto;
+    overflow-y: hidden;
   }
 }
