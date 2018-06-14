@@ -18,6 +18,8 @@ $ git clone https://github.com/olOwOlo/hugo-theme-even themes/even
 
 **Important:** Take a look inside the [`exampleSite`](https://github.com/olOwOlo/hugo-theme-even/tree/master/exampleSite) folder of this theme. You'll find a file called [`config.toml`](https://github.com/olOwOlo/hugo-theme-even/blob/master/exampleSite/config.toml). **To use it, copy the [`config.toml`](https://github.com/olOwOlo/hugo-theme-even/blob/master/exampleSite/config.toml) in the root folder of your Hugo site.** Feel free to change it.
 
+**NOTE:** For this theme, you should use **post** instead of **posts**, namely `hugo new post/some-content.md`.
+
 ## Language Support
 
 > Translations are collected from the [`themes/even/i18n/`](https://github.com/olOwOlo/hugo-theme-even/tree/master/i18n) folder (built into the theme), as well as translations present in `i18n/` at the root of your project. The translations will be merged and take precedence over what is in the theme folder.
