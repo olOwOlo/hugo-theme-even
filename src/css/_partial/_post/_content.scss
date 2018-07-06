@@ -119,6 +119,13 @@
     }
   }
 
+  hr {
+    margin: 1rem 0;
+    position: relative;
+    border-top: 2px dashed $theme-color;
+    border-bottom: none;
+  }
+
   .task-list {
     list-style: none;
     padding-left: 1.5rem;
