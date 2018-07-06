@@ -35,8 +35,12 @@
   window.flowchartDiagramsOptions = {{ .Site.Params.flowchartDiagrams.options | safeJS }};
   {{- end -}}
 </script>
-<script src="https://cdn.jsdelivr.net/npm/raphael@2.2.7/raphael.min.js" integrity="sha256-67By+NpOtm9ka1R6xpUefeGOY8kWWHHRAKlvaTJ7ONI=" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/flowchart.js@1.8.0/release/flowchart.min.js" integrity="sha256-zNGWjubXoY6rb5MnmpBNefO0RgoVYfle9p0tvOQM+6k=" crossorigin="anonymous"></script>
+{{- if .Site.Params.publicCDN.enable -}}
+  {{ .Site.Params.publicCDN.flowchartDiagrams | safeHTML }}
+{{- else -}}
+<script src="{{ "lib/flowchartDiagrams/raphael-2.2.7.min.js" | relURL }}" integrity="sha256-67By+NpOtm9ka1R6xpUefeGOY8kWWHHRAKlvaTJ7ONI=" crossorigin="anonymous"></script>
+<script src="{{ "lib/flowchartDiagrams/flowchart-1.8.0.min.js" | relURL }}" integrity="sha256-zNGWjubXoY6rb5MnmpBNefO0RgoVYfle9p0tvOQM+6k=" crossorigin="anonymous"></script>
+{{- end -}}
 {{- end -}}
 
 <!-- js-sequence-diagrams -->
@@ -48,11 +52,16 @@
   window.sequenceDiagramsOptions = {{ .Site.Params.sequenceDiagrams.options | safeJS }};
   {{- end -}}
 </script>
-<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js" integrity="sha256-4O4pS1SH31ZqrSO2A/2QJTVjTPqVe+jnYgOWUVr7EEc=" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/snapsvg@0.5.1/dist/snap.svg-min.js" integrity="sha256-oI+elz+sIm+jpn8F/qEspKoKveTc5uKeFHNNVexe6d8=" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/underscore@1.8.3/underscore-min.js" integrity="sha256-obZACiHd7gkOk9iIL/pimWMTJ4W/pBsKu+oZnSeBIek=" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/gh/bramp/js-sequence-diagrams@2.0.1/dist/sequence-diagram-min.js" integrity="sha384-8748Vn52gHJYJI0XEuPB2QlPVNUkJlJn9tHqKec6J3q2r9l8fvRxrgn/E5ZHV0sP" crossorigin="anonymous"></script>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/bramp/js-sequence-diagrams@2.0.1/dist/sequence-diagram-min.css" integrity="sha384-6QbLKJMz5dS3adWSeINZe74uSydBGFbnzaAYmp+tKyq60S7H2p6V7g1TysM5lAaF" crossorigin="anonymous">
+{{- if .Site.Params.publicCDN.enable -}}
+  {{ .Site.Params.publicCDN.sequenceDiagramsJS | safeHTML }}
+  {{ .Site.Params.publicCDN.sequenceDiagramsCSS | safeHTML }}
+{{- else -}}
+<script src="{{ "lib/js-sequence-diagrams/webfontloader-1.6.28.js" | relURL }}" integrity="sha256-4O4pS1SH31ZqrSO2A/2QJTVjTPqVe+jnYgOWUVr7EEc=" crossorigin="anonymous"></script>
+<script src="{{ "lib/js-sequence-diagrams/snap.svg-0.5.1.min.js" | relURL }}" integrity="sha256-oI+elz+sIm+jpn8F/qEspKoKveTc5uKeFHNNVexe6d8=" crossorigin="anonymous"></script>
+<script src="{{ "lib/js-sequence-diagrams/underscore-1.8.3.min.js" | relURL }}" integrity="sha256-obZACiHd7gkOk9iIL/pimWMTJ4W/pBsKu+oZnSeBIek=" crossorigin="anonymous"></script>
+<script src="{{ "lib/js-sequence-diagrams/sequence-diagram-2.0.1.min.js" | relURL }}" integrity="sha384-8748Vn52gHJYJI0XEuPB2QlPVNUkJlJn9tHqKec6J3q2r9l8fvRxrgn/E5ZHV0sP" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="{{ "lib/js-sequence-diagrams/sequence-diagram-2.0.1.min.css" | relURL }}" integrity="sha384-6QbLKJMz5dS3adWSeINZe74uSydBGFbnzaAYmp+tKyq60S7H2p6V7g1TysM5lAaF" crossorigin="anonymous">
+{{- end -}}
 {{- end }}
 <script type="text/javascript" src="{{ "dist/even.min.js?v=3.2.0" | relURL }}"></script>
 
