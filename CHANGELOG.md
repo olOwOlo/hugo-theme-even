@@ -1,3 +1,20 @@
+<a name="4.0.0"></a>
+# 4.0.0 (WIP)
+
+### BREAKING CHANGES
+
+- Rename params
+
+  | origin   | now      |
+  | :------: |:--------:|
+  | fancyboxJ**s** | fancyboxJ**S** |
+  | fancyboxC**ss**| fancyboxC**SS**|
+  | baidu_push | baidu**P**ush |
+  | baidu_analytics | baidu**A**nalytics |
+  | baidu_verification | baidu**V**erification |
+  | google_verification | google**V**erification |
+
+
 <a name="3.2.0"></a>
 # [3.2.0](https://github.com/olOwOlo/hugo-theme-even/compare/v3.1.1...v3.2.0) (2018-07-06)
 

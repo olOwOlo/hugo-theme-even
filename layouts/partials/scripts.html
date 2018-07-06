@@ -3,7 +3,7 @@
 {{- if .Site.Params.publicCDN.enable }}
   {{ .Site.Params.publicCDN.jquery | safeHTML }}
   {{ .Site.Params.publicCDN.slideout | safeHTML }}
-  {{ if .Site.Params.fancybox }}{{ .Site.Params.publicCDN.fancyboxJs | safeHTML }}{{ end }}
+  {{ if .Site.Params.fancybox }}{{ .Site.Params.publicCDN.fancyboxJS | safeHTML }}{{ end }}
 {{- else -}}
   <script type="text/javascript" src="{{ "lib/jquery/jquery-3.2.1.min.js" | relURL }}"></script>
   <script type="text/javascript" src="{{ "lib/slideout/slideout-1.0.1.min.js" | relURL }}"></script>
@@ -90,7 +90,7 @@
   {{ template "_internal/google_analytics_async.html" . }}
 {{- end -}}
 
-{{- with .Site.Params.baidu_analytics -}}
+{{- with .Site.Params.baiduAnalytics -}}
 <script id="baidu_analytics">
   var _hmt = _hmt || [];
   (function() {
@@ -103,8 +103,8 @@
 </script>
 {{- end }}
 
-<!-- baidu_push -->
-{{- if .Site.Params.baidu_push -}}
+<!-- baidu push -->
+{{- if .Site.Params.baiduPush -}}
 <script id="baidu_push">
   (function(){
     if (window.location.hostname === 'localhost') return;
@@ -123,6 +123,6 @@
 {{- end }}
 
 <!-- custom js -->
-{{ range .Site.Params.customJS }}
+{{ range .Site.Params.customJS -}}
 <script src="{{ "/js/" | relURL }}{{ . }}"></script>
 {{ end }}
