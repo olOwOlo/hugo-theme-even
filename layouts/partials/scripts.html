@@ -78,7 +78,11 @@
       messageStyle: 'none'
     };
   </script>
-  <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+  {{ if .Site.Params.mathjaxUseLocalFiles -}}
+    <script type="text/javascript" async src="{{ "lib/mathjax/MathJax.js?config=TeX-MML-AM_CHTML" | relURL }}"></script>
+  {{- else -}}
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+  {{- end }}
 {{- end }}
 
 <!-- Analytics -->
