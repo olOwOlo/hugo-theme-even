@@ -98,3 +98,69 @@ object HelloWorld with Application {
 ```python
 print("Hello, World!") 
 ```
+
+```go-html-template
+<!DOCTYPE html>
+<html>
+<head>
+  <title>{{ .Title }}</title>
+</head>
+<body>
+  <h1>{{ .Title }}</h1>
+  {{ .Content }}
+</body>
+</html>
+```
+
+```go-html-template
+{{ partial "header.html" . }}
+
+  <h1>posts</h1>
+  {{ range first 10 .Data.Pages }}
+    {{ if eq .Type "post"}}
+      <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+    {{ end }}
+  {{ end }}
+
+  <h1>pages</h1>
+  {{ range .Data.Pages }}
+    {{ if or (eq .Type "page") (eq .Type "about") }}
+      <h2><a href="{{ .Permalink }}">{{ .Type }} - {{ .Title }} - {{ .RelPermalink }}</a></h2>
+    {{ end }}
+  {{ end }}
+
+{{ partial "footer.html" . }}
+```
+
+---
+
+Detect the language
+
+```
+package hello
+
+fun main(args: Array<String>) {
+  println("Hello World!")
+}
+```
+
+```
+<?php
+  echo 'Hello, World!';
+?>
+```
+
+---
+
+By `{{</* highlight go-html-template "linenos=table,hl_lines=1 3-7,linenostart=199" */>}}..{{</* / highlight */>}}`
+
+{{< highlight go-html-template "linenos=table,hl_lines=1 3-7,linenostart=199" >}}
+<section id="main">
+  <div>
+   <h1 id="title">{{ .Title }}</h1>
+    {{ range .Data.Pages }}
+        {{ .Render "summary"}}
+    {{ end }}
+  </div>
+</section>
+{{< / highlight >}}

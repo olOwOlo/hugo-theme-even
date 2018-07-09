@@ -11,6 +11,8 @@ weight: 10
 
 contentCopyright: '<a href="https://laozhu.me/post/hugo-nuo-post-preview/" rel="noopener" target="_blank">See origin</a>'
 
+mathjax: true
+
 ---
 > Copy from [《Hugo 主题 Nuo 文章样式预览》](https://laozhu.me/post/hugo-nuo-post-preview/)
 

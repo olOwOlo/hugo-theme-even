@@ -38,7 +38,7 @@ Configure for all home and regular pages:
 
 Configure for a single post in the front matter (**Params in front matter have higher precedence**):
 
-```yml
+```yaml
 sequenceDiagrams: 
   enable: true
   options: "{theme: 'hand'}"

@@ -10,7 +10,7 @@ categories: ["shortcodes"]
 
 # center, right, left
 
-```
+```markdown
 ## default
 ![img](/path/to/img.gif "img")
 
