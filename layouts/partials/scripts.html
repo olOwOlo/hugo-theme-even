@@ -1,5 +1,9 @@
-<!-- js -->
-<script src="{{ "lib/highlight/highlight.pack.js?v=20171001" | relURL }}"></script>
+<!-- highlight.js -->
+{{- if .Site.Params.highlightInClient -}}
+  <script src="{{ "lib/highlight/highlight.pack.js?v=20171001" | relURL }}"></script>
+{{- end -}}
+
+<!-- core -->
 {{- if .Site.Params.publicCDN.enable }}
   {{ .Site.Params.publicCDN.jquery | safeHTML }}
   {{ .Site.Params.publicCDN.slideout | safeHTML }}

@@ -7,6 +7,12 @@ enableRobotsTXT = true
 enableEmoji = true
 theme = "even"
 
+# Syntax highlighting by Chroma. NOTE: Don't enable `highlightInClient` and `chroma` at the same time!
+pygmentsOptions = "linenos=table"
+pygmentsCodefences = true
+pygmentsUseClasses = true
+pygmentsCodefencesGuessSyntax = true
+
 hasCJKLanguage = true     # has chinese/japanese/korean ? # 自动检测是否包含 中文\日文\韩文
 paginate = 5                                              # 首页每页显示的文章数
 disqusShortname = ""      # disqus_shortname
@@ -64,6 +70,9 @@ copyright = ""            # default: author.name ↓        # 默认为下面配
 
   # show word count and read time ?                       # 是否显示字数统计与阅读时间
   moreMeta = false
+
+  # Syntax highlighting by highlight.js
+  highlightInClient = false
 
   # 一些全局开关，你也可以在每一篇内容的 front matter 中针对单篇内容关闭或开启某些功能，在 archetypes/default.md 查看更多信息。
   # Some global options, you can also close or open something in front matter for a single post, see more information from `archetypes/default.md`.

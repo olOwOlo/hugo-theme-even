@@ -12,5 +12,10 @@ $(document).ready(function () {
 Even.flowchart()
 Even.sequence()
 
-hljs.initHighlighting()
-Even.highlight()
+if (window.hljs) {
+  hljs.initHighlighting()
+  Even.highlight()
+} else {
+  Even.chroma()
+}
+

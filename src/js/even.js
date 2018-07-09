@@ -167,6 +167,16 @@ Even.highlight = function () {
   }
 }
 
+Even.chroma = function() {
+  const blocks = document.querySelectorAll('.highlight > .chroma')
+  for (let i = 0; i < blocks.length; i++) {
+    const block = blocks[i]
+    const afterHighLight =  block.querySelector('pre.chroma > code')
+    const lang = afterHighLight ? afterHighLight.className : ''
+    block.className += ' ' + lang
+  }
+}
+
 Even.toc = function () {
   const tocContainer = document.getElementById('post-toc')
   if (tocContainer !== null) {
@@ -210,8 +220,12 @@ Even.flowchart = function () {
 
   const blocks = document.querySelectorAll('pre code.language-flowchart')
   for (let i = 0; i < blocks.length; i++) {
+    if (!window.hljs && i % 2 === 0) continue
+
     const block = blocks[i]
-    const rootElement = block.parentElement
+    const rootElement = window.hljs
+        ? block.parentElement
+        : block.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement
 
     const container = document.createElement('div')
     const id = `js-flowchart-diagrams-${i}`
@@ -229,8 +243,12 @@ Even.sequence = function () {
 
   const blocks = document.querySelectorAll('pre code.language-sequence')
   for (let i = 0; i < blocks.length; i++) {
+    if (!window.hljs && i % 2 === 0) continue
+
     const block = blocks[i]
-    const rootElement = block.parentElement
+    const rootElement = window.hljs
+        ? block.parentElement
+        : block.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement
 
     const container = document.createElement('div')
     const id = `js-sequence-diagrams-${i}`
