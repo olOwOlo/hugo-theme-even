@@ -166,6 +166,13 @@ copyright = ""            # default: author.name ↓        # 默认为下面配
     l-tumblr = "http://localhost:1313"
     m-instagram = "http://localhost:1313"
 
+# See https://gohugo.io/about/hugo-and-gdpr/
+[privacy]
+  [privacy.googleAnalytics]
+    anonymizeIP = true      # 12.214.31.144 -> 12.214.31.0
+  [privacy.youtube]
+    privacyEnhanced = true
+
 # 将下面这段配置取消注释可以使 hugo 生成 .md 文件
 # Uncomment these options to make hugo output .md files.
 #[mediaTypes]
