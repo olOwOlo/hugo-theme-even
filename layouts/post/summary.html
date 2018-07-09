@@ -5,14 +5,14 @@
       <span class="post-time"> {{ .Date.Format (.Site.Params.dateFormatToUse | default "2006-01-02") }} </span>
       {{ with .Params.categories -}}
         <div class="post-category">
-          {{ range . }}
+          {{ range . -}}
             <a href="{{ "categories" | relLangURL }}/{{ . | urlize }}/"> {{ . }} </a>
-          {{ end }}
+          {{ end -}}
         </div>
       {{- end }}
-      {{ if .Site.Params.moreMeta -}}
-      <span class="more-meta"> {{ T "wordCount" .WordCount }} </span>
-      <span class="more-meta"> {{ T "readingTime" .ReadingTime }} </span>
+      {{- if .Site.Params.moreMeta }}
+        <span class="more-meta"> {{ T "wordCount" .WordCount }} </span>
+        <span class="more-meta"> {{ T "readingTime" .ReadingTime }} </span>
       {{- end }}
     </div>
   </header>

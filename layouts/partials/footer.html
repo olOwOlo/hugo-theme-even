@@ -26,13 +26,13 @@
   <div class="busuanzi-footer">
     {{ $spinner := "img/spinner.svg" | relURL -}}
     {{ if and .Site.Params.busuanzi.enable .Site.Params.busuanzi.sitePV -}}
-    {{ $valueSpan := printf `<span id="busuanzi_value_site_pv"><img src="%s" alt="spinner.svg"/></span>` $spinner -}}
-    <span id="busuanzi_container_site_pv"> {{ printf (T "sitePV") $valueSpan | safeHTML }} </span>
-    {{ if .Site.Params.busuanzi.siteUV }}<span class="division">|</span>{{ end }}
+      {{ $valueSpan := printf `<span id="busuanzi_value_site_pv"><img src="%s" alt="spinner.svg"/></span>` $spinner -}}
+      <span id="busuanzi_container_site_pv"> {{ printf (T "sitePV") $valueSpan | safeHTML }} </span>
+      {{ if .Site.Params.busuanzi.siteUV }}<span class="division">|</span>{{ end }}
     {{- end }}
     {{ if and .Site.Params.busuanzi.enable .Site.Params.busuanzi.siteUV -}}
-    {{ $valueSpan := printf `<span id="busuanzi_value_site_uv"><img src="%s" alt="spinner.svg"/></span>` $spinner -}}
-    <span id="busuanzi_container_site_uv"> {{ printf (T "siteUV") $valueSpan | safeHTML }} </span>
+      {{ $valueSpan := printf `<span id="busuanzi_value_site_uv"><img src="%s" alt="spinner.svg"/></span>` $spinner -}}
+      <span id="busuanzi_container_site_uv"> {{ printf (T "siteUV") $valueSpan | safeHTML }} </span>
     {{- end }}
   </div>
   {{- end }}
@@ -40,7 +40,7 @@
   <span class="copyright-year">
     {{- $current := now.Format "2006" }}
     &copy; 
-    {{ if ne .Site.Params.since $current }}
+    {{ if ne .Site.Params.since $current -}}
       {{ .Site.Params.since }} - 
     {{ end }}
     {{- $current }}

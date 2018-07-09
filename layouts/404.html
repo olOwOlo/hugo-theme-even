@@ -1,6 +1,6 @@
-{{ define "title" }}404 page not found - {{ .Site.Title }}{{ end }}
+{{- define "title" }}404 page not found - {{ .Site.Title }}{{ end -}}
 
-{{ define "content" }}
+{{- define "content" -}}
 <div class="not-found">
   <h1 class="error-emoji"></h1>
   <p class="error-text">/* 404 page not found. */</p>
@@ -15,4 +15,4 @@
   var errorEmoji = emojiArray[Math.floor(Math.random() * emojiArray.length)];
   errorEmojiContainer.appendChild(document.createTextNode(errorEmoji));
 </script>
-{{ end }}
+{{- end -}}

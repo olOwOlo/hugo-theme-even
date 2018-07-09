@@ -1,6 +1,6 @@
-{{ define "title" }}{{ T "archive" }} - {{ .Site.Title }}{{ end }}
+{{- define "title" }}{{ T "archive" }} - {{ .Site.Title }}{{ end -}}
 
-{{ define "content"}}
+{{- define "content" }}
 {{- $paginator := .Paginate .Data.Pages.ByDate.Reverse .Site.Params.archivePaginate }}
 <section id="archive" class="archive">
   {{- if and (not $paginator.HasPrev) .Site.Params.showArchiveCount }}
@@ -14,7 +14,7 @@
   {{- range $index, $element := $paginator.Pages -}}
     {{- $thisYear := $element.Date.Format "2006" }}
     {{- $lastElement := $index | add -1 | index $paginator.Pages }}
-    {{ if or (eq $index 0) ( ne ($lastElement.Date.Format "2006") $thisYear ) }}
+    {{- if or (eq $index 0) ( ne ($lastElement.Date.Format "2006") $thisYear ) }}
       <div class="collection-title">
         <h2 class="archive-year">{{ $thisYear }}</h2>
       </div>
@@ -47,4 +47,4 @@
     </a>
   {{- end }}
 </nav>
-{{ end }}
+{{- end }}
