@@ -33,7 +33,7 @@
 {{ with .Site.Params.googleVerification }}<meta name="google-site-verification" content="{{.}}" />{{ end }}
 
 <!-- Site Generator -->
-<meta name="generator" content="Hugo {{ .Hugo.Version }}" />
+<meta name="generator" content="Hugo {{ .Hugo.Version }} with even 4.0.0" />
 
 <!-- Permalink & RSSlink -->
 <link rel="canonical" href="{{ .Permalink }}" />
@@ -61,7 +61,7 @@
 {{- end }}
 
 <!-- Styles -->
-<link href="{{ "dist/even.min.css?v=3.2.0" | relURL }}" rel="stylesheet">
+<link href="{{ print "dist/" .Site.Data.even.assets.even.css | relURL }}" rel="stylesheet">
 {{ if .Site.Params.publicCDN.enable -}}
   {{ if .Site.Params.fancybox }}{{ .Site.Params.publicCDN.fancyboxCSS | safeHTML }}{{ end }}
 {{- else -}}

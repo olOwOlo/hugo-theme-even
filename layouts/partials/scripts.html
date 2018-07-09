@@ -36,7 +36,7 @@
   {{- end -}}
 </script>
 {{- if .Site.Params.publicCDN.enable -}}
-  {{ .Site.Params.publicCDN.flowchartDiagrams | safeHTML }}
+  {{ .Site.Params.publicCDN.flowchartDiagramsJS | safeHTML }}
 {{- else -}}
 <script src="{{ "lib/flowchartDiagrams/raphael-2.2.7.min.js" | relURL }}" integrity="sha256-67By+NpOtm9ka1R6xpUefeGOY8kWWHHRAKlvaTJ7ONI=" crossorigin="anonymous"></script>
 <script src="{{ "lib/flowchartDiagrams/flowchart-1.8.0.min.js" | relURL }}" integrity="sha256-zNGWjubXoY6rb5MnmpBNefO0RgoVYfle9p0tvOQM+6k=" crossorigin="anonymous"></script>
@@ -63,7 +63,7 @@
 <link rel="stylesheet" href="{{ "lib/js-sequence-diagrams/sequence-diagram-2.0.1.min.css" | relURL }}" integrity="sha384-6QbLKJMz5dS3adWSeINZe74uSydBGFbnzaAYmp+tKyq60S7H2p6V7g1TysM5lAaF" crossorigin="anonymous">
 {{- end -}}
 {{- end }}
-<script type="text/javascript" src="{{ "dist/even.min.js?v=3.2.0" | relURL }}"></script>
+<script type="text/javascript" src="{{ print "dist/" .Site.Data.even.assets.even.js | relURL }}"></script>
 
 {{- if and (or .Params.mathjax (and .Site.Params.mathjax (ne .Params.mathjax false))) (or .IsPage .IsHome) }}
   <script type="text/javascript">

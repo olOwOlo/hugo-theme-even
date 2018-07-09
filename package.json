@@ -1,0 +1,32 @@
+{
+  "name": "even-src",
+  "version": "1.0.0",
+  "description": "even source file",
+  "main": "index.js",
+  "scripts": {
+    "start": "hugo server --source=exampleSite --themesDir=../.. --disableFastRender",
+    "build": "webpack"
+  },
+  "author": "ahonn, olOwOlo",
+  "license": "MIT",
+  "devDependencies": {
+    "assets-webpack-plugin": "^3.8.4",
+    "autoprefixer": "^8.6.5",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.5",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-stage-3": "^6.24.1",
+    "clean-webpack-plugin": "^0.1.19",
+    "css-loader": "^1.0.0",
+    "file-loader": "^1.1.11",
+    "mini-css-extract-plugin": "^0.4.1",
+    "node-sass": "^4.9.2",
+    "optimize-css-assets-webpack-plugin": "^4.0.3",
+    "postcss-loader": "^2.1.5",
+    "sass-loader": "^7.0.3",
+    "uglifyjs-webpack-plugin": "^1.2.7",
+    "webpack": "^4.15.1",
+    "webpack-cli": "^3.0.8"
+  }
+}
