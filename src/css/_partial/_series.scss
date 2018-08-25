@@ -1,0 +1,43 @@
+
+.series {
+  margin: 2em 0 3em;
+  text-align: center;
+  font-family: $global-serif-font-family;
+
+  .series-title {
+    display: inline-block;
+    font-size: $series-title-size;
+    color: $theme-color;
+    border-bottom: $series-title-border-bottom;
+  }
+
+  .series-tags {
+    margin: 10px 0;
+
+    .series-link {
+      display: inline-block;
+      position: relative;
+      margin: $series-tags-link-margin;
+      word-wrap: break-word;
+      transition-duration: 0.2s;
+      transition-property: transform;
+      transition-timing-function: ease-out;
+
+      .series-count {
+        display: inline-block;
+        position: relative;
+        top: -8px;
+        right: -2px;
+        color: $theme-color;
+        font-size: $series-count-font-size;
+      }
+
+      &:active,
+      &:focus,
+      &:hover {
+        color: $theme-color;
+        transform: scale(1.1);
+      }
+    }
+  }
+}

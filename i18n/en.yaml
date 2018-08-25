@@ -8,6 +8,9 @@ tags:
 categories:
   other: "Categories"
 
+series:
+  other: "Series"
+
 # ===== footer =====
 powered:
   other: "Powered by %s"
@@ -100,3 +103,10 @@ categoryCounter:
 
 zeroCategoryCounter:
   other: "No categories"
+
+seriesCounter:
+  one: "{{ .Count }} Series In Total"
+  other: "{{ .Count }} Series In Total"
+
+zeroSeriesCounter:
+  other: "No series"

@@ -40,5 +40,23 @@
         {{ end }}
       </div>
     </div>
+  {{ else if eq $name "series" }}
+    <div class="series">
+      <div class="series-title">
+        {{ if eq $length 0 }}
+          {{ T "zeroSeriesCounter" }}
+        {{ else }}
+          {{ T "seriesCounter" $length }}
+        {{ end }}
+      </div>
+      <div class="series-tags">
+        {{ range $key, $value := $terms }}
+          <a class="series-link" href="{{ $name | relLangURL }}/{{ $value.Term | urlize }}/">
+            {{ $value.Term }}
+            <span class="series-count">{{ len $value.Pages }}</span>
+          </a>
+        {{ end }}
+      </div>
+    </div>
   {{ end }}
 {{ end }}

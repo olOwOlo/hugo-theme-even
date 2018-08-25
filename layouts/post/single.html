@@ -21,6 +21,13 @@
         {{ $valueSpan := printf `<span id="busuanzi_value_page_pv"><img src="%s" alt="spinner.svg"/></span>` ("img/spinner.svg" | relURL) -}}
         <span id="busuanzi_container_page_pv" class="more-meta"> {{ printf (T "pagePV") $valueSpan | safeHTML }} </span>
         {{- end }}
+        {{ with .Params.series -}}
+          <div class="post-series">
+            {{ range . }}
+            <a href="{{ "series" | relLangURL }}/{{ . | urlize }}/">{{ . }}</a>
+            {{ end }}
+          </div>
+        {{- end }}
       </div>
     </header>
 

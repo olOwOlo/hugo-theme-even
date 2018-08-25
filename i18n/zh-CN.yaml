@@ -8,6 +8,9 @@ tags:
 categories:
   other: "分类"
 
+series:
+  other: "系列"
+
 # ===== footer =====
 powered:
   other: "由 %s 强力驱动"
@@ -100,3 +103,10 @@ categoryCounter:
 
 zeroCategoryCounter:
   other: "暂无分类"
+
+seriesCounter:
+  one: "共计 {{ .Count }} 个系列"
+  other: "共计 {{ .Count }} 个系列"
+
+zeroSeriesCounter:
+  other: "暂无系列"

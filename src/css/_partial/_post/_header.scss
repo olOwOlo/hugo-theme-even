@@ -42,5 +42,26 @@
       }
     }
 
+    .post-series {
+      display: inline-block;
+      padding: 0 6px;
+
+      a {
+        color: $theme-color;
+
+        &::before {
+          content: '#';
+        }
+
+        &::after {
+          content: '#';
+        }
+
+        &:hover {
+          background-color: $deputy-color;
+        }
+      }
+    }
+
   }
 }
