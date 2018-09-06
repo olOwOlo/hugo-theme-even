@@ -20,8 +20,11 @@
         {{ if and .Site.Params.busuanzi.enable .Site.Params.busuanzi.pagePV -}}
         {{ $valueSpan := printf `<span id="busuanzi_value_page_pv"><img src="%s" alt="spinner.svg"/></span>` ("img/spinner.svg" | relURL) -}}
         <span id="busuanzi_container_page_pv" class="more-meta"> {{ printf (T "pagePV") $valueSpan | safeHTML }} </span>
+
         {{- end }}
+        <span style="float: right"><a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count="false">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></span>
       </div>
+
     </header>
 
     <!-- TOC -->
@@ -34,7 +37,7 @@
     <div class="post-content">
       {{ .Content }}
     </div>
-
+    
     <!-- Ginco PR -->
     <div class="pr">
       <hr>
@@ -46,7 +49,7 @@
     </div>
 
     <div style="text-align: center">
-      <div class="wantedly-visit-button" data-visit-button-id="nqtcW0vVQ-fHR_wJdCUhKQ" data-width="400" data-height="60"></div>
+      <div class="wantedly-visit-button" data-visit-button-id="nqtcW0vVQ-fHR_wJdCUhKQ" data-width="320" data-height="60"></div>
       <script>
         (function(d, s, id) {
           var js, fjs = d.getElementsByTagName(s)[0];
