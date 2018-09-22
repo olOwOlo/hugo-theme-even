@@ -35,6 +35,9 @@
 <!-- Site Generator -->
 <meta name="generator" content="Hugo {{ .Hugo.Version }}" />
 
+<!-- OGP -->
+{{ partial "ogp.html" . }}
+
 <!-- Permalink & RSSlink -->
 <link rel="canonical" href="{{ .Permalink }}" />
 {{ if .RSSLink -}}
