@@ -186,7 +186,7 @@ copyright = ""            # default: author.name ↓        # 默认为下面配
 # Uncomment these options to make hugo output .md files.
 #[mediaTypes]
 #  [mediaTypes."text/plain"]
-#    suffix = "md"
+#    suffixes = ["md"]
 #
 #[outputFormats.MarkDown]
 #  mediaType = "text/plain"
