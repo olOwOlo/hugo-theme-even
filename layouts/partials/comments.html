@@ -83,13 +83,8 @@
   <!-- gitalk -->
   {{- if .Site.Params.gitalk.owner -}}
     <div id="gitalk-container"></div>
-    {{ if .Site.Params.publicCDN.enable -}}
-      {{ .Site.Params.publicCDN.gitalkCSS | safeHTML }}
-      {{ .Site.Params.publicCDN.gitalkJS | safeHTML }}
-    {{- else -}}
-      <link rel="stylesheet" href="{{ "lib/gitalk/gitalk-1.2.2.min.css" | relURL }}">
-      <script src="{{ "lib/gitalk/gitalk-1.2.2.min.js" | relURL }}"></script>
-    {{- end }}
+    {{ .Site.Params.publicCDN.gitalkCSS | safeHTML }}
+    {{ .Site.Params.publicCDN.gitalkJS | safeHTML }}
     <script type="text/javascript">
       var gitalk = new Gitalk({
         id: '{{ .Date }}',
