@@ -55,13 +55,8 @@
   <!-- gitment -->
   {{- if .Site.Params.gitment.owner -}}
     <div id="comments-gitment"></div>
-    {{ if .Site.Params.publicCDN.enable -}}
-      {{ .Site.Params.publicCDN.gitmentCSS | safeHTML }}
-      {{ .Site.Params.publicCDN.gitmentJS | safeHTML }}
-    {{- else -}}
-      <link rel="stylesheet" href="{{ "lib/gitment/gitment-0.0.3.min.css" | relURL }}">
-      <script src="{{ "lib/gitment/gitment-0.0.3.min.js" | relURL }}"></script>
-    {{- end }}
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitment@0.0.3/style/default.min.css" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/gitment@0.0.3/dist/gitment.browser.min.js" crossorigin="anonymous"></script>
     <script type="text/javascript">
       var gitment = new Gitment({
         id: '{{ .Date }}',
@@ -83,8 +78,8 @@
   <!-- gitalk -->
   {{- if .Site.Params.gitalk.owner -}}
     <div id="gitalk-container"></div>
-    {{ .Site.Params.publicCDN.gitalkCSS | safeHTML }}
-    {{ .Site.Params.publicCDN.gitalkJS | safeHTML }}
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js" crossorigin="anonymous"></script>
     <script type="text/javascript">
       var gitalk = new Gitalk({
         id: '{{ .Date }}',
