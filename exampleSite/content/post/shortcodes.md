@@ -8,6 +8,88 @@ categories: ["shortcodes"]
 
 ---
 
+# Admonition
+
+{{% admonition note "I'm title!" false %}}
+biu biu biu.
+
+{{% admonition type="note" title="note" details="true" %}}
+biu biu biu.
+{{% /admonition %}}
+
+{{% admonition example %}}
+Without title.
+{{% /admonition %}}
+
+{{% /admonition %}}
+
+```markdown
+{{%/* admonition note "I'm title!" false */%}}
+biu biu biu.
+
+{{%/* admonition type="note" title="note" details="true" */%}}
+biu biu biu.
+{{%/* /admonition */%}}
+
+{{%/* admonition example */%}}
+Without title.
+{{%/* /admonition */%}}
+
+{{%/* /admonition */%}}
+```
+
+<!--more-->
+
+{{% admonition abstract abstract %}}
+biu biu biu.
+{{% /admonition %}}
+
+```markdown
+{{%/* admonition abstract abstract */%}}
+biu biu biu.
+{{%/* /admonition */%}}
+```
+
+{{% admonition info "info" %}}
+biu biu biu.
+{{% /admonition %}}
+
+{{% admonition tip "tip" %}}
+biu biu biu.
+{{% /admonition %}}
+
+{{% admonition success "success" %}}
+biu biu biu.
+{{% /admonition %}}
+
+{{% admonition question "question" %}}
+biu biu biu.
+{{% /admonition %}}
+
+{{% admonition warning "warning" %}}
+biu biu biu.
+{{% /admonition %}}
+
+{{% admonition failure "failure" %}}
+biu biu biu.
+{{% /admonition %}}
+
+{{% admonition danger "danger" %}}
+biu biu biu.
+{{% /admonition %}}
+
+{{% admonition bug "bug" %}}
+biu biu biu.
+{{% /admonition %}}
+
+{{% admonition example "example" %}}
+biu biu biu.
+{{% /admonition %}}
+
+{{% admonition quote "quote" %}}
+biu biu biu.
+{{% /admonition %}}
+
 # center, right, left
 
 ```markdown
@@ -29,7 +111,6 @@ categories: ["shortcodes"]
 ![img](/path/to/img.gif "img")
 {{%/* /left */%}}
 ```
-<!--more-->
 
 ## default
 ![img](https://wx1.sinaimg.cn/small/006SToa6ly1fm07summ2gj30qo0qomzu.jpg "img")
@@ -127,7 +208,7 @@ categories: ["shortcodes"]
 {{%/* music "28196554" */%}}
 ```
 
-{{% music "28196554" %}}
+{{%/* music "28196554" */%}}
 
 <style>
 .post-content img {

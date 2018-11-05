@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "start": "hugo server --source=exampleSite --themesDir=../.. --disableFastRender",
-    "build": "webpack"
+    "build": "webpack",
+    "watch": "webpack --watch --progress --colors"
   },
   "author": "ahonn, olOwOlo",
   "license": "MIT",
