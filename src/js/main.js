@@ -9,6 +9,7 @@ $(document).ready(function () {
   Even.fancybox();
 });
 
+Even.responsiveTable();
 Even.flowchart();
 Even.sequence();
 
