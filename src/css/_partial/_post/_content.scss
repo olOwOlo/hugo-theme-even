@@ -9,6 +9,32 @@
     h#{$i} {
       font-weight: 400;
       font-family: $global-serif-font-family;
+
+      .anchor {
+        float: left;
+        line-height: 1;
+        margin-left: -20px;
+        padding-right: 4px;
+
+        &:hover {
+          border-bottom: initial;
+        }
+
+        .icon-link {
+          visibility: hidden;
+          font-size: 16px;
+
+          &:before {
+            vertical-align: middle;
+          }
+        }
+      }
+
+      &:hover {
+        .icon-link {
+          visibility: visible;
+        }
+      }
     }
   }
 
