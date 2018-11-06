@@ -1,5 +1,10 @@
 # hugo-theme-even
 
+[![GitHub contributors](https://img.shields.io/github/contributors/olOwOlo/hugo-theme-even.svg?colorB=green)](https://github.com/olOwOlo/hugo-theme-even/contributors)
+[![GitHub release](https://img.shields.io/github/release/olOwOlo/hugo-theme-even.svg?colorB=green)](https://github.com/olOwOlo/hugo-theme-even/releases)
+[![GitHub commits (since latest release)](https://img.shields.io/github/commits-since/olOwOlo/hugo-theme-even/latest.svg?colorB=green)](https://github.com/olOwOlo/hugo-theme-even/compare)
+[![GitHub](https://img.shields.io/github/license/mashape/apistatus.svg)](https://github.com/olOwOlo/hugo-theme-even/blob/master/LICENSE.md)
+
 A super concise theme for Hugo
 
 > 该主题移植自 [hexo-theme-even](https://github.com/ahonn/hexo-theme-even)
@@ -57,7 +62,7 @@ defaultContentLanguage = "en"  # en / zh-cn / other...
 
 ## Shortcodes
 
-主题提供了 `center`,` right`, `left`,` music` 四种 shortcodes，并支持为内置的 `figure` 设置 `center`,` right`, `left` 这三种 class 值。点击[这里](https://blog.olowolo.com/example-site/post/shortcodes/)查看详细内容。
+主题提供了 `center`,` right`, `left`,` music`, `admonition` 这些 shortcodes，并支持为内置的 `figure` 设置 `center`,` right`, `left` 这三种 class 值。点击[这里](https://blog.olowolo.com/example-site/post/shortcodes/)查看详细内容。
 
 ## Theme Color 
 
@@ -67,10 +72,14 @@ defaultContentLanguage = "en"  # en / zh-cn / other...
 
 如果你更改了 `/src/` 目录下的任意文件，你需要重新编译它们。
 ```bash
-cd ./themes/even/src/
-npm install
-npm run build
+cd ./themes/even/
+# install dependencies
+yarn install
+# build
+yarn build
 ```
+
+_你需要先安装 **[Yarn](https://yarnpkg.com/)** 和 **[Node.js](https://nodejs.org/)**。_
 
 ## Update Theme
 
