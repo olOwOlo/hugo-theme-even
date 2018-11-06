@@ -8,7 +8,7 @@ description = "A super concise theme for Hugo"
 homepage = "https://github.com/olOwOlo/hugo-theme-even"
 tags = ["responsive", "blog", "simple", "clean", "highlight.js", "syntax highlighting"]
 features = ["responsive", "blog", "simple", "clean", "highlight.js", "syntax highlighting"]
-min_version = "0.35"
+min_version = "0.50"
 
 [author]
   name = "olOwOlo"
