@@ -312,27 +312,15 @@ $archive-post-hover-transition: 0.2s ease-out !default;
 // Transform of the archive post when hover it.
 $archive-post-hover-transform: translateX(4px) !default;
 
+// ========== General Terms ========== //
+// Font size of the terms title.
+$terms-title-size: 18px !default;
 
-// ========== Tags ========== //
-// Font soze of the tag cloud title.
-$tag-cloud-title-size: 18px !default;
+// Border bottom of the terms title.
+$terms-title-border-bottom: 2px solid $theme-color !default;
 
-// Border bottom of the tag cloud title.
-$tag-cloud-title-border-bottom: 2px solid $theme-color !default;
+// Margin of the terms link.
+$terms-link-margin: 5px 10px !default;
 
-// Margin of the tag cloud tags link.
-$tag-cloud-tags-link-margin: 5px 10px !default;
-
-
-// ========== Categories ========== //
-// Font soze of the categories title.
-$categories-title-size: 18px !default;
-
-// Border bottom of the categories title.
-$categories-title-border-bottom: 2px solid $theme-color !default;
-
-// Margin of the categories tags link.
-$categories-tags-link-margin: 5px 10px !default;
-
-// Font size of the category count
-$category-count-font-size: 12px !default;
+// Font size of the terms count
+$terms-count-font-size: 12px !default;
