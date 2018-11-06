@@ -1,18 +1,51 @@
-<a name="4.0.0"></a>
-# 4.0.0 (WIP)
+# [4.0.0](https://github.com/olOwOlo/hugo-theme-even/compare/v3.2.0...v4.0.0) (2018-11-06)
+
+
+### Bug Fixes
+
+* **busuanzi:** update busuanzi domain ([51e5aca](https://github.com/olOwOlo/hugo-theme-even/commit/51e5aca)), closes [#104](https://github.com/olOwOlo/hugo-theme-even/issues/104) [#108](https://github.com/olOwOlo/hugo-theme-even/issues/108) [#109](https://github.com/olOwOlo/hugo-theme-even/issues/109)
+* **config:** MediaType's Suffix deprecated warning ([#103](https://github.com/olOwOlo/hugo-theme-even/issues/103)) ([b55831b](https://github.com/olOwOlo/hugo-theme-even/commit/b55831b))
+
+
+### Code Refactoring
+
+* **comment:** remove local js and css files ([f4bcf93](https://github.com/olOwOlo/hugo-theme-even/commit/f4bcf93))
+* **param:** camelcase for parameter names ([fcb48d9](https://github.com/olOwOlo/hugo-theme-even/commit/fcb48d9))
+
+
+### Features
+
+* init admonition & refactor iconfont ([2517f74](https://github.com/olOwOlo/hugo-theme-even/commit/2517f74))
+* **highlight:** add support for chroma ([7710103](https://github.com/olOwOlo/hugo-theme-even/commit/7710103))
+* **mathjax:** configure to let mathjax use local files ([a3cab1a](https://github.com/olOwOlo/hugo-theme-even/commit/a3cab1a)), closes [#63](https://github.com/olOwOlo/hugo-theme-even/issues/63)
+* **scripts:** configure to use local files for flowchart and sequence diagram ([cec9ea9](https://github.com/olOwOlo/hugo-theme-even/commit/cec9ea9)), closes [#76](https://github.com/olOwOlo/hugo-theme-even/issues/76) [#77](https://github.com/olOwOlo/hugo-theme-even/issues/77)
+* **style:** dashed hr ([90a17f8](https://github.com/olOwOlo/hugo-theme-even/commit/90a17f8))
+* **table:** responsive table ([9d8940b](https://github.com/olOwOlo/hugo-theme-even/commit/9d8940b)), closes [#107](https://github.com/olOwOlo/hugo-theme-even/issues/107)
+* **title:** add anchor ([8d39099](https://github.com/olOwOlo/hugo-theme-even/commit/8d39099))
+
 
 ### BREAKING CHANGES
 
-- Rename params
+* **hugo:** Hugo minimum version required "0.50".
+* **comment:** Remove local comment js/css files.
+* **highlight:** You need add params to enable `chroma` or `highlight.js` since they are disabled by default.
+* **param:** Rename parameter names.
 
-  | origin   | now      |
-  | :------: |:--------:|
-  | fancyboxJ**s** | fancyboxJ**S** |
-  | fancyboxC**ss**| fancyboxC**SS**|
-  | baidu_push | baidu**P**ush |
-  | baidu_analytics | baidu**A**nalytics |
-  | baidu_verification | baidu**V**erification |
-  | google_verification | google**V**erification |
+    | origin   | now      |
+    | :------: |:--------:|
+    | fancyboxJ**s** | fancyboxJ**S** |
+    | fancyboxC**ss**| fancyboxC**SS**|
+    | baidu_push | baidu**P**ush |
+    | baidu_analytics | baidu**A**nalytics |
+    | baidu_verification | baidu**V**erification |
+    | google_verification | google**V**erification |
+
+* **version:** Version flag "4.x".
+
+  ```toml
+  [params]
+    version = "4.x"           # 3.x -> 4.x
+  ```
 
 
 <a name="3.2.0"></a>
