@@ -1,0 +1,44 @@
+{{ define "title" }}{{ T .Data.Plural }} - {{ .Site.Title }}{{ end }}
+
+{{ define "content" }}
+  {{ $name := .Data.Plural -}}
+  {{ $terms := .Data.Terms.ByCount -}}
+  {{ $length := len $terms -}}
+  {{ if eq $name "categories" }}
+    <div class="categories">
+      <div class="categories-title">
+        {{ if eq $length 0 }}
+          {{ T "zeroCategoryCounter" }}
+        {{ else }}
+          {{ T "categoryCounter" $length }}
+        {{ end }}
+      </div>
+      <div class="categories-tags">
+        {{ range $key, $value := $terms }}
+          <a class="category-link" href="{{ $name | relLangURL }}/{{ $value.Term | urlize }}/">
+            {{ $value.Term }}
+            <span class="category-count">{{ len $value.Pages }}</span>
+          </a>
+        {{ end }}
+      </div>
+    </div>
+  {{ else if eq $name "tags" }}
+    <div class="tag-cloud">
+      <div class="tag-cloud-title">
+        {{ if eq $length 0 }}
+          {{ T "zeroTagCounter" }}
+        {{ else }}
+          {{ T "tagCounter" $length }}
+        {{ end }}
+      </div>
+      <div class="tag-cloud-tags">
+        {{ range $key, $value := $terms }}
+          <a href="{{ $name | relLangURL }}/{{ $value.Term | urlize }}/">
+            {{ $value.Term }}
+            <span class="tag-count">{{ len $value.Pages }}</span>
+          </a>
+        {{ end }}
+      </div>
+    </div>
+  {{ end }}
+{{ end }}

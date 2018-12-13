@@ -1,0 +1,47 @@
+archive = "归档"
+tags = "标签"
+categories = "分类"
+
+[footer]
+  powered = "由 %s 强力驱动"
+  theme = "主题"
+
+[posts]
+  prev = "上一页"
+  next = "下一页"
+  prev_post = "上一篇"
+  next_post = "下一篇"
+  toc = "文章目录"
+  readmore = "阅读更多"
+  reward = "赞赏支持"
+  rewardAlipay = "支付宝打赏"
+  rewardWechat = "微信打赏"
+  seeMarkDown = "查看本文 Markdown 版本 »"
+
+  [posts.header]
+    wordCount = "约 %d 字"
+    readingTime = "预计阅读 %d 分钟"
+
+[copyright]
+  author = "文章作者"
+  lastMod = "上次更新"
+  markdown = "原始文档"
+  license = "许可协议"
+
+[counter]
+  [counter.archives]
+    zero = "暂无文章"
+    other = "共计 %d 篇文章"
+
+  [counter.tagcloud]
+    zero = "暂无标签"
+    other = "共计 %d 个标签"
+
+  [counter.categories]
+    zero =  "暂无分类"
+    other = "共计 %d 个分类"
+
+[traffic]
+  siteUV = "本站总访客数 %s 人"
+  sitePV = "本站总访问量 %s 次"
+  pagePV = "%s 次阅读"

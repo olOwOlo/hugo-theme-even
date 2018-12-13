@@ -1,0 +1,46 @@
+{{ if ne .Site.Params.version "3.x" -}}
+{{ errorf "\n\nThere are two possible situations that led to this error:\n  1. You haven't copied the config.toml yet. See https://github.com/olOwOlo/hugo-theme-even#installation \n  2. You have an incompatible update. See https://github.com/olOwOlo/hugo-theme-even/blob/master/CHANGELOG.md#300 \n\n有两种可能的情况会导致这个错误发生:\n  1. 你还没有复制 config.toml 参考 https://github.com/olOwOlo/hugo-theme-even/blob/master/README-zh.md#installation \n  2. 你进行了一次不兼容的更新 参考 https://github.com/olOwOlo/hugo-theme-even/blob/master/CHANGELOG.md#300 \n" -}}
+{{ end -}}
+<!DOCTYPE html>
+<html lang="{{ .Site.Language }}">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>
+    {{- block "title" . -}}
+      {{ if .IsPage }}{{ .Title }} - {{ .Site.Title }}{{ else }}{{ .Site.Title }}{{ end }}
+    {{- end -}}
+  </title>
+  {{ partial "head.html" . }}
+</head>
+<body>
+  {{ partial "slideout.html" . }}
+  <div class="container" id="mobile-panel">
+    {{ if not .Params.hideHeaderAndFooter -}}
+    <header id="header" class="header">
+        {{ partial "header.html" . }}
+    </header>
+    {{- end }}
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          {{ block "content" . }}{{ end }}
+        </div>
+        {{ partial "comments.html" . }}
+      </div>
+    </main>
+
+    {{ if not .Params.hideHeaderAndFooter -}}
+    <footer id="footer" class="footer">
+      {{ partial "footer.html" . }}
+    </footer>
+    {{- end }}
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  {{ partial "scripts.html" . }}
+</body>
+</html>

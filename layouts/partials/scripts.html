@@ -1,0 +1,115 @@
+<!-- js -->
+<script src="{{ "lib/highlight/highlight.pack.js?v=20171001" | relURL }}"></script>
+{{- if .Site.Params.publicCDN.enable }}
+  {{ .Site.Params.publicCDN.jquery | safeHTML }}
+  {{ .Site.Params.publicCDN.slideout | safeHTML }}
+  {{ if .Site.Params.fancybox }}{{ .Site.Params.publicCDN.fancyboxJs | safeHTML }}{{ end }}
+{{- else -}}
+  <script type="text/javascript" src="{{ "lib/jquery/jquery-3.2.1.min.js" | relURL }}"></script>
+  <script type="text/javascript" src="{{ "lib/slideout/slideout-1.0.1.min.js" | relURL }}"></script>
+  {{ if .Site.Params.fancybox }}<script type="text/javascript" src="{{ "lib/fancybox/jquery.fancybox-3.1.20.min.js" | relURL }}"></script>{{ end }}
+{{- end -}}
+
+<!-- timeago.JS -->
+{{- if and (or .Params.enableOutdatedInfoWarning (and .Site.Params.outdatedInfoWarning.enable (ne .Params.enableOutdatedInfoWarning false))) (or .IsPage .IsHome) }}
+  {{- if .Site.Params.publicCDN.enable }}
+  {{ .Site.Params.publicCDN.timeagoJS | safeHTML }}
+  {{ .Site.Params.publicCDN.timeagoLocalesJS | safeHTML }}
+  {{- else }}
+  <script type="text/javascript" src="{{ "lib/timeago/timeago-3.0.2.min.js" | relURL }}"></script>
+  <script type="text/javascript" src="{{ "lib/timeago/timeago.locales-3.0.2.min.js" | relURL }}"></script>
+  {{- end }}
+<script>  // NOTE: timeago.js uses the language code format like "zh_CN" (underscore and case sensitive)
+  var languageCode = {{ .Site.LanguageCode }}.replace(/-/g, '_').replace(/_(.*)/, function ($0, $1) {return $0.replace($1, $1.toUpperCase());});
+  timeago().render(document.querySelectorAll('.timeago'), languageCode);
+  timeago.cancel();  // stop update
+</script>
+{{- end }}
+
+<!-- flowchart -->
+{{- if and (or .Params.flowchartDiagrams.enable (and .Site.Params.flowchartDiagrams.enable (ne .Params.flowchartDiagrams.enable false))) (or .IsPage .IsHome) -}}
+<script>
+  {{- if .Params.flowchartDiagrams.options -}}
+  window.flowchartDiagramsOptions = {{ .Params.flowchartDiagrams.options | safeJS }};
+  {{- else if .Site.Params.flowchartDiagrams.options -}}
+  window.flowchartDiagramsOptions = {{ .Site.Params.flowchartDiagrams.options | safeJS }};
+  {{- end -}}
+</script>
+<script src="https://cdn.jsdelivr.net/npm/raphael@2.2.7/raphael.min.js" integrity="sha256-67By+NpOtm9ka1R6xpUefeGOY8kWWHHRAKlvaTJ7ONI=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/flowchart.js@1.8.0/release/flowchart.min.js" integrity="sha256-zNGWjubXoY6rb5MnmpBNefO0RgoVYfle9p0tvOQM+6k=" crossorigin="anonymous"></script>
+{{- end -}}
+
+<!-- js-sequence-diagrams -->
+{{- if and (or .Params.sequenceDiagrams.enable (and .Site.Params.sequenceDiagrams.enable (ne .Params.sequenceDiagrams.enable false))) (or .IsPage .IsHome) -}}
+<script>
+  {{- if .Params.sequenceDiagrams.options -}}
+  window.sequenceDiagramsOptions = {{ .Params.sequenceDiagrams.options | safeJS }};
+  {{- else if .Site.Params.sequenceDiagrams.options -}}
+  window.sequenceDiagramsOptions = {{ .Site.Params.sequenceDiagrams.options | safeJS }};
+  {{- end -}}
+</script>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js" integrity="sha256-4O4pS1SH31ZqrSO2A/2QJTVjTPqVe+jnYgOWUVr7EEc=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/snapsvg@0.5.1/dist/snap.svg-min.js" integrity="sha256-oI+elz+sIm+jpn8F/qEspKoKveTc5uKeFHNNVexe6d8=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/underscore@1.8.3/underscore-min.js" integrity="sha256-obZACiHd7gkOk9iIL/pimWMTJ4W/pBsKu+oZnSeBIek=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/gh/bramp/js-sequence-diagrams@2.0.1/dist/sequence-diagram-min.js" integrity="sha384-8748Vn52gHJYJI0XEuPB2QlPVNUkJlJn9tHqKec6J3q2r9l8fvRxrgn/E5ZHV0sP" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/bramp/js-sequence-diagrams@2.0.1/dist/sequence-diagram-min.css" integrity="sha384-6QbLKJMz5dS3adWSeINZe74uSydBGFbnzaAYmp+tKyq60S7H2p6V7g1TysM5lAaF" crossorigin="anonymous">
+{{- end }}
+<script type="text/javascript" src="{{ "dist/even.min.js?v=3.2.0" | relURL }}"></script>
+
+{{- if and (or .Params.mathjax (and .Site.Params.mathjax (ne .Params.mathjax false))) (or .IsPage .IsHome) }}
+  <script type="text/javascript">
+    window.MathJax = {
+      {{ if or .Params.mathjaxEnableSingleDollar (and .Site.Params.mathjaxEnableSingleDollar (ne .Params.mathjaxEnableSingleDollar false)) -}}
+        tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]},
+      {{ end -}}
+      {{ if or .Params.mathjaxEnableAutoNumber (and .Site.Params.mathjaxEnableAutoNumber (ne .Params.mathjaxEnableAutoNumber false)) -}}
+        TeX: {equationNumbers: {autoNumber: "AMS"}},
+      {{ end -}}
+      showProcessingMessages: false,
+      messageStyle: 'none'
+    };
+  </script>
+  <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+{{- end }}
+
+<!-- Analytics -->
+{{- if .Site.GoogleAnalytics -}}
+  {{ template "_internal/google_analytics_async.html" . }}
+{{- end -}}
+
+{{- with .Site.Params.baidu_analytics -}}
+<script id="baidu_analytics">
+  var _hmt = _hmt || [];
+  (function() {
+    if (window.location.hostname === 'localhost') return;
+    var hm = document.createElement("script"); hm.async = true;
+    hm.src = "https://hm.baidu.com/hm.js?{{.}}";
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(hm, s);
+  })();
+</script>
+{{- end }}
+
+<!-- baidu_push -->
+{{- if .Site.Params.baidu_push -}}
+<script id="baidu_push">
+  (function(){
+    if (window.location.hostname === 'localhost') return;
+    var bp = document.createElement('script'); bp.async = true;
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+      bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    }
+    else {
+      bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+  })();
+</script>
+{{- end }}
+
+<!-- custom js -->
+{{ range .Site.Params.customJS }}
+<script src="{{ "/js/" | relURL }}{{ . }}"></script>
+{{ end }}

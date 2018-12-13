@@ -1,0 +1,29 @@
+.post-copyright {
+  margin-top: 20px;
+  padding-top: 10px;
+  border-top: 1px dashed $light-gray;
+
+  .copyright-item {
+    margin: 5px 0;
+
+    a {
+      color: $theme-color;
+      word-wrap: break-word;
+
+      &:hover {
+        border-bottom: $content-link-border;
+      }
+    }
+
+    .item-title {
+      display: inline-block;
+      min-width: 5rem;
+      margin-right: .5rem;
+      text-align: right;
+
+      &:after {
+        content: " :";
+      }
+    }
+  }
+}

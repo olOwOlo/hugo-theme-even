@@ -1,0 +1,46 @@
+{{ define "title" }}{{ .Title }} · {{ .Site.Title }}{{ end }}
+
+{{ define "content"}}
+{{ $paginator := .Paginate .Data.Pages.ByDate.Reverse .Site.Params.archivePaginate }}
+<section id="archive" class="archive">
+  {{ if not $paginator.HasPrev }}
+    {{ if eq .Data.Plural "tags" }}
+      <div class="archive-title tag">
+        <h2 class="archive-name">{{ .Title }}</h2>
+      </div>
+    {{ else if eq .Data.Plural "categories" }}
+      <div class="archive-title category">
+        <h2 class="archive-name">{{ .Title }}</h2>
+      </div>
+    {{ end }}
+  {{ end }}
+
+  {{ range $paginator.Pages }}
+    <div class="archive-post">
+      <span class="archive-post-time">
+        {{ .Date.Format (.Site.Params.dateFormatToUse | default "2006-01-02") }}
+      </span>
+      <span class="archive-post-title">
+        <a href="{{ .URL }}" class="archive-post-link">
+          {{ .Title }}
+        </a>
+      </span>
+    </div>
+  {{ end }}
+</section>
+<!-- pagination -->
+<nav class="pagination">
+  {{ with $paginator.Prev }}
+    <a class="prev" href="{{ .URL }}">
+      <i class="iconfont icon-left"></i>
+      <span class="prev-text">{{ T "prevPage" }}</span>
+    </a>
+  {{- end }}
+  {{ with $paginator.Next }}
+    <a class="next" href="{{ .URL }}">
+      <span class="next-text">{{ T "nextPage" }}</span>
+      <i class="iconfont icon-right"></i>
+    </a>
+  {{- end }}
+</nav>
+{{ end }}

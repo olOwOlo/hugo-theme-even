@@ -1,0 +1,90 @@
+<meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+<!-- author & description & keywords  -->
+<meta name="author" content="{{ if .Params.author }}{{ .Params.author | safeHTML }}{{ else }}{{ .Site.Author.name | safeHTML }}{{ end }}" />
+
+{{- if .Description -}}
+  <meta name="description" content="{{ .Description | safeHTML }}" />
+{{ else if .IsPage }}
+  <meta name="description" content="{{ .Summary | plainify }}" />
+{{ else if .Site.Params.description }}
+  <meta name="description" content="{{ .Site.Params.description | safeHTML }}" />
+{{- end -}}
+
+{{- if .Keywords -}}
+  {{ $length := len .Keywords | add -1 -}}
+  <meta name="keywords" content="{{ range $index, $element := .Keywords }}{{ $element | safeHTML }}{{if ne $index $length }}, {{ end }}{{ end }}" />
+{{ else if .Site.Params.keywords }}
+  {{ $length := len .Site.Params.keywords | add -1 -}}
+  <meta name="keywords" content="{{ range $index, $element := .Site.Params.keywords }}{{ $element | safeHTML }}{{if ne $index $length }}, {{ end }}{{ end }}" />
+{{- end }}
+
+<!-- baidu & google verification  -->
+{{ with .Site.Params.baidu_verification }}<meta name="baidu-site-verification" content="{{.}}" />{{ end }}
+{{ with .Site.Params.google_verification }}<meta name="google-site-verification" content="{{.}}" />{{ end }}
+
+<!-- Site Generator -->
+<meta name="generator" content="Hugo {{ .Hugo.Version }}" />
+
+<!-- Permalink & RSSlink -->
+<link rel="canonical" href="{{ .Permalink }}" />
+{{ if .RSSLink -}}
+  <link href="{{ .RSSLink }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
+  <link href="{{ .RSSLink }}" rel="feed" type="application/rss+xml" title="{{ .Site.Title }}" />
+{{ end -}}
+
+<!-- Favicon and Touch icons -->
+<link rel="apple-touch-icon" sizes="180x180" href="{{ "apple-touch-icon.png" | relURL }}">
+<link rel="icon" type="image/png" sizes="32x32" href="{{ "favicon-32x32.png" | relURL }}">
+<link rel="icon" type="image/png" sizes="16x16" href="{{ "favicon-16x16.png" | relURL }}">
+<link rel="manifest" href="{{ "manifest.json" | relURL }}">
+<link rel="mask-icon" href="{{ "safari-pinned-tab.svg" | relURL }}" color="#5bbad5">
+
+<!-- debug -->
+{{- if .Site.Params.debug }}
+<script src="https://cdn.jsdelivr.net/npm/eruda@1.2.6/eruda.min.js" integrity="sha256-Jmz4bc3kp+rRrXX2tGadNBKFLwtzMapr8kHABxSAAP8=" crossorigin="anonymous"></script>
+<script>eruda.init();</script>
+{{- end }}
+
+<!-- busuanzi -->
+{{ if .Site.Params.busuanzi.enable -}}
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+{{- end }}
+
+<!-- Styles -->
+<link href="{{ "dist/even.min.css?v=3.2.0" | relURL }}" rel="stylesheet">
+{{ if .Site.Params.publicCDN.enable -}}
+  {{ if .Site.Params.fancybox }}{{ .Site.Params.publicCDN.fancyboxCss | safeHTML }}{{ end }}
+{{- else -}}
+  {{ if .Site.Params.fancybox }}<link href="{{ "lib/fancybox/jquery.fancybox-3.1.20.min.css" | relURL }}" rel="stylesheet">{{ end }}
+{{- end }}
+
+<!-- custom css -->
+{{ range .Site.Params.customCSS }}
+<link rel="stylesheet" href="{{ "/css/" | relURL }}{{ . }}">
+{{ end }}
+
+{{/* NOTE: These Hugo Internal Templates can be found starting at https://github.com/spf13/hugo/blob/master/tpl/tplimpl/template_embedded.go#L158 */}}
+{{- template "_internal/opengraph.html" . -}}
+{{- template "_internal/google_news.html" . -}}
+{{- template "_internal/schema.html" . -}}
+{{- template "_internal/twitter_cards.html" . -}}
+
+<!-- Polyfill for old browsers -->
+{{ `<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->` | safeHTML }}
+
+{{ `<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->` | safeHTML }}
