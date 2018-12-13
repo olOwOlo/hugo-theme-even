@@ -1,5 +1,5 @@
 ---
-title: "[English] Creating a New Theme"
+title: "English Creating a New Theme"
 date: 2017-08-31T15:43:48+08:00
 lastmod: 2017-08-31T15:43:48+08:00
 draft: false
@@ -7,14 +7,22 @@ tags: ["preview", "English", "tag-2"]
 categories: ["English"]
 author: "Michael Henderson"
 
+# You can also close(false) or open(true) something for this content.
+# P.S. comment can only be closed
+# comment: false
+# toc: false
 autoCollapseToc: true
+# You can also define another contentCopyright. e.g. contentCopyright: "This is another copyright."
 contentCopyright: '<a href="https://github.com/gohugoio/hugoBasicExample" rel="noopener" target="_blank">See origin</a>'
-
+# reward: false
+# mathjax: false
 ---
 
 ## Introduction
 
 This tutorial will show you how to create a simple theme in Hugo. I assume that you are familiar with HTML, the bash command line, and that you are comfortable using Markdown to format content. I'll explain how Hugo uses templates and how you can organize your templates to create a theme. I won't cover using CSS to style your theme.
+
+<!--more-->
 
 We'll start with creating a new site with a very basic template. Then we'll add in a few pages and posts. With small variations on that, you will be able to create many different types of web sites.
 

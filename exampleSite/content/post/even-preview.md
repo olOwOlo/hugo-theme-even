@@ -9,12 +9,21 @@ author: '<a href="https://laozhu.me" rel="noopener" target="_blank">米老朱</a
 
 weight: 10
 
+# You can also close(false) or open(true) something for this content.
+# P.S. comment can only be closed
+# comment: false
+# toc: false
+# autoCollapseToc: false
+# You can also define another contentCopyright. e.g. contentCopyright: "This is another copyright."
 contentCopyright: '<a href="https://laozhu.me/post/hugo-nuo-post-preview/" rel="noopener" target="_blank">See origin</a>'
-
+# reward: false
+mathjax: true
 ---
 > Copy from [《Hugo 主题 Nuo 文章样式预览》](https://laozhu.me/post/hugo-nuo-post-preview/)
 
 这篇文章集中说明主题所支持的 Markdown 语法和 Hugo Shortcodes 插件，你也可以在这里预览到他们的样子。如果你不喜欢某些样式，可以去修改 css/ 文件夹下的 .scss 文件。
+
+<!--more-->
 
 # 1.标题
 

@@ -1,7 +1,7 @@
 {{ define "title" }}{{ .Title }} · {{ .Site.Title }}{{ end }}
 
 {{ define "content"}}
-{{ $paginator := .Paginate .Data.Pages.ByDate.Reverse .Site.Params.archivePaginate }}
+{{ $paginator := .Paginate (where .Data.Pages.ByDate.Reverse "Type" "post") (index .Site.Params "archive-paginate") }}
 <section id="archive" class="archive">
   {{ if not $paginator.HasPrev }}
     {{ if eq .Data.Plural "tags" }}
@@ -30,15 +30,16 @@
 </section>
 <!-- pagination -->
 <nav class="pagination">
+  {{- $lang := .Site.Data.even.default -}}
   {{ with $paginator.Prev }}
     <a class="prev" href="{{ .URL }}">
       <i class="iconfont icon-left"></i>
-      <span class="prev-text">{{ T "prevPage" }}</span>
+      <span class="prev-text">{{ $lang.posts.prev }}</span>
     </a>
   {{- end }}
   {{ with $paginator.Next }}
     <a class="next" href="{{ .URL }}">
-      <span class="next-text">{{ T "nextPage" }}</span>
+      <span class="next-text">{{ $lang.posts.next }}</span>
       <i class="iconfont icon-right"></i>
     </a>
   {{- end }}

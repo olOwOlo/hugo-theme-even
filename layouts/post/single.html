@@ -1,4 +1,5 @@
 {{ define "content" -}}
+  {{ $lang := .Site.Data.even.default -}}
   <article class="post">
     <!-- post-header -->
     <header class="post-header">
@@ -9,17 +10,13 @@
         {{ with .Params.categories -}}
           <div class="post-category">
             {{ range . }}
-              <a href="{{ "categories" | relLangURL }}/{{ . | urlize }}/"> {{ . }} </a>
+              <a href="{{ "categories" | relURL }}/{{ . | urlize }}/"> {{ . }} </a>
             {{ end }}
           </div>
         {{- end }}
         {{ if .Site.Params.moreMeta -}}
-        <span class="more-meta"> {{ T "wordCount" .WordCount }} </span>
-        <span class="more-meta"> {{ T "readingTime" .ReadingTime }} </span>
-        {{- end }}
-        {{ if and .Site.Params.busuanzi.enable .Site.Params.busuanzi.pagePV -}}
-        {{ $valueSpan := printf `<span id="busuanzi_value_page_pv"><img src="%s" alt="spinner.svg"/></span>` ("img/spinner.svg" | relURL) -}}
-        <span id="busuanzi_container_page_pv" class="more-meta"> {{ printf (T "pagePV") $valueSpan | safeHTML }} </span>
+        <span class="more-meta"> {{ printf $lang.posts.header.wordCount .WordCount }} </span>
+        <span class="more-meta"> {{ printf $lang.posts.header.readingTime .ReadingTime }} </span>
         {{- end }}
         {{ if and .Site.Params.busuanzi.enable .Site.Params.busuanzi.pagePV -}}
         {{ $valueSpan := printf `<span id="busuanzi_value_page_pv"><img src="%s" alt="spinner.svg"/></span>` ("img/spinner.svg" | relURL) -}}
@@ -30,9 +27,6 @@
 
     <!-- TOC -->
     {{ partial "post/toc.html" . }}
-
-    <!-- Outdated Info Warning -->
-    {{ partial "post/outdated-info-warning.html" . }}
 
     <!-- Content -->
     <div class="post-content">
@@ -49,7 +43,7 @@
       {{ with .Params.tags -}}
         <div class="post-tags">
           {{ range . }}
-          <a href="{{ "tags" | relLangURL }}/{{ . | urlize }}/">{{ . }}</a>
+          <a href="{{ "tags" | relURL }}/{{ . | urlize }}/">{{ . }}</a>
           {{ end }}
         </div>
       {{- end }}
@@ -60,13 +54,13 @@
           <a class="prev" href="{{ .URL }}">
             <i class="iconfont icon-left"></i>
             <span class="prev-text nav-default">{{ .Title }}</span>
-            <span class="prev-text nav-mobile">{{ T "prevPost" }}</span>
+            <span class="prev-text nav-mobile">{{ $lang.posts.prev_post }}</span>
           </a>
         {{- end }}
         {{ with .PrevInSection }}
           <a class="next" href="{{ .URL }}">
             <span class="next-text nav-default">{{ .Title }}</span>
-            <span class="next-text nav-mobile">{{ T "nextPost" }}</span>
+            <span class="prev-text nav-mobile">{{ $lang.posts.next_post }}</span>
             <i class="iconfont icon-right"></i>
           </a>
         {{- end }}

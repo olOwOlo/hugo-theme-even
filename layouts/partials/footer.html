@@ -6,33 +6,20 @@
       <a href="{{ $path | safeURL }}" class="iconfont icon-{{ $realName }}" title="{{ $realName }}"></a>
     {{- end }}
   {{- end }}
-  {{ if .Site.LanguagePrefix -}}
-    <a href="{{ .Site.LanguagePrefix | absURL }}/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
-  {{- else -}}
-    <a href="{{ .Site.RSSLink }}" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
-  {{- end }}
+  <a href="{{ .Site.RSSLink }}" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
 </div>
 
 <div class="copyright">
   <span class="power-by">
-<<<<<<< HEAD
     {{ (printf $lang.footer.powered `<a class="hexo-link" href="https://gohugo.io">Hugo</a>`) | safeHTML }}
   </span>
   <span class="division">|</span>
   <span class="theme-info">
     {{ $lang.footer.theme }} - 
-=======
-    {{ (printf (T "powered") `<a class="hexo-link" href="https://gohugo.io">Hugo</a>`) | safeHTML }}
-  </span>
-  <span class="division">|</span>
-  <span class="theme-info">
-    {{ T "theme" }} - 
->>>>>>> upstream/master
     <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
   </span>
 
   {{ if .Site.Params.busuanzi.enable -}}
-<<<<<<< HEAD
 	<div class="busuanzi-footer">
     {{ $spinner := "img/spinner.svg" | relURL -}}
     {{ if and .Site.Params.busuanzi.enable .Site.Params.busuanzi.sitePV -}}
@@ -43,18 +30,6 @@
 	  {{ if and .Site.Params.busuanzi.enable .Site.Params.busuanzi.siteUV -}}
     {{ $valueSpan := printf `<span id="busuanzi_value_site_uv"><img src="%s" alt="spinner.svg"/></span>` $spinner -}}
     <span id="busuanzi_container_site_uv"> {{ printf $lang.traffic.siteUV $valueSpan | safeHTML }} </span>
-=======
-  <div class="busuanzi-footer">
-    {{ $spinner := "img/spinner.svg" | relURL -}}
-    {{ if and .Site.Params.busuanzi.enable .Site.Params.busuanzi.sitePV -}}
-    {{ $valueSpan := printf `<span id="busuanzi_value_site_pv"><img src="%s" alt="spinner.svg"/></span>` $spinner -}}
-    <span id="busuanzi_container_site_pv"> {{ printf (T "sitePV") $valueSpan | safeHTML }} </span>
-    {{ if .Site.Params.busuanzi.siteUV }}<span class="division">|</span>{{ end }}
-    {{- end }}
-    {{ if and .Site.Params.busuanzi.enable .Site.Params.busuanzi.siteUV -}}
-    {{ $valueSpan := printf `<span id="busuanzi_value_site_uv"><img src="%s" alt="spinner.svg"/></span>` $spinner -}}
-    <span id="busuanzi_container_site_uv"> {{ printf (T "siteUV") $valueSpan | safeHTML }} </span>
->>>>>>> upstream/master
     {{- end }}
   </div>
   {{- end }}

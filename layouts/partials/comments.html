@@ -15,11 +15,7 @@
     })();
     </script>
     <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-<<<<<<< HEAD
   {{- end }}
-=======
-  {{- end -}}
->>>>>>> upstream/master
 
   <!-- changyan -->
   {{- if and .Site.Params.changyanAppid .Site.Params.changyanAppkey -}}
@@ -34,39 +30,7 @@
       if (width < 960) {window.document.write('<script id="changyan_mobile_js" charset="utf-8" type="text/javascript" src="https://changyan.sohu.com/upload/mobile/wap-js/changyan_mobile.js?client_id=' + appid + '&conf=' + conf + '"><\/script>'); } else { var loadJs=function(d,a){var c=document.getElementsByTagName("head")[0]||document.head||document.documentElement;var b=document.createElement("script");b.setAttribute("type","text/javascript");b.setAttribute("charset","UTF-8");b.setAttribute("src",d);if(typeof a==="function"){if(window.attachEvent){b.onreadystatechange=function(){var e=b.readyState;if(e==="loaded"||e==="complete"){b.onreadystatechange=null;a()}}}else{b.onload=a}}c.appendChild(b)};loadJs("https://changyan.sohu.com/upload/changyan.js",function(){window.changyan.api.config({appid:appid,conf:conf})}); }
     })();
     </script>
-  {{- end -}}
-
-  <!-- LiveRe -->
-  {{- if .Site.Params.livereUID -}}
-  <div id="lv-container" data-id="city" data-uid="{{ .Site.Params.livereUID }}">
-  <script type="text/javascript">
-    (function(d, s) {
-      var j, e = d.getElementsByTagName(s)[0];
-
-      if (typeof LivereTower === 'function') { return; }
-
-      j = d.createElement(s);
-      j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
-      j.async = true;
-
-      e.parentNode.insertBefore(j, e);
-    })(document, 'script');
-  </script>
-  <noscript>Please enable JavaScript to view the comments powered by <a href="https://livere.com/">LiveRe.</a></noscript>
-  </div>
-  {{- end -}}
-
-  <!-- gitment -->
-  {{- if .Site.Params.gitment.owner -}}
-  <div id="comments-gitment"></div>
-  {{ if .Site.Params.publicCDN.enable -}}
-    {{ .Site.Params.publicCDN.gitmentCSS | safeHTML }}
-    {{ .Site.Params.publicCDN.gitmentJS | safeHTML }}
-  {{- else -}}
-    <link rel="stylesheet" href="{{ "lib/gitment/gitment-0.0.3.min.css" | relURL }}">
-    <script src="{{ "lib/gitment/gitment-0.0.3.min.js" | relURL }}"></script>
   {{- end }}
-<<<<<<< HEAD
 
   <!-- LiveRe -->
   {{- if .Site.Params.livereUID -}}
@@ -88,50 +52,3 @@
   </div>
   {{- end }}
 {{- end }}
-=======
-  <script type="text/javascript">
-  const gitment = new Gitment({
-    id: '{{ .Date }}',
-    title: '{{ .Title }}',
-    link: decodeURI(location.href),
-    desc: '{{ .Summary }}',
-    owner: '{{ .Site.Params.gitment.owner }}',
-    repo: '{{ .Site.Params.gitment.repo }}',
-    oauth: {
-      client_id: '{{ .Site.Params.gitment.clientId }}',
-      client_secret: '{{ .Site.Params.gitment.clientSecret }}'
-    }
-  })
-  gitment.render('comments-gitment')
-  </script>
-  <noscript>Please enable JavaScript to view the <a href="https://github.com/imsun/gitment">comments powered by gitment.</a></noscript>
-  {{- end }}
-
-  <!-- gitalk -->
-  {{- if .Site.Params.gitalk.owner -}}
-  <div id="gitalk-container"></div>
-  {{ if .Site.Params.publicCDN.enable -}}
-    {{ .Site.Params.publicCDN.gitalkCSS | safeHTML }}
-    {{ .Site.Params.publicCDN.gitalkJS | safeHTML }}
-  {{- else -}}
-    <link rel="stylesheet" href="{{ "lib/gitalk/gitalk-1.2.2.min.css" | relURL }}">
-    <script src="{{ "lib/gitalk/gitalk-1.2.2.min.js" | relURL }}"></script>
-  {{- end }}
-  <script type="text/javascript">
-  var gitalk = new Gitalk({
-    id: '{{ .Date }}',
-    title: '{{ .Title }}',
-    clientID: '{{ .Site.Params.gitalk.clientId }}',
-    clientSecret: '{{ .Site.Params.gitalk.clientSecret }}',
-    repo: '{{ .Site.Params.gitalk.repo }}',
-    owner: '{{ .Site.Params.gitalk.owner }}',
-    admin: ['{{ .Site.Params.gitalk.owner }}'],
-    body: decodeURI(location.href)
-  });
-  gitalk.render('gitalk-container');
-  </script>
-  <noscript>Please enable JavaScript to view the <a href="https://github.com/gitalk/gitalk">comments powered by gitalk.</a></noscript>
-  {{- end }}
-
-{{- end }}
->>>>>>> upstream/master

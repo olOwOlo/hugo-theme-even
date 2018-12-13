@@ -1,6 +1,7 @@
-{{ define "title" }}{{ T .Data.Plural }} - {{ .Site.Title }}{{ end }}
+{{ define "title" }}{{ index .Site.Data.even.default .Data.Plural }} - {{ .Site.Title }}{{ end }}
 
 {{ define "content" }}
+  {{ $lang := .Site.Data.even.default -}}
   {{ $name := .Data.Plural -}}
   {{ $terms := .Data.Terms.ByCount -}}
   {{ $length := len $terms -}}
@@ -8,14 +9,14 @@
     <div class="categories">
       <div class="categories-title">
         {{ if eq $length 0 }}
-          {{ T "zeroCategoryCounter" }}
+          {{ $lang.counter.categories.zero }}
         {{ else }}
-          {{ T "categoryCounter" $length }}
+          {{ printf $lang.counter.categories.other $length }}
         {{ end }}
       </div>
       <div class="categories-tags">
         {{ range $key, $value := $terms }}
-          <a class="category-link" href="{{ $name | relLangURL }}/{{ $value.Term | urlize }}/">
+          <a class="category-link" href="{{ $name | urlize | relURL }}/{{ $value.Term | urlize }}/">
             {{ $value.Term }}
             <span class="category-count">{{ len $value.Pages }}</span>
           </a>
@@ -25,15 +26,15 @@
   {{ else if eq $name "tags" }}
     <div class="tag-cloud">
       <div class="tag-cloud-title">
-        {{ if eq $length 0 }}
-          {{ T "zeroTagCounter" }}
+          {{ if eq $length 0 }}
+          {{ $lang.counter.tagcloud.zero }}
         {{ else }}
-          {{ T "tagCounter" $length }}
+          {{ printf $lang.counter.tagcloud.other $length}}
         {{ end }}
       </div>
       <div class="tag-cloud-tags">
         {{ range $key, $value := $terms }}
-          <a href="{{ $name | relLangURL }}/{{ $value.Term | urlize }}/">
+          <a href="{{ $name | urlize | relURL }}/{{ $value.Term | urlize }}/">
             {{ $value.Term }}
             <span class="tag-count">{{ len $value.Pages }}</span>
           </a>
