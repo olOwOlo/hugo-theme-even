@@ -9,6 +9,32 @@
     h#{$i} {
       font-weight: 400;
       font-family: $global-serif-font-family;
+
+      .anchor {
+        float: left;
+        line-height: 1;
+        margin-left: -20px;
+        padding-right: 4px;
+
+        &:hover {
+          border-bottom: initial;
+        }
+
+        .icon-link {
+          visibility: hidden;
+          font-size: 16px;
+
+          &:before {
+            vertical-align: middle;
+          }
+        }
+      }
+
+      &:hover {
+        .icon-link {
+          visibility: visible;
+        }
+      }
     }
   }
 
@@ -44,27 +70,32 @@
     max-width: 100%;
   }
 
-  > table {
-    max-width: 100%;
-    margin: 10px 0;
-    border-spacing: 0;
-    box-shadow: 2px 2px 3px rgba(0,0,0,.125);
+  .table-wrapper {
+    overflow-x: auto;
 
-    thead {
-      background: $deputy-color;
-    }
+    > table {
+      max-width: 100%;
+      margin: 10px 0;
+      border-spacing: 0;
+      box-shadow: 2px 2px 3px rgba(0,0,0,.125);
 
-    th, td {
-      padding: 5px 15px;
-      border: 1px double $content-table-border-color;
-    }
+      thead {
+        background: $deputy-color;
+      }
 
-    tr:hover {
-      background-color: $deputy-color;
+      th, td {
+        padding: 5px 15px;
+        border: 1px double $content-table-border-color;
+      }
+
+      tr:hover {
+        background-color: $deputy-color;
+      }
     }
   }
 
   @import 'code';
+  @import 'admonition';
 
   .post-summary {
     margin-bottom: 1em;
@@ -105,14 +136,61 @@
       text-align: center;
     }
 
+    &.right {
+      text-align: right;
+    }
+
+    &.left {
+      text-align: left;
+    }
+
     figcaption h4 {
       color: #b5b5b5;
       font-size: 0.9rem;
     }
   }
 
+  hr {
+    margin: 1rem 0;
+    position: relative;
+    border-top: 2px dashed $theme-color;
+    border-bottom: none;
+  }
+
+  .footnote-ref {
+    > a {
+      font-weight: bold;
+      margin-left: 3px;
+
+      &:before {
+        content: "[";
+      }
+
+      &:after {
+        content: "]";
+      }
+    }
+  }
+
   .task-list {
     list-style: none;
     padding-left: 1.5rem;
+  }
+
+  .align-center {
+    text-align: center;
+  }
+
+  .align-right {
+    text-align: right;
+  }
+
+  .align-left {
+    text-align: left;
+  }
+
+  .MJXc-display {
+    overflow-x: auto;
+    overflow-y: hidden;
   }
 }

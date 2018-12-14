@@ -3,59 +3,80 @@
 // ==============================
 
 @font-face {
-  font-family: 'iconfont';  /* project id 96542 */
+  font-family: 'iconfont';
 
   src: url('../fonts/iconfont/iconfont.eot');
   src: url('../fonts/iconfont/iconfont.eot#iefix') format('embedded-opentype'), // not '?#iefix', because webpack will add '?hash=[hash]'
   url('../fonts/iconfont/iconfont.woff') format('woff'),
   url('../fonts/iconfont/iconfont.ttf') format('truetype'),
   url('../fonts/iconfont/iconfont.svg#iconfont') format('svg');
+}
 
-  // Uncomment these code and comment upper code if you want to use alicdn
-  // src: url('//at.alicdn.com/t/font_96542_ixz9jngnf1sb57b9.eot');
-  // src: url('//at.alicdn.com/t/font_96542_ixz9jngnf1sb57b9.eot?#iefix') format('embedded-opentype'),
-  // url('//at.alicdn.com/t/font_96542_ixz9jngnf1sb57b9.woff') format('woff'),
-  // url('//at.alicdn.com/t/font_96542_ixz9jngnf1sb57b9.ttf') format('truetype'),
-  // url('//at.alicdn.com/t/font_96542_ixz9jngnf1sb57b9.svg#iconfont') format('svg');
+%base-iconfont {
+  font-family: "iconfont" !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  -webkit-text-stroke-width: 0.2px;
+  cursor: pointer;
+
+  /* Enable Ligatures ================ */
+  letter-spacing: 0;
+  font-feature-settings: "liga";
+  font-variant-ligatures: discretionary-ligatures;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 .iconfont {
-  font-family: "iconfont" !important;
-  font-style: normal;
-  -webkit-font-smoothing: antialiased;
-  -webkit-text-stroke-width: 0.2px;
-  -moz-osx-font-smoothing: grayscale;
-  cursor: pointer;
+  @extend %base-iconfont;
 }
 
+/* Social Icon */
+.icon-bilibili:before {
+  content: "\e900";
+  font-size: .9em;
+  position: relative;
+  top: -4px;
+}
 .icon-instagram:before {
   font-size: .95em;
   content: "\e611";
   position: relative;
-  top: -1px;
+  top: 1px;
 }
 .icon-douban:before {
   content: "\e610";
+  position: relative;
+  top: 2px;
 }
 .icon-tumblr:before {
   content: "\e69f";
   font-size: .85em;
   position: relative;
-  top: -4px;
+  top: -2px;
 }
 .icon-linkedin:before {
   content: "\e60d";
   position: relative;
-  top: -4px;
+  top: -2px;
 }
 .icon-twitter:before {
   content: "\e600";
 }
 .icon-weibo:before {
   content: "\e602";
+  position: relative;
+  top: 2px;
 }
 .icon-stack-overflow:before {
-  content: "\e603";
+  content: "\e902";
   font-size: .85em;
   position: relative;
   top: -4px;
@@ -71,25 +92,33 @@
   position: relative;
   top: -2px;
 }
+.icon-gitlab:before {
+  content: "\e901";
+  font-size: .9em;
+  position: relative;
+  top: -4px;
+}
 .icon-github:before {
   content: "\e606";
   position: relative;
-  top: -3px;
+  top: -1px;
 }
 .icon-rss:before {
   content: "\e604";
 }
 .icon-google:before {
   content: "\e609";
+  position: relative;
+  top: 2px;
 }
 .icon-zhihu:before {
   content: "\e607";
   font-size: .9em;
-  position: relative;
-  top: -2px;
 }
 .icon-pocket:before {
   content: "\e856";
+  position: relative;
+  top: 2px;
 }
 
 /* Generic Icon */
@@ -108,3 +137,55 @@
 .icon-close:before {
   content: "\e60f";
 }
+.icon-link:before {
+  content: "\e909";
+}
+
+/* Admonition Icon */
+/*
+.icon-chevron-down:before {
+  content: "\e908";
+}
+.icon-format-quote:before {
+  content: "\e904";
+}
+.icon-pencil:before {
+  content: "\e903";
+}
+.icon-list-numbered:before {
+  content: "\e9b9";
+}
+.icon-list:before {
+  content: "\e9bb";
+}
+.icon-warning:before {
+  content: "\ea07";
+}
+.icon-question:before {
+  content: "\ea09";
+}
+.icon-info:before {
+  content: "\ea0c";
+}
+.icon-cross:before {
+  content: "\ea0f";
+}
+.icon-checkmark:before {
+  content: "\ea10";
+}
+.icon-fire:before {
+  content: "\e905";
+}
+.icon-danger:before {
+  content: "\e905";
+}
+.icon-flame:before {
+  content: "\e905";
+}
+.icon-hot:before {
+  content: "\e905";
+}
+.icon-bulb:before {
+  content: "\e906";
+}
+*/

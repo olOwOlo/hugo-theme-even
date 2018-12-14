@@ -1,0 +1,46 @@
+// ==============================
+// General Terms(tags, categories, etc.)
+// =============================
+
+.terms {
+  margin: 2em 0 3em;
+  text-align: center;
+  font-family: $global-serif-font-family;
+
+  .terms-title {
+    display: inline-block;
+    font-size: $terms-title-size;
+    color: $theme-color;
+    border-bottom: $terms-title-border-bottom;
+  }
+
+  .terms-tags {
+    margin: 10px 0;
+
+    .terms-link {
+      display: inline-block;
+      position: relative;
+      margin: $terms-link-margin;
+      word-wrap: break-word;
+      transition-duration: 0.2s;
+      transition-property: transform;
+      transition-timing-function: ease-out;
+
+      .terms-count {
+        display: inline-block;
+        position: relative;
+        top: -8px;
+        right: -2px;
+        color: $theme-color;
+        font-size: $terms-count-font-size;
+      }
+
+      &:active,
+      &:focus,
+      &:hover {
+        color: $theme-color;
+        transform: scale(1.1);
+      }
+    }
+  }
+}

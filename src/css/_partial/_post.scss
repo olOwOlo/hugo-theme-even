@@ -9,7 +9,7 @@
 
 .post {
   padding: $post-padding;
-  
+
   & + .post {
     border-top: $post-border;
   }
@@ -20,4 +20,5 @@
   @import '_post/copyright';
   @import '_post/reward';
   @import '_post/footer';
+  @import '_post/outdated';
 }
