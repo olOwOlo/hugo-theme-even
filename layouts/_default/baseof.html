@@ -4,6 +4,9 @@
 <!DOCTYPE html>
 <html lang="{{ .Site.Language }}">
 <head>
+  {{ if .Site.Params.removeFromExternalSearch }}
+    <meta name=”robots” content=”noindex,nofollow”>
+  {{ end }}
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <title>
