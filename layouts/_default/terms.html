@@ -15,7 +15,7 @@
       </div>
       <div class="terms-tags">
         {{ range $key, $value := $terms -}}
-          <a class="terms-link" href="{{ $name | relLangURL }}/{{ $value.Term | urlize }}/">
+          <a class="terms-link" href="{{ $name | relLangURL }}/{{ $value.Term | urlize }}{{ if $.Site.Params.uglyURLs }}.html{{else}}/{{ end }}">
             {{ $value.Term }}
             <span class="terms-count">{{ len $value.Pages }}</span>
           </a>
@@ -33,7 +33,7 @@
       </div>
       <div class="terms-tags">
         {{- range $key, $value := $terms }}
-          <a class="terms-link" href="{{ $name | relLangURL }}/{{ $value.Term | urlize }}/">
+          <a class="terms-link" href="{{ $name | relLangURL }}/{{ $value.Term | urlize }}{{ if $.Site.Params.uglyURLs }}.html{{else}}/{{ end }}">
             {{ $value.Term }}
             <span class="terms-count">{{ len $value.Pages }}</span>
           </a>
