@@ -67,7 +67,10 @@
     <link rel="stylesheet" href="{{ "lib/js-sequence-diagrams/sequence-diagram-2.0.1.min.css" | relURL }}" integrity="sha384-6QbLKJMz5dS3adWSeINZe74uSydBGFbnzaAYmp+tKyq60S7H2p6V7g1TysM5lAaF" crossorigin="anonymous">
   {{- end -}}
 {{- end }}
-<script type="text/javascript" src="{{ print "dist/" .Site.Data.even.assets.even.js | relURL }}"></script>
+{{ $even := resources.Get "js/even.js" }}
+{{ $main := resources.Get "js/main.js" }}
+{{ $js := slice $even $main | resources.Concat "js/main.js" | fingerprint }}
+<script type="text/javascript" src="{{ $js.Permalink }}"></script>
 
 {{- if and (or .Params.mathjax (and .Site.Params.mathjax (ne .Params.mathjax false))) (or .IsPage .IsHome) }}
   <script type="text/javascript">

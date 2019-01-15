@@ -64,22 +64,9 @@ You can customize something for a single content in the content's front-matter. 
 
 This theme provides `center`,` right`, `left`,` music`, `admonition` shortcodes, and support `center`,` right`, `left` class for the built-in `figure`. See more information from [there](https://blog.olowolo.com/example-site/post/shortcodes/).
 
-## Theme Color 
+## Theme Color
 
 There are five built-in theme colors ( Default | Mint Green | Cobalt Blue | Hot Pink | Dark Violet ), you can config it by changing the `$theme-color-config` value in [`/src/css/_variable.scss`](https://github.com/olOwOlo/hugo-theme-even/blob/master/src/css/_variables.scss#L5-L8).
-    
-## Build
-
-If you changed any file under `/src/`, you need to rebuild. 
-```bash
-cd ./themes/even/
-# install dependencies
-yarn install
-# build
-yarn build
-```
-
-_You need to install **[Yarn](https://yarnpkg.com/)** and **[Node.js](https://nodejs.org/)** first._
 
 ## Update Theme
 
