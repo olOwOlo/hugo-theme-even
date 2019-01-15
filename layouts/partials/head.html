@@ -61,7 +61,8 @@
 {{- end -}}
 
 <!-- Styles -->
-<link href="{{ print "dist/" .Site.Data.even.assets.even.css | relURL }}" rel="stylesheet">
+{{ $style := resources.Get "sass/main.scss" | toCSS | minify | fingerprint }}
+<link href="{{ $style.Permalink }}" rel="stylesheet">
 {{ if .Site.Params.publicCDN.enable -}}
   {{ if .Site.Params.fancybox }}{{ .Site.Params.publicCDN.fancyboxCSS | safeHTML }}{{ end }}
 {{- else -}}
