@@ -19,7 +19,7 @@
 
   <!-- changyan -->
   {{- if and .Site.Params.changyanAppid .Site.Params.changyanAppkey -}}
-    <div id="SOHUCS"></div>
+    <div id="SOHUCS" sid="{{ .URL }}"></div>
     <script type="text/javascript">
     (function(){
       if (window.location.hostname === 'localhost') return;
