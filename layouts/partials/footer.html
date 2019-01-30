@@ -5,11 +5,13 @@
       <a href="{{ $path | safeURL }}" class="iconfont icon-{{ $realName }}" title="{{ $realName }}"></a>
     {{- end }}
   {{- end }}
-  {{ if .Site.LanguagePrefix -}}
-    <a href="{{ .Site.LanguagePrefix | absURL }}/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
-  {{- else -}}
-    <a href="{{ .Site.RSSLink }}" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
-  {{- end }}
+  {{if .Site.Params.rss.enable -}}
+    {{ if .Site.LanguagePrefix -}}
+      <a href="{{ .Site.LanguagePrefix | absURL }}/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+    {{- else -}}
+      <a href="{{ .Site.RSSLink }}" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+    {{- end }}
+  {{- end}}
 </div>
 
 <div class="copyright">
