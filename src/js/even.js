@@ -124,6 +124,44 @@ Even._initToc = function() {
   });
 };
 
+Even._initSsharing = function() {
+    const SPACING = 20;
+    const $ssharing = $('.post-ssharing');
+    const $footer = $('.post-footer');
+
+    if ($ssharing.length) {
+        const minScrollTop = $ssharing.offset().top - SPACING;
+        const maxScrollTop = $footer.offset().top - $ssharing.height() - SPACING;
+
+        const tocState = {
+            start: {
+                'position': 'absolute',
+                'top': minScrollTop,
+            },
+            process: {
+                'position': 'fixed',
+                'top': SPACING,
+            },
+            end: {
+                'position': 'absolute',
+                'top': maxScrollTop,
+            },
+        };
+
+        $(window).scroll(function() {
+            const scrollTop = $(window).scrollTop();
+
+            if (scrollTop < minScrollTop) {
+                $ssharing.css(tocState.start);
+            } else if (scrollTop > maxScrollTop) {
+                $ssharing.css(tocState.end);
+            } else {
+                $ssharing.css(tocState.process);
+            }
+        });
+    }
+};
+
 Even.fancybox = function() {
   if ($.fancybox) {
     $('.post-content').each(function() {
@@ -190,6 +228,14 @@ Even.toc = function() {
       this._initToc();
     }
   }
+};
+
+Even.ssharing = function() {
+    const ssharingContainer = document.getElementById('post-ssharing');
+    if (ssharingContainer !== null) {
+        const toc = document.getElementById('TableOfContents');
+        this._initSsharing();
+    }
 };
 
 Even._refactorToc = function(toc) {

@@ -1,0 +1,16 @@
+{{ if or .Params.ssharing (and .Site.Params.ssharing (ne .Params.ssharing false)) -}}
+{{ $title := .Title }}
+{{ $url := printf "%s" .URL | absLangURL }}
+{{ $body := print $title ", by " .Site.Title "\n" .Params.description "\n\n" $url "\n" }}
+<div class="post-ssharing" id="post-ssharing">
+    <h2 class="post-ssharing-title">{{ T "ssharing" }}</h2>
+
+    <div class="post-ssharing-content">
+        <a href="http://www.facebook.com/sharer.php?u={{ $url }}" class="iconfont icon-facebook" aria-label="share on Facebook"></a>
+        <a href="http://twitter.com/share?url={{ $url }}&text={{ $title }}&via={{with .Site.Social.twitter }}{{ . }}{{ end }}" class="iconfont icon-twitter" aria-label="share on Twitter"></a>
+
+        <!--<a href="mailto:?subject=Check%20out%20{{ $title }}.&body={{ $body }}" class="twitter" aria-label="share on Email"></a>-->
+    </div>
+
+</div>
+{{- end }}

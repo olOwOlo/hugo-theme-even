@@ -1,0 +1,30 @@
+.post-ssharing {
+  position: absolute;
+  width: $post-ssharing-width;
+  margin-left: $post-ssharing-margin-left;
+  padding: 10px;
+  font-family: $global-serif-font-family;
+  border-radius: 5px;
+  background: $post-toc-backgroud;
+  box-shadow: 1px 1px 2px rgba(0,0,0,0.125);
+  word-wrap: break-word;
+  box-sizing: border-box;
+
+  .post-ssharing-title {
+    margin: 0 10px;
+    font-size: $post-toc-title-size;
+    font-weight: 400;
+    text-transform: uppercase;
+  }
+
+  a {
+    font-size: $post-toc-content;
+    display: block;
+  }
+}
+
+@include max-screen($toc-max-sreen-width) {
+  .post-ssharing {
+    display: none;
+  }
+}

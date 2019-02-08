@@ -40,6 +40,9 @@ nextPost:
 toc:
   other: "Contents"
 
+ssharing:
+  other: "Share"
+
 readMore:
   other: "Read more.."
 

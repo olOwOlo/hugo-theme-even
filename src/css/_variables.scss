@@ -169,6 +169,13 @@ $post-toc-list-style: square !default;
 // Max screen media of the post toc.
 $toc-max-sreen-width: 2 * $post-toc-width + $post-toc-margin-left !default;
 
+// ========== SSharing ========== //
+
+$post-ssharing-width: 120px !default;
+// Margin left of the post toc.
+$post-ssharing-margin-left: -1 * ($post-ssharing-width + 15px) !default;
+
+
 // ========== Content ========== //
 // Headings anchor.
 $content-headings-anchor: "" !default;
