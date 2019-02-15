@@ -221,7 +221,7 @@ Even._linkToc = function() {
 Even.flowchart = function() {
   if (!window.flowchart) return;
 
-  const blocks = document.querySelectorAll('pre code.language-flowchart');
+  const blocks = document.querySelectorAll('pre code.language-flowchart, pre code.language-flow');
   for (let i = 0; i < blocks.length; i++) {
     if (!window.hljs && i % 2 === 0) continue;
 
