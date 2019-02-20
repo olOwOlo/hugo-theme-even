@@ -12,6 +12,18 @@
       <div class="archive-title category">
         <h2 class="archive-name">{{ .Title }}</h2>
       </div>
+    {{- else if eq .Data.Plural "series" -}}
+      <div class="archive-title series">
+        <h2 class="archive-name">{{ .Title }}</h2>
+      </div>
+    {{- else if eq .Data.Plural "creators" -}}
+      <div class="archive-title creator">
+        <h2 class="archive-name">{{ .Title }}</h2>
+      </div>
+    {{- else if eq .Data.Plural "uploaders" -}}
+      <div class="archive-title uploader">
+        <h2 class="archive-name">{{ .Title }}</h2>
+      </div>
     {{- end }}
   {{- end }}
 

@@ -40,5 +40,59 @@
         {{ end -}}
       </div>
     </div>
+  {{- else if eq $name "series" -}}
+    <div class="terms">
+      <div class="terms-title">
+        {{ if eq $length 0 -}}
+          {{ T "zeroSeriesCounter" }}
+        {{- else -}}
+          {{ T "seriesCounter" $length }}
+        {{- end }}
+      </div>
+      <div class="terms-tags">
+        {{- range $key, $value := $terms }}
+          <a class="terms-link" href="{{ $name | relLangURL }}/{{ $value.Term | urlize }}/">
+            {{ $value.Term }}
+            <span class="terms-count">{{ len $value.Pages }}</span>
+          </a>
+        {{ end -}}
+      </div>
+    </div>
+  {{- else if eq $name "creators" -}}
+    <div class="terms">
+      <div class="terms-title">
+        {{ if eq $length 0 -}}
+          {{ T "zeroCreatorCounter" }}
+        {{- else -}}
+          {{ T "creatorCounter" $length }}
+        {{- end }}
+      </div>
+      <div class="terms-tags">
+        {{- range $key, $value := $terms }}
+          <a class="terms-link" href="{{ $name | relLangURL }}/{{ $value.Term | urlize }}/">
+            {{ $value.Term }}
+            <span class="terms-count">{{ len $value.Pages }}</span>
+          </a>
+        {{ end -}}
+      </div>
+    </div>
+  {{- else if eq $name "uploaders" -}}
+    <div class="terms">
+      <div class="terms-title">
+        {{ if eq $length 0 -}}
+          {{ T "zeroUploaderCounter" }}
+        {{- else -}}
+          {{ T "uploaderCounter" $length }}
+        {{- end }}
+      </div>
+      <div class="terms-tags">
+        {{- range $key, $value := $terms }}
+          <a class="terms-link" href="{{ $name | relLangURL }}/{{ $value.Term | urlize }}/">
+            {{ $value.Term }}
+            <span class="terms-count">{{ len $value.Pages }}</span>
+          </a>
+        {{ end -}}
+      </div>
+    </div>
   {{- end }}
 {{- end }}

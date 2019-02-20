@@ -100,3 +100,24 @@ categoryCounter:
 
 zeroCategoryCounter:
   other: "暂无分类"
+
+seriesCounter:
+  one: "共计 {{ .Count }} 个系列"
+  other: "共计 {{ .Count }} 个系列"
+
+zeroSeriesCounter:
+  other: "暂无系列"
+
+creatorCounter:
+  one: "共计 {{ .Count }} 个作者"
+  other: "共计 {{ .Count }} 个作者"
+
+zeroCreatorCounter:
+  other: "暂无作者"
+
+uploaderCounter:
+  one: "共计 {{ .Count }} 个上传者"
+  other: "共计 {{ .Count }} 个上传者"
+
+zeroUploaderCounter:
+  other: "暂无上传者"

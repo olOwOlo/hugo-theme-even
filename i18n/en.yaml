@@ -100,3 +100,24 @@ categoryCounter:
 
 zeroCategoryCounter:
   other: "No categories"
+
+seriesCounter:
+  one: "{{ .Count }} Series In Total"
+  other: "{{ .Count }} Series In Total"
+
+zeroSeriesCounter:
+  other: "No series"
+
+creatorCounter:
+  one: "{{ .Count }} Creator In Total"
+  other: "{{ .Count }} Creators In Total"
+
+zeroCreatorCounter:
+  other: "No creators"
+
+uploaderCounter:
+  one: "{{ .Count }} Uploader In Total"
+  other: "{{ .Count }} Uploaders In Total"
+
+zeroUploaderCounter:
+  other: "No uploaders"
