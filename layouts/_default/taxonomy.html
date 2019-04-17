@@ -1,7 +1,7 @@
 {{- define "title" }}{{ .Title }} · {{ .Site.Title }}{{ end -}}
 
 {{- define "content" }}
-{{- $paginator := .Paginate .Data.Pages.ByDate.Reverse .Site.Params.archivePaginate -}}
+{{- $paginator := .Paginate .Data.Pages .Site.Params.archivePaginate -}}
 <section id="archive" class="archive">
   {{ if not $paginator.HasPrev -}}
     {{ if eq .Data.Plural "tags" -}}
