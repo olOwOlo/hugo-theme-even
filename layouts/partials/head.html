@@ -33,14 +33,13 @@
 {{ with .Site.Params.googleVerification }}<meta name="google-site-verification" content="{{.}}" />{{ end }}
 
 <!-- Site Generator -->
-<meta name="generator" content="Hugo {{ .Hugo.Version }} with even 4.0.0" />
+<meta name="generator" content="Hugo {{ hugo.Version }} with even 4.0.0" />
 
 <!-- Permalink & RSSlink -->
 <link rel="canonical" href="{{ .Permalink }}" />
-{{- if .RSSLink }}
-  <link href="{{ .RSSLink }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
-  <link href="{{ .RSSLink }}" rel="feed" type="application/rss+xml" title="{{ .Site.Title }}" />
-{{- end -}}
+{{ with .OutputFormats.Get "RSS" }}
+{{ printf "<atom:link href=%q rel=\"self\" type=%q />" .Permalink .MediaType | safeHTML }}
+{{ end }}
 
 <!-- Favicon and Touch icons -->
 <link rel="apple-touch-icon" sizes="180x180" href="{{ "apple-touch-icon.png" | relURL }}">
