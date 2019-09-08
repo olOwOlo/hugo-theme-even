@@ -19,14 +19,14 @@
 
   <!-- changyan -->
   {{- if and .Site.Params.changyanAppid .Site.Params.changyanAppkey -}}
-    <div id="SOHUCS" sid="{{ .URL }}"></div>
+    <div id="SOHUCS" sid="{{ .RelPermalink }}"></div>
     <script type="text/javascript">
     (function(){
       if (window.location.hostname === 'localhost') return;
 
       var appid = '{{ .Site.Params.changyanAppid }}';
       var conf = '{{ .Site.Params.changyanAppkey }}';
-      var width = window.innerWidth || document.documentElement.clientWidth; 
+      var width = window.innerWidth || document.documentElement.clientWidth;
       if (width < 960) {window.document.write('<script id="changyan_mobile_js" charset="utf-8" type="text/javascript" src="https://changyan.sohu.com/upload/mobile/wap-js/changyan_mobile.js?client_id=' + appid + '&conf=' + conf + '"><\/script>'); } else { var loadJs=function(d,a){var c=document.getElementsByTagName("head")[0]||document.head||document.documentElement;var b=document.createElement("script");b.setAttribute("type","text/javascript");b.setAttribute("charset","UTF-8");b.setAttribute("src",d);if(typeof a==="function"){if(window.attachEvent){b.onreadystatechange=function(){var e=b.readyState;if(e==="loaded"||e==="complete"){b.onreadystatechange=null;a()}}}else{b.onload=a}}c.appendChild(b)};loadJs("https://changyan.sohu.com/upload/changyan.js",function(){window.changyan.api.config({appid:appid,conf:conf})}); }
     })();
     </script>
@@ -95,12 +95,12 @@
     </script>
     <noscript>Please enable JavaScript to view the <a href="https://github.com/gitalk/gitalk">comments powered by gitalk.</a></noscript>
   {{- end }}
-  
+
   <!-- valine -->
   {{- if .Site.Params.valine.enable -}}
   <!-- id 将作为查询条件 -->
     {{- if .Site.Params.valine.visitor -}}
-	  <span id="{{ .URL | relURL }}" class="leancloud_visitors" data-flag-title="{{ .Title }}">
+	  <span id="{{ .RelPermalink | relURL }}" class="leancloud_visitors" data-flag-title="{{ .Title }}">
 		<span class="post-meta-item-text">文章阅读量 </span>
 		<span class="leancloud-visitors-count">0</span>
 		<p></p>
@@ -114,9 +114,9 @@
         el: '#vcomments' ,
         appId: '{{ .Site.Params.valine.appId }}',
         appKey: '{{ .Site.Params.valine.appKey }}',
-        notify: {{ .Site.Params.valine.notify }}, 
-        verify: {{ .Site.Params.valine.verify }}, 
-        avatar:'{{ .Site.Params.valine.avatar }}', 
+        notify: {{ .Site.Params.valine.notify }},
+        verify: {{ .Site.Params.valine.verify }},
+        avatar:'{{ .Site.Params.valine.avatar }}',
         placeholder: '{{ .Site.Params.valine.placeholder }}',
         visitor: {{ .Site.Params.valine.visitor }}
     });
