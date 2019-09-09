@@ -2,7 +2,7 @@
 <div class="post-copyright">
   <p class="copyright-item">
     <span class="item-title">{{ T "author" }}</span>
-    <span class="item-content">{{ if .Params.author }}{{ .Params.author | safeHTML }}{{ else }}{{ .Site.Author.name | safeHTML }}{{ end }}</span>
+    <span class="item-content">{{ if .Params.author }}{{ with .Params.author  }}{{ $author_type := (printf "%T" .)  }}{{ $author_is_slice := (eq "[]string" $author_type)  }}{{ if $author_is_slice  }}{{ delimit . ", " | safeHTML  }}{{ else  }}{{ . | safeHTML }}{{ end  }}{{ end  }}{{ else }}{{ .Site.Author.name | safeHTML }}{{ end }}</span>
   </p>
   <p class="copyright-item">
     <span class="item-title">{{ T "lastMod" }}</span>

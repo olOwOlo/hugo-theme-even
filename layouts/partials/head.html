@@ -10,7 +10,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 <!-- author & description & keywords  -->
-<meta name="author" content="{{ if .Params.author }}{{ .Params.author | safeHTML }}{{ else }}{{ .Site.Author.name | safeHTML }}{{ end }}" />
+<meta name="author" content="{{ if .Params.author }}{{ with .Params.author }}{{ $author_type := (printf "%T" .) }}{{ $author_is_slice := (eq "[]string" $author_type) }}{{ if $author_is_slice }}{{ delimit . ", " | safeHTML }}{{ else }}{{ . | safeHTML}}{{ end }}{{ end }}{{ else }}{{ .Site.Author.name | safeHTML }}{{ end }}" />
 
 {{- if .Description -}}
   <meta name="description" content="{{ .Description | safeHTML }}" />
