@@ -171,7 +171,7 @@ Even.chroma = function() {
   const blocks = document.querySelectorAll('.highlight > .chroma');
   for (let i = 0; i < blocks.length; i++) {
     const block = blocks[i];
-    const afterHighLight = block.querySelector('pre.chroma > code');
+    const afterHighLight = block.querySelector('pre.chroma > code[data-lang]');
     const lang = afterHighLight ? afterHighLight.className : '';
     block.className += ' ' + lang;
   }
