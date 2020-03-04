@@ -1,0 +1,102 @@
+# ===== title =====
+archive:
+  other: "歸檔"
+
+tags:
+  other: "標簽"
+
+categories:
+  other: "分類"
+
+# ===== footer =====
+powered:
+  other: "由 %s 強力驅動"
+
+theme:
+  other: "主題"
+
+siteUV:
+  other: "本站總訪客數 %s 人"
+
+sitePV:
+  other: "本站總訪問量 %s 次"
+
+pagePV:
+  other: "%s 次閱讀"
+
+# ===== post =====
+prevPage:
+  other: "上一頁"
+
+nextPage:
+  other: "下一頁"
+
+prevPost:
+  other: "上一篇"
+
+nextPost:
+  other: "下一篇"
+
+toc:
+  other: "文章目錄"
+
+readMore:
+  other: "閱讀更多"
+
+reward:
+  other: "讚賞支持"
+
+rewardAlipay:
+  other: "支付寶贊助"
+
+rewardWechat:
+  other: "微信贊助"
+
+wordCount:
+  one: "約 {{ .Count }} 字"
+  other: "約 {{ .Count }} 字"
+
+readingTime:
+  one: "預計閱讀 {{ .Count }} 分鐘"
+  other: "預計閱讀 {{ .Count }} 分鐘"
+
+outdatedInfoWarningBefore:
+  other: "注意：最後更新於 "
+
+outdatedInfoWarningAfter:
+  other: "，文中內容可能已過時，請謹慎參考。"
+
+# ===== content license =====
+author:
+  other: "文章作者"
+
+lastMod:
+  other: "上次更新"
+
+markdown:
+  other: "原始文檔"
+
+seeMarkDown:
+  other: "查看本文 Markdown 版本 »"
+
+license:
+  other: "許可證"
+
+# ===== counter =====
+archiveCounter:
+  one: "共計 {{ .Count }} 篇文章"
+  other: "共計 {{ .Count }} 篇文章"
+
+tagCounter:
+  one: "共計 {{ .Count }} 個標籤"
+  other: "共計 {{ .Count }} 個標籤"
+
+zeroTagCounter:
+  other: "暫無標籤"
+
+categoryCounter:
+  one: "共計 {{ .Count }} 個分類"
+  other: "共計 {{ .Count }} 個分類"
+
+zeroCategoryCounter:
+  other: "暫無分類"
