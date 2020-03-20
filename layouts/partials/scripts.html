@@ -94,7 +94,7 @@
 
 <!-- Analytics -->
 {{- if and (not .Site.IsServer) .Site.GoogleAnalytics -}}
-  {{ template "_internal/google_analytics_async.html" . }}
+  {{- partial "ga-lite.html" . -}}
 {{- end -}}
 
 {{- with .Site.Params.baiduAnalytics -}}
