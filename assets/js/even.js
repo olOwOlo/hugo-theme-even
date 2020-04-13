@@ -277,4 +277,3 @@ Even.responsiveTable = function() {
   }
 };
 
-export {Even}

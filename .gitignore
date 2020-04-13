@@ -3,3 +3,4 @@ node_modules/
 static/dist/*.min.js.map
 static/dist/*.min.css.map
 *.iml
+exampleSite/resources/
