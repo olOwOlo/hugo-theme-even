@@ -23,6 +23,8 @@ $ git clone https://github.com/olOwOlo/hugo-theme-even themes/even
 
 **Important:** Take a look inside the [`exampleSite`](https://github.com/olOwOlo/hugo-theme-even/tree/master/exampleSite) folder of this theme. You'll find a file called [`config.toml`](https://github.com/olOwOlo/hugo-theme-even/blob/master/exampleSite/config.toml). **To use it, copy the [`config.toml`](https://github.com/olOwOlo/hugo-theme-even/blob/master/exampleSite/config.toml) in the root folder of your Hugo site.** Feel free to change it.
 
+**Important:** This theme uses [Hugo Pipes](https://gohugo.io/hugo-pipes/introduction/). Modifing contents in `asserts` requires the extended version to be installed.
+
 **NOTE:** For this theme, you should use **post** instead of **posts**, namely `hugo new post/some-content.md`.
 
 ## Language Support
@@ -66,7 +68,7 @@ This theme provides `center`,` right`, `left`,` music`, `admonition` shortcodes,
 
 ## Theme Color
 
-There are five built-in theme colors ( Default | Mint Green | Cobalt Blue | Hot Pink | Dark Violet ), you can config it by changing the `$theme-color-config` value in [`/src/css/_variable.scss`](https://github.com/olOwOlo/hugo-theme-even/blob/master/src/css/_variables.scss#L5-L8).
+There are five built-in theme colors ( Default | Mint Green | Cobalt Blue | Hot Pink | Dark Violet ), you can config it by changing the `$theme-color-config` value in [`/assets/sass/_variable.scss`](https://github.com/olOwOlo/hugo-theme-even/blob/master/assets/sass/_variables.scss#L5-L8).
 
 ## Update Theme
 
