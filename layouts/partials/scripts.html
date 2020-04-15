@@ -75,20 +75,20 @@
 {{- if and (or .Params.mathjax (and .Site.Params.mathjax (ne .Params.mathjax false))) (or .IsPage .IsHome) }}
   <script type="text/javascript">
     window.MathJax = {
-      {{ if or .Params.mathjaxEnableSingleDollar (and .Site.Params.mathjaxEnableSingleDollar (ne .Params.mathjaxEnableSingleDollar false)) -}}
-        tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]},
-      {{ end -}}
-      {{ if or .Params.mathjaxEnableAutoNumber (and .Site.Params.mathjaxEnableAutoNumber (ne .Params.mathjaxEnableAutoNumber false)) -}}
-        TeX: {equationNumbers: {autoNumber: "AMS"}},
-      {{ end -}}
-      showProcessingMessages: false,
-      messageStyle: 'none'
+      tex: {
+        {{ if or .Params.mathjaxEnableSingleDollar (and .Site.Params.mathjaxEnableSingleDollar (ne .Params.mathjaxEnableSingleDollar false)) -}}
+          inlineMath: [['$','$'], ['\\(','\\)']],
+        {{ end -}}
+        {{ if or .Params.mathjaxEnableAutoNumber (and .Site.Params.mathjaxEnableAutoNumber (ne .Params.mathjaxEnableAutoNumber false)) -}}
+          tags: 'ams',
+        {{ end -}}
+      }
     };
   </script>
   {{ if .Site.Params.mathjaxUseLocalFiles -}}
-    <script type="text/javascript" async src="{{ "lib/mathjax/MathJax.js?config=TeX-MML-AM_CHTML" | relURL }}"></script>
+    <script type="text/javascript" async src="{{ "lib/mathjax/es5/tex-mml-chtml.js" | relURL }}"></script>
   {{- else -}}
-    <script async src="https://cdn.jsdelivr.net/npm/mathjax@2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"  integrity="sha256-nvJJv9wWKEm88qvoQl9ekL2J+k/RWIsaSScxxlsrv8k=" crossorigin="anonymous"></script>
+    <script async src="https://cdn.jsdelivr.net/npm/mathjax@3.0.5/es5/tex-mml-chtml.js" integrity="sha256-HGLuEfFcsUJGhvB8cQ8nr0gai9EucOOaIxFw7qxmd+w=" crossorigin="anonymous"></script>
   {{- end }}
 {{- end }}
 
