@@ -70,7 +70,7 @@
 {{ $even := resources.Get "js/even.js" }}
 {{ $main := resources.Get "js/main.js" }}
 {{ $js := slice $even $main | resources.Concat "js/main.js" | fingerprint }}
-<script type="text/javascript" src="{{ $js.Permalink }}"></script>
+<script type="text/javascript" src="{{ $js.RelPermalink }}"></script>
 
 {{- if and (or .Params.mathjax (and .Site.Params.mathjax (ne .Params.mathjax false))) (or .IsPage .IsHome) }}
   <script type="text/javascript">

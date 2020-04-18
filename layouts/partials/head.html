@@ -62,7 +62,7 @@
 
 <!-- Styles -->
 {{ $style := resources.Get "sass/main.scss" | toCSS | minify | fingerprint }}
-<link href="{{ $style.Permalink }}" rel="stylesheet">
+<link href="{{ $style.RelPermalink }}" rel="stylesheet">
 {{ if .Site.Params.publicCDN.enable -}}
   {{ if .Site.Params.fancybox }}{{ .Site.Params.publicCDN.fancyboxCSS | safeHTML }}{{ end }}
 {{- else -}}
