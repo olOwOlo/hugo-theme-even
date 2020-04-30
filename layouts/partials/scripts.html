@@ -9,7 +9,7 @@
   {{ .Site.Params.publicCDN.slideout | safeHTML }}
   {{ if .Site.Params.fancybox }}{{ .Site.Params.publicCDN.fancyboxJS | safeHTML }}{{ end }}
 {{- else -}}
-  <script type="text/javascript" src="{{ "lib/jquery/jquery-3.2.1.min.js" | relURL }}"></script>
+  <script type="text/javascript" src="{{ "lib/jquery/jquery-3.5.0.min.js" | relURL }}"></script>
   <script type="text/javascript" src="{{ "lib/slideout/slideout-1.0.1.min.js" | relURL }}"></script>
   {{ if .Site.Params.fancybox }}<script type="text/javascript" src="{{ "lib/fancybox/jquery.fancybox-3.1.20.min.js" | relURL }}"></script>{{ end }}
 {{- end -}}
