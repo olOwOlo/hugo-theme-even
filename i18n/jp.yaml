@@ -92,7 +92,7 @@ tagCounter:
   other: "タグ: {{ .Count }}"
 
 zeroTagCounter:
-  other: "タグなし"
+  other: "タグなし"
 
 categoryCounter:
   one: "カテゴリ: {{ .Count }}"
