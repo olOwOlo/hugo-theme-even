@@ -23,7 +23,7 @@ $ git clone https://github.com/olOwOlo/hugo-theme-even themes/even
 
 **Important:** Take a look inside the [`exampleSite`](https://github.com/olOwOlo/hugo-theme-even/tree/master/exampleSite) folder of this theme. You'll find a file called [`config.toml`](https://github.com/olOwOlo/hugo-theme-even/blob/master/exampleSite/config.toml). **To use it, copy the [`config.toml`](https://github.com/olOwOlo/hugo-theme-even/blob/master/exampleSite/config.toml) in the root folder of your Hugo site.** Feel free to change it.
 
-**Important:** This theme uses [Hugo Pipes](https://gohugo.io/hugo-pipes/introduction/). Modifing contents in `asserts` requires the extended version to be installed.
+**Important:** This theme uses [Hugo Pipes](https://gohugo.io/hugo-pipes/introduction/). Modifying contents in `assets` requires the extended version to be installed.
 
 **NOTE:** For this theme, you should use **post** instead of **posts**, namely `hugo new post/some-content.md`.
 
