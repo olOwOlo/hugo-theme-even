@@ -3,8 +3,6 @@
 // ==============================
 
 .post-content {
-  word-wrap: break-word;
-
   @for $i from 1 through 6 {
     h#{$i} {
       font-weight: 400;
@@ -41,7 +39,6 @@
 
   a {
     color: $theme-color;
-    word-break: break-all;
 
     &:hover {
       border-bottom: $content-link-border;
