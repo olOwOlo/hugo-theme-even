@@ -9,9 +9,9 @@
   {{ .Site.Params.publicCDN.slideout | safeHTML }}
   {{ if .Site.Params.fancybox }}{{ .Site.Params.publicCDN.fancyboxJS | safeHTML }}{{ end }}
 {{- else -}}
-  <script type="text/javascript" src="{{ "lib/jquery/jquery-3.2.1.min.js" | relURL }}"></script>
+  <script type="text/javascript" src="{{ "lib/jquery/jquery-3.5.1.min.js" | relURL }}"></script>
   <script type="text/javascript" src="{{ "lib/slideout/slideout-1.0.1.min.js" | relURL }}"></script>
-  {{ if .Site.Params.fancybox }}<script type="text/javascript" src="{{ "lib/fancybox/jquery.fancybox-3.1.20.min.js" | relURL }}"></script>{{ end }}
+  {{ if .Site.Params.fancybox }}<script type="text/javascript" src="{{ "lib/fancybox/jquery.fancybox-3.5.7.min.js" | relURL }}"></script>{{ end }}
 {{- end -}}
 
 <!-- timeago.JS -->
@@ -42,8 +42,8 @@
   {{- if .Site.Params.publicCDN.enable -}}
     {{ .Site.Params.publicCDN.flowchartDiagramsJS | safeHTML }}
   {{- else -}}
-    <script src="{{ "lib/flowchartDiagrams/raphael-2.2.7.min.js" | relURL }}" integrity="sha256-67By+NpOtm9ka1R6xpUefeGOY8kWWHHRAKlvaTJ7ONI=" crossorigin="anonymous"></script>
-    <script src="{{ "lib/flowchartDiagrams/flowchart-1.8.0.min.js" | relURL }}" integrity="sha256-zNGWjubXoY6rb5MnmpBNefO0RgoVYfle9p0tvOQM+6k=" crossorigin="anonymous"></script>
+    <script src="{{ "lib/flowchartDiagrams/raphael-2.3.0.min.js" | relURL }}" integrity="sha256-TabprKdeNXbSesCWLMrcbWSDzUhpAdcNPe5Q53rn9Yg=" crossorigin="anonymous"></script>
+    <script src="{{ "lib/flowchartDiagrams/flowchart-1.12.1.min.js" | relURL }}" integrity="sha256-ANSuVJkHZftRURALG24omixaZG+Sb51/+JY6EDa7MdE=" crossorigin="anonymous"></script>
   {{- end -}}
 {{- end -}}
 
