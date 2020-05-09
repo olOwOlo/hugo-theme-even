@@ -1,5 +1,9 @@
 <article class="post">
+  {{- if .Site.Params.hideSummary }}
+  <header class="post-header no-padding">
+  {{- else -}}
   <header class="post-header">
+  {{- end }}
     <h1 class="post-title"><a class="post-link" href="{{ .RelPermalink }}">{{ .Title }}</a></h1>
     <div class="post-meta">
       <span class="post-time"> {{ .Date.Format (.Site.Params.dateFormatToUse | default "2006-01-02") }} </span>
@@ -17,6 +21,7 @@
     </div>
   </header>
   <!-- Content -->
+  {{- if not .Site.Params.hideSummary }}
   <div class="post-content">
     <div class="post-summary">
       {{ .Summary }}
@@ -25,4 +30,5 @@
       <a href="{{ .RelPermalink }}" class="read-more-link">{{ T "readMore" }}</a>
     </div>
   </div>
+  {{- end }}
 </article>
