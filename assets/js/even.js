@@ -113,7 +113,7 @@ Even._initToc = function() {
     $($toclink).removeClass('active');
     $($tocLinkLis).removeClass('has-active');
 
-    if (activeTocIndex !== -1) {
+    if (activeTocIndex !== -1 && $toclink[activeTocIndex] != null) {
       $($toclink[activeTocIndex]).addClass('active');
       let ancestor = $toclink[activeTocIndex].parentNode;
       while (ancestor.tagName !== 'NAV') {
