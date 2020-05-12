@@ -13,7 +13,7 @@ powered:
   other: "Powered by %s"
 
 theme:
-  other: "テーマ"
+  other: "Theme"
 
 siteUV:
   other: "総訪問者数: %s"
