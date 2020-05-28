@@ -23,6 +23,8 @@ $ git clone https://github.com/olOwOlo/hugo-theme-even themes/even
 
 **重要:** 在主题的 [`exampleSite`](https://github.com/olOwOlo/hugo-theme-even/tree/master/exampleSite) 目录下有一个 [`config.toml`](https://github.com/olOwOlo/hugo-theme-even/blob/master/exampleSite/config.toml) 文件，**将这个 [`config.toml`](https://github.com/olOwOlo/hugo-theme-even/blob/master/exampleSite/config.toml) 文件复制到你的站点目录下**，根据自己的需求更改即可。
 
+**重要:** 本主题用到了 [Hugo Pipes](https://gohugo.io/hugo-pipes/introduction/) 功能。如需修改 `assets` 目录下的文件，请安装 extended 版。
+
 **注意:** 对于这个主题，你应该使用 **post** 而不是 **posts**，即 `hugo new post/some-content.md`。
 
 ## Language Support
@@ -64,22 +66,9 @@ defaultContentLanguage = "en"  # en / zh-cn / other...
 
 主题提供了 `center`,` right`, `left`,` music`, `admonition` 这些 shortcodes，并支持为内置的 `figure` 设置 `center`,` right`, `left` 这三种 class 值。点击[这里](https://blog.olowolo.com/example-site/post/shortcodes/)查看详细内容。
 
-## Theme Color 
+## Theme Color
 
-主题内置了五种颜色 ( Default | Mint Green | Cobalt Blue | Hot Pink | Dark Violet )，你可以通过改变 [`/src/css/_variable.scss`](https://github.com/olOwOlo/hugo-theme-even/blob/master/src/css/_variables.scss#L5-L8) 文件中 `$theme-color-config` 的值来改变主题的颜色。
-    
-## Build
-
-如果你更改了 `/src/` 目录下的任意文件，你需要重新编译它们。
-```bash
-cd ./themes/even/
-# install dependencies
-yarn install
-# build
-yarn build
-```
-
-_你需要先安装 **[Yarn](https://yarnpkg.com/)** 和 **[Node.js](https://nodejs.org/)**。_
+主题内置了五种颜色 ( Default | Mint Green | Cobalt Blue | Hot Pink | Dark Violet )，你可以通过改变 [`/assets/sass/_variable.scss`](https://github.com/olOwOlo/hugo-theme-even/blob/master/assets/sass/_variables.scss#L5-L8) 文件中 `$theme-color-config` 的值来改变主题的颜色。
 
 ## Update Theme
 

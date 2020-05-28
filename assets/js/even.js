@@ -171,7 +171,7 @@ Even.chroma = function() {
   const blocks = document.querySelectorAll('.highlight > .chroma');
   for (let i = 0; i < blocks.length; i++) {
     const block = blocks[i];
-    const afterHighLight = block.querySelector('pre.chroma > code');
+    const afterHighLight = block.querySelector('pre.chroma > code[data-lang]');
     const lang = afterHighLight ? afterHighLight.className : '';
     block.className += ' ' + lang;
   }
@@ -267,7 +267,7 @@ Even.sequence = function() {
 };
 
 Even.responsiveTable = function() {
-  const tables = document.querySelectorAll('.post-content > table');
+  const tables = document.querySelectorAll('.post-content table:not(.lntable)');
   for (let i = 0; i < tables.length; i++) {
     const table = tables[i];
     const wrapper = document.createElement('div');
@@ -277,4 +277,3 @@ Even.responsiveTable = function() {
   }
 };
 
-export {Even}

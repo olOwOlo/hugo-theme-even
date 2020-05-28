@@ -1,0 +1,102 @@
+# ===== title =====
+archive:
+  other: "Archiv"
+
+tags:
+  other: "Tags"
+
+categories:
+  other: "Kategorien"
+
+# ===== footer =====
+powered:
+  other: "Powered by %s"
+
+theme:
+  other: "Theme"
+
+siteUV:
+  other: "site uv: %s"
+
+sitePV:
+  other: "site pv: %s"
+
+pagePV:
+  other: "%s mal gelesen"
+
+# ===== post =====
+prevPage:
+  other: "vorher"
+
+nextPage:
+  other: "nächstes"
+
+prevPost:
+  other: "vorher"
+
+nextPost:
+  other: "nächstes"
+
+toc:
+  other: "Inhalt"
+
+readMore:
+  other: "Weiterlesen..."
+
+reward:
+  other: "Belohnung"
+
+rewardAlipay:
+  other: "alipay"
+
+rewardWechat:
+  other: "wechat"
+
+wordCount:
+  one: "{{ .Count }} Wort"
+  other: "{{ .Count }} Wörter"
+
+readingTime:
+  one: "{{ .Count }} Min Lesezeit"
+  other: "{{ .Count }} Min Lesezeit"
+
+outdatedInfoWarningBefore:
+  other: "[HINWEIS] aktualisiert "
+
+outdatedInfoWarningAfter:
+  other: ". Der Inhalt dieses Artikels kann veraltet sein."
+
+# ===== content license =====
+author:
+  other: "Autor"
+
+lastMod:
+  other: "letzte Änderung"
+
+markdown:
+  other: "Markdown"
+
+seeMarkDown:
+  other: "Die Markdown Version »"
+
+license:
+  other: "Lizenz"
+
+# ===== counter =====
+archiveCounter:
+  one: "{{ .Count }} Aritkel in Summe"
+  other: "{{ .Count }} Artikel in Summe"
+
+tagCounter:
+  one: "{{ .Count }} Tag in Summe"
+  other: "{{ .Count }} Tags in Summe"
+
+zeroTagCounter:
+  other: "Keine Tags"
+
+categoryCounter:
+  one: "{{ .Count }} Kategorie in Summe"
+  other: "{{ .Count }} Kategorien in Summe"
+
+zeroCategoryCounter:
+  other: "Keine Kategorien"

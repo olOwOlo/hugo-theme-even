@@ -1,0 +1,102 @@
+# ===== title =====
+archive:
+  other: "アーカイブ"
+
+tags:
+  other: "タグ"
+
+categories:
+  other: "カテゴリ"
+
+# ===== footer =====
+powered:
+  other: "Powered by %s"
+
+theme:
+  other: "Theme"
+
+siteUV:
+  other: "総訪問者数: %s"
+
+sitePV:
+  other: "総ページビュー: %s"
+
+pagePV:
+  other: "ページビュー: %s"
+
+# ===== post =====
+prevPage:
+  other: "前へ"
+
+nextPage:
+  other: "次へ"
+
+prevPost:
+  other: "前の記事へ"
+
+nextPost:
+  other: "次の記事へ"
+
+toc:
+  other: "コンテンツ"
+
+readMore:
+  other: "続きを読む..."
+
+reward:
+  other: "Reword"
+
+rewardAlipay:
+  other: "alipay"
+
+rewardWechat:
+  other: "wechat"
+
+wordCount:
+  one: "{{ .Count }} 文字"
+  other: "{{ .Count }} 文字"
+
+readingTime:
+  one: "読了時間: {{ .Count }} 分"
+  other: "読了時間: {{ .Count }} 分"
+
+outdatedInfoWarningBefore:
+  other: "【注意】最後更新日は "
+
+outdatedInfoWarningAfter:
+  other: "のため、記事の内容が古い可能性があります。"
+
+# ===== content license =====
+author:
+  other: "作成者"
+
+lastMod:
+  other: "最終更新時刻"
+
+markdown:
+  other: "Markdown"
+
+seeMarkDown:
+  other: "Markdownで本文を見る »"
+
+license:
+  other: "ライセンス"
+
+# ===== counter =====
+archiveCounter:
+  one: "投稿数: {{ .Count }} 記事"
+  other: "投稿数: {{ .Count }} 記事"
+
+tagCounter:
+  one: "タグ: {{ .Count }}"
+  other: "タグ: {{ .Count }}"
+
+zeroTagCounter:
+  other: "タグなし"
+
+categoryCounter:
+  one: "カテゴリ: {{ .Count }}"
+  other: "カテゴリ: {{ .Count }}"
+
+zeroCategoryCounter:
+  other: "カテゴリなし"
