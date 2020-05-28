@@ -18,11 +18,15 @@
   </header>
   <!-- Content -->
   <div class="post-content">
-    <div class="post-summary">
-      {{ .Summary }}
-    </div>
-    <div class="read-more">
-      <a href="{{ .RelPermalink }}" class="read-more-link">{{ T "readMore" }}</a>
-    </div>
+    {{- if .Site.Params.fullContent }}
+      {{ .Content }}
+    {{- else }}
+      <div class="post-summary">
+        {{ .Summary }}
+      </div>
+      <div class="read-more">
+        <a href="{{ .RelPermalink }}" class="read-more-link">{{ T "readMore" }}</a>
+      </div>
+    {{- end }}
   </div>
 </article>
