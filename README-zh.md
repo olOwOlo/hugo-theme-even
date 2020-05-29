@@ -86,3 +86,9 @@ Released under the [MIT](https://github.com/olOwOlo/hugo-theme-even/blob/master/
 - [ananke](https://github.com/budparr/gohugo-theme-ananke)
 - [hexo-theme-even](https://github.com/ahonn/hexo-theme-even)
 - [hugo-nuo](https://github.com/laozhu/hugo-nuo)
+
+## 修改部分
+- `assets/sass/_variables.scss` 自定义主题颜色
+- `assets/sass/_base.scss` 注释顶部条、选中文字变白
+- `assets/sass/_toc.scss` 注释目录背景
+- `layouts/partials/comments.html` 修改评论区js地址,提高加载速度
