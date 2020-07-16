@@ -2,4 +2,3 @@ node_modules/
 .idea/
 *.iml
 exampleSite/resources/
-yarn.lock
