@@ -1,16 +1,4 @@
 {{ if and .IsPage (ne .Params.comment false) -}}
-  <!-- Utterances -->
-  {{- if .Site.Params.utterances.enable -}}
-    <div id="utterances_comment"></div>
-    <script src="https://utteranc.es/client.js"
-      repo='{{ .Site.Params.utterances.repo }}'
-      issue-term='{{ .Site.Params.utterances.issueTerm }}'
-      label='{{ .Site.Params.utterances.label }}'
-      theme='{{ .Site.Params.utterances.theme }}'
-      crossorigin='{{ .Site.Params.utterances.crossorigin }}'
-      async>
-    </script>
-  {{- end -}}
   <!-- Disqus -->
   {{- if .Site.DisqusShortname -}}
     <div id="disqus_thread"></div>
