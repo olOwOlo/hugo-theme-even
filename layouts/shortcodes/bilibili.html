@@ -1,0 +1,23 @@
+
+{{ $videoID := index .Params 0  }}
+{{ $pageNum := index .Params 1 | default 1 }}
+
+{{ if (findRE "^[bB][vV][0-9a-zA-Z]+$" $videoID)  }}
+<div><iframe id="biliplayer" src="//player.bilibili.com/player.html?bvid={{ $videoID  }}&page={{ $pageNum  }}" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" loading="lazy" > </iframe></div>
+{{ else  }}
+<div><iframe id="biliplayer" src="//player.bilibili.com/player.html?aid={{ $videoID  }}&page={{ $pageNum  }}" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" loading="lazy" > </iframe></div>
+{{ end  }}
+
+<style>
+// Embed BiliBili Video
+#bilibili {
+  width: 100%;
+  height: 550px;
+}
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  #bilibili {
+    width: 100%;
+    height: 250px;
+  }
+}
+</style>
