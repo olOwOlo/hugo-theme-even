@@ -1,0 +1,25 @@
+<!--
+  Language selector.
+
+  If current page has version in another language, language link will lead
+  to the translated page. If not, the link will be to the home page of the site
+  with specified language.
+-->
+{{ if (and (.Site.IsMultiLingual) ($.Site.Params.showLanguageSelector)) }}
+  <div class="language-selector">
+    <ul class="languages-list">
+      {{ range $homeTranslation := .Site.Home.AllTranslations }}
+        {{ $active := eq $homeTranslation.Language $.Site.Language }}
+        {{ $pageTranslation := (index (where $.Page.AllTranslations "Language.Lang"  "eq" $homeTranslation.Language.Lang) 0) }}
+
+        <li class="language-item {{if $active}}active{{end}}">
+          {{ with $pageTranslation }}
+            <a href="{{ .Permalink }}">{{ .Language.Lang }}</a>
+          {{ else }}
+            <a href="{{ $homeTranslation.Permalink }}">{{ .Language.Lang }}</a>
+          {{ end }}
+        </li>
+      {{ end }}
+    </ul>
+  </div>
+{{ end }}
