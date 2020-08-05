@@ -64,7 +64,7 @@ copyright = ""            # default: author.name ↓        # 默认为下面配
   description = "Hugo theme even example site."
 
   # paginate of archives, tags and categories             # 归档、标签、分类每页显示的文章数目，建议修改为一个较大的值
-  archivePaginate = 5
+  archivePaginate = 50
 
   # show 'xx Posts In Total' in archive page ?            # 是否在归档页显示文章的总数
   showArchiveCount = false
@@ -155,7 +155,7 @@ copyright = ""            # default: author.name ↓        # 默认为下面配
     appKey = '你的appKey'
     notify = false  # mail notifier , https://github.com/xCss/Valine/wiki
     verify = false # Verification code
-    avatar = 'mm' 
+    avatar = 'mm'
     placeholder = '说点什么吧...'
     visitor = false
 
@@ -201,6 +201,13 @@ copyright = ""            # default: author.name ↓        # 默认为下面配
     anonymizeIP = true      # 12.214.31.144 -> 12.214.31.0
   [privacy.youtube]
     privacyEnhanced = true
+
+# see https://gohugo.io/getting-started/configuration-markup
+[markup]
+  [markup.tableOfContents]
+    startLevel = 1
+  [markup.goldmark.renderer]
+    unsafe = true
 
 # 将下面这段配置取消注释可以使 hugo 生成 .md 文件
 # Uncomment these options to make hugo output .md files.
