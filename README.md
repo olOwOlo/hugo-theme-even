@@ -9,7 +9,7 @@ A super concise theme for Hugo
 
 > It's a port of the [hexo-theme-even](https://github.com/ahonn/hexo-theme-even)
 
-[Demo](https://blog.olowolo.com/example-site/) | [中文说明](https://github.com/olOwOlo/hugo-theme-even/blob/master/README-zh.md)
+[Demo](https://hugo-theme-even.netlify.app) | [中文说明](https://github.com/olOwOlo/hugo-theme-even/blob/master/README-zh.md)
 
 ## Screenshots
 
