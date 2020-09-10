@@ -11,6 +11,10 @@ code {
   color: $code-color;
 }
 
+pre > code {
+  display: block;
+}
+
 // highlight.js
 figure.highlight {
   margin: 1em 0;
@@ -129,11 +133,11 @@ figure.highlight {
     .hljs-formula {
       background: map-get($code-highlight-color, formula);
     }
-    
+
     .hljs-emphasis {
       font-style: italic;
     }
-    
+
     .hljs-strong {
       font-weight: bold;
     }
