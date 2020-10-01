@@ -2,7 +2,7 @@
   {{- range $name, $path := .Site.Params.social }}
     {{- if $path }}
       {{- $realName := slicestr $name 2 }}
-      <a href="{{ $path | safeURL }}" class="iconfont icon-{{ $realName }}" title="{{ $realName }}"></a>
+      <a href="{{ $path | safeURL }}" rel="me" class="iconfont icon-{{ $realName }}" title="{{ $realName }}"></a>
     {{- end }}
   {{- end }}
   {{ if .Site.LanguagePrefix -}}
