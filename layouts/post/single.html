@@ -45,7 +45,7 @@
       {{ with .Params.tags -}}
         <div class="post-tags">
           {{ range . -}}
-            <a href="{{ "tags" | relLangURL }}/{{ . | urlize }}/">{{ . }}</a>
+            <a href="{{ "tags" | relLangURL }}/{{ . | urlize }}{{ if $.Site.Params.uglyURLs }}.html{{ else }}/{{ end }}">{{ . }}</a>
           {{ end -}}
         </div>
       {{- end -}}
