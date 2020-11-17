@@ -716,6 +716,14 @@ $$ E(\mathbf{v}, \mathbf{h}) = -\sum_{i,j}w_{ij}v_i h_j - \sum_i b_i v_i - \sum_
 
 {{% music "28196554" %}}
 
+## BiliBili
+
+```
+{{</* bilibili BV14p4y1X7cQ */>}}
+```
+
+{{< bilibili BV14p4y1X7cQ >}}
+
 ## YouTube
 
 ```
