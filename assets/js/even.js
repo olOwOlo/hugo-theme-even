@@ -181,8 +181,7 @@ Even.toc = function() {
   const tocContainer = document.getElementById('post-toc');
   if (tocContainer !== null) {
     const toc = document.getElementById('TableOfContents');
-    if (toc === null) {
-      // toc = true, but there are no headings
+    if (toc == null || !toc.hasChildNodes()) {
       tocContainer.parentNode.removeChild(tocContainer);
     } else {
       this._refactorToc(toc);
