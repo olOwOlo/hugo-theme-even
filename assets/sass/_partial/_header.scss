@@ -3,17 +3,24 @@
 // ==============================
 
 .header {
-  @include clearfix; 
+  @include clearfix;
   padding: $header-padding;
 
   @import '_header/logo';
   @import '_header/menu';
-}
 
+  .language-selector {
+    float: right;
+  }
+}
 
 @include max-screen() {
   .header {
     padding: 50px 0 0;
     text-align: center;
+
+    .language-selector {
+      display: none;
+    }
   }
 }

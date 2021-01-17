@@ -41,6 +41,16 @@ Can also support any other languages as well. For example, to support german, cr
 
 P.S. In multilingual mode, the language which currently being used to render the website will be used.
 
+### Language selector
+
+It is possible to enable language selector for multilingual site. It will be displayed in the header or in the slide menu.
+
+To enable it, set `showLanguageSelector` parameter to `true`.
+
+```toml
+showLanguageSelector = true
+```
+
 ## Favicon
 
 In order to customize the favicon you need to place **all** the following files in the `static` folder at the root of your site, which will overwrite those files in the [`themes/even/static/`](https://github.com/olOwOlo/hugo-theme-even/tree/master/static) folder.
