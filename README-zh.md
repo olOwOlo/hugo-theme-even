@@ -77,6 +77,9 @@ cd ./themes/even/
 git pull
 ```
 
+**每当更新此主题时，都应检查 `CHANGELOG.md` 文件，可能会有一些重大更改。**
+
+
 ## License
 
 Released under the [MIT](https://github.com/olOwOlo/hugo-theme-even/blob/master/LICENSE.md) License.
