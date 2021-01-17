@@ -1,0 +1,102 @@
+# ===== title =====
+archive:
+  other: "Arşiv"
+
+tags:
+  other: "Etiketler"
+
+categories:
+  other: "Kategoriler"
+
+# ===== footer =====
+powered:
+  other: "%s tarafından desteklenmektedir"
+
+theme:
+  other: "Tema"
+
+siteUV:
+  other: "site uv: %s"
+
+sitePV:
+  other: "site pv: %s"
+
+pagePV:
+  other: "okuma süresi: %s"
+
+# ===== post =====
+prevPage:
+  other: "Önceki"
+
+nextPage:
+  other: "Sonraki"
+
+prevPost:
+  other: "Önceki"
+
+nextPost:
+  other: "Sonraki"
+
+toc:
+  other: "İçerikler"
+
+readMore:
+  other: "Daha fazla..."
+
+reward:
+  other: "Ödül"
+
+rewardAlipay:
+  other: "alipay"
+
+rewardWechat:
+  other: "wechat"
+
+wordCount:
+  one: "{{ .Count }} kelime"
+  other: "{{ .Count }} kelime"
+
+readingTime:
+  one: "{{ .Count }} dakikalık okuma süresi"
+  other: "{{ .Count }} dakikalık okuma süresi"
+
+outdatedInfoWarningBefore:
+  other: "[NOT] Güncellendi "
+
+outdatedInfoWarningAfter:
+  other: ". Bu makale güncel olmayan içeriğe veya konuya sahip olabilir."
+
+# ===== content license =====
+author:
+  other: "Yazar"
+
+lastMod:
+  other: "LastMod"
+
+markdown:
+  other: "Markdown"
+
+seeMarkDown:
+  other: "Markdown sürümü »"
+
+license:
+  other: "Lisans"
+
+# ===== counter =====
+archiveCounter:
+  one: "Toplam {{ .Count }} gönderi"
+  other: "Toplam {{ .Count }} gönderi"
+
+tagCounter:
+  one: "Toplam {{ .Count }} etiket"
+  other: "Toplam {{ .Count }} etiket"
+
+zeroTagCounter:
+  other: "Etiket yok"
+
+categoryCounter:
+  one: "Toplam {{ .Count }} kategori"
+  other: "Toplam {{ .Count }} kategori"
+
+zeroCategoryCounter:
+  other: "Kategori yok"
