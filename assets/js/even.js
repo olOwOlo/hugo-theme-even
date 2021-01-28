@@ -241,6 +241,31 @@ Even.flowchart = function() {
   }
 };
 
+Even.mermaid = function () {
+  if (!window.mermaid) return;
+
+  const blocks = document.querySelectorAll("pre code.language-mermaid");
+
+  // change all <pre><code mamaid> tags to <div class="mermaid">
+  // mermaid will handle the rest!
+  for (let i = 0; i < blocks.length; i++) {
+    if (!window.hljs && i % 2 === 0) continue;
+
+    const block = blocks[i];
+    const rootElement = window.hljs
+      ? block.parentElement
+      : block.parentElement.parentElement.parentElement.parentElement
+          .parentElement.parentElement.parentElement;
+
+    var container = document.createElement("div");
+    const id = `js-mermaid-diagrams-${i}`;
+    container.id = id;
+    container.className = "align-center mermaid";
+    container.textContent = block.childNodes[0].textContent;
+    rootElement.parentElement.replaceChild(container, rootElement);
+  }
+};
+
 Even.sequence = function() {
   if (!window.Diagram) return;
 

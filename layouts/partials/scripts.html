@@ -30,6 +30,23 @@
   </script>
 {{- end -}}
 
+
+<!-- mermaid -->
+{{- if and (or .Params.mermaid.enable (and .Site.Params.mermaid.enable (ne .Params.mermaid.enable false))) (or .IsPage .IsHome ) -}}
+  <script>
+    {{- if .Params.mermaid.options -}}
+      window.mermaidOptions = {{ .Params.mermaid.options | safeJS }};
+    {{- else if .Site.Params.mermaid.options -}}
+      window.mermaidOptions = {{ .Site.Params.options | safeJS }};
+    {{- end -}}
+  </script>
+  {{- if .Site.Params.publicCDN.enable -}}
+    {{ .Site.Params.publicCDN.mermaidJS | safeHTML }}
+  {{- else -}}
+    <script src="{{ "lib/mermaid/mermaid.min.js" | relURL }}"  crossorigin="anonymous"></script>
+  {{- end -}}
+{{- end -}}
+
 <!-- flowchart -->
 {{- if and (or .Params.flowchartDiagrams.enable (and .Site.Params.flowchartDiagrams.enable (ne .Params.flowchartDiagrams.enable false))) (or .IsPage .IsHome) -}}
   <script>
