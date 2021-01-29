@@ -264,6 +264,11 @@ Even.mermaid = function () {
     container.textContent = block.childNodes[0].textContent;
     rootElement.parentElement.replaceChild(container, rootElement);
   }
+  window.mermaid.mermaidAPI.initialize(
+    window.mermaidOptions?
+    window.mermaidOptions:
+    {'securityLevel': 'loose', 'theme': 'base'}
+  );
 };
 
 Even.sequence = function() {

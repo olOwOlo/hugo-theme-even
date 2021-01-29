@@ -182,7 +182,7 @@ copyright = ""            # default: author.name ↓        # 默认为下面配
 
   [params.mermaid]    # add mermaid support
     enable = false
-    options = ""      # currently unusable now.
+    options = ""      # default: "{'securityLevel': 'loose', 'theme': 'base' }"
 
   [params.busuanzi]         # count web traffic by busuanzi                             # 是否使用不蒜子统计站点访问量
     enable = false
