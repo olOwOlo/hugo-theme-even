@@ -34,10 +34,10 @@
 <!-- mermaid -->
 {{- if and (or .Params.mermaid.enable (and .Site.Params.mermaid.enable (ne .Params.mermaid.enable false))) (or .IsPage .IsHome ) -}}
   <script>
-    {{- if .Params.mermaid.options -}}
-      window.mermaidOptions = {{ .Params.mermaid.options | safeJS }};
-    {{- else if .Site.Params.mermaid.options -}}
-      window.mermaidOptions = {{ .Site.Params.options | safeJS }};
+    {{- if .Site.Params.mermaid.options -}}
+      window.mermaidOptions = {{ .Site.Params.mermaid.options | safeJS }};
+    {{- else if .Params.mermaid.options -}}
+      window.mermaidOptions = {{ .Params.options | safeJS }};
     {{- end -}}
   </script>
   {{- if .Site.Params.publicCDN.enable -}}
