@@ -52,6 +52,11 @@ img {
   vertical-align: middle;
 }
 
+// fix mermaid svg height
+svg {
+  height: auto;
+}
+
 a {
   color: $global-font-color;
   text-decoration: none;
