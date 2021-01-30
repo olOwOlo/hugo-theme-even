@@ -47,16 +47,6 @@
   {{- end -}}
 {{- end -}}
 
-  <script>
-    alert('before judge');
-    {{if .i_am_a_undefined_attribute}}
-    alert('prob');
-    {{else if true}}
-    alert('judging');
-    {{end}}
-    alert('judged');
-  </script>
-
 <!-- flowchart -->
 {{- if and (or .Params.flowchartDiagrams.enable (and .Site.Params.flowchartDiagrams.enable (ne .Params.flowchartDiagrams.enable false))) (or .IsPage .IsHome) -}}
   <script>
