@@ -1,0 +1,13 @@
+<div class='align-right'>
+<article class="tweet">
+    <blockquote class="twitter-tweet" data-lang="en">
+      <p lang="en" dir="ltr">{{ .Content }}
+      <a href="">{{ .Site.Author.name | safeHTML }}</a>. 
+      <a href="{{ .RelPermalink }}" class="read-more-link">{{ T "readMore" }}</a>
+      <a href="{{ .RelPermalink }}">{{ .Date.Format (.Site.Params.dateFormatToUse | default "2006-01-02") }}</a>
+      <a class=url href="{{ .RelPermalink }}">
+        <span class=heart>&#9829;</span>
+      </a>
+    </blockquote>
+</article>
+</div>
