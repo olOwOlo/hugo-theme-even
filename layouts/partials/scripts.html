@@ -7,6 +7,7 @@
 {{- if .Site.Params.publicCDN.enable }}
   {{ .Site.Params.publicCDN.jquery | safeHTML }}
   {{ .Site.Params.publicCDN.slideout | safeHTML }}
+  {{ .Site.Params.publicCDN.mermaid | safeHTML }}
   {{ if .Site.Params.fancybox }}{{ .Site.Params.publicCDN.fancyboxJS | safeHTML }}{{ end }}
 {{- else -}}
   <script type="text/javascript" src="{{ "lib/jquery/jquery-3.2.1.min.js" | relURL }}"></script>
