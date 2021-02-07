@@ -1,0 +1,10 @@
+<!-- This is quite bad since if you have multiple mermaid diagrams, the scrip will be downloaded as many times. -->
+<!-- One proper solution is to include this in the footer -->
+<div class="mermaid" align="{{ if .Get "align" }}
+                                {{ .Get "align" }}
+                            {{ else }}
+                                center
+                            {{ end }}">
+    {{ safeHTML .Inner }}
+</div>
+
