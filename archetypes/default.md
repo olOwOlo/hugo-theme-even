@@ -38,6 +38,9 @@ sequenceDiagrams:
   enable: false
   options: ""
 
+asciinema:
+  enable: false
+  option: ""
 ---
 
 <!--more-->

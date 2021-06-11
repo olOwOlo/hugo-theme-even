@@ -1,0 +1,39 @@
+{{/*
+    ## enable = false
+    ### Params:
+    - `speed`
+      required param
+      you can extract from music url
+      url format "http://music.163.com/#/song?id=3950552"
+    - `theme`
+      optional param
+      default value 0
+      you can overwrite it with 1
+    - `rows`
+    ### Examples:
+    - Simple
+    - Named Params
+
+*/}}
+{{- /* DEFAULTS */ -}}
+{{ $speed := "1" }}
+{{ $theme := "solarized-light" }}
+{{ $rows := "30" }}
+{{- if .IsNamedParams -}}
+<asciinema-player 
+    src="/ascrec/{{ .Get "cf" }}"
+    speed="{{or (.Get "speed") $speed }}"
+    theme="{{or (.Get "theme") $theme }}"
+    rows="{{or (.Get "rows") $rows }}"
+    idle-time-limit="2">
+</asciinema-player>
+{{- else -}}
+<asciinema-player 
+    src="/ascrec/{{ .Get "cf" }}"
+    speed="1"
+    rows="20"
+    theme="solarized-light"
+    idle-time-limit="2">
+</asciinema-player>
+
+{{- end -}}
