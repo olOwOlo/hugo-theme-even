@@ -104,7 +104,8 @@
     {{ .Site.Params.publicCDN.asciinemaJS | safeHTML }}
     {{ .Site.Params.publicCDN.asciinemaCSS | safeHTML }}
   {{- else -}}
-    <h1>NOOOOOOO</h1>
+    <script src="{{ "lib/asciinema/asciinema-player.js" | relURL }}" integrity="sha256-RhMkYvfU/IITmQKEXZOpX54ucn3OJaqGr8HdGi2Wi3c=" crossorigin="anonymous"></script>
+    <script src="{{ "lib/asciinema/asciinema-player.css" | relURL }}" integrity="sha256-Us+G/D2x4qaNPj8UgpY7kqzO6f6cYyh5w7IWfZsrJPo=" crossorigin="anonymous"></script>
   {{- end -}}
 {{- end }}
 
