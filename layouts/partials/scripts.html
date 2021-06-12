@@ -92,6 +92,24 @@
   {{- end }}
 {{- end }}
 
+{{- if and (or .Params.asciinema (and .Site.Params.asciinema (ne .Params.asciinema false))) (or .IsPage .IsHome) }}
+  <script>
+    {{- if .Params.asciinema.options -}}
+      window.asciinemaOptions = {{ .Params.asciinema.options | safeJS }};
+    {{- else if .Site.Params.asciinema.options -}}
+      window.asciinemaOptions = {{ .Site.Params.asciinema.options | safeJS }};
+    {{- end -}}
+  </script>
+  {{- if .Site.Params.publicCDN.enable -}}
+    {{ .Site.Params.publicCDN.asciinemaJS | safeHTML }}
+    {{ .Site.Params.publicCDN.asciinemaCSS | safeHTML }}
+  {{- else -}}
+    <script src="{{ "lib/asciinema/asciinema-player.js" | relURL }}" integrity="sha256-RhMkYvfU/IITmQKEXZOpX54ucn3OJaqGr8HdGi2Wi3c=" crossorigin="anonymous"></script>
+    <script src="{{ "lib/asciinema/asciinema-player.css" | relURL }}" integrity="sha256-Us+G/D2x4qaNPj8UgpY7kqzO6f6cYyh5w7IWfZsrJPo=" crossorigin="anonymous"></script>
+  {{- end -}}
+{{- end }}
+
+
 <!-- Analytics -->
 {{- if (in (slice (getenv "HUGO_ENV") hugo.Environment) "production") | and .Site.GoogleAnalytics -}}
   {{ template "_internal/google_analytics_async.html" . }}

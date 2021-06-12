@@ -1,0 +1,20 @@
+{{/*
+    ### Params:(see:https://github.com/asciinema/asciinema-player)
+    - `speed`
+    - `theme`
+    - `rows`
+
+*/}}
+{{- /* DEFAULTS */ -}}
+
+{{ $speed := "1" }}
+{{ $theme := "solarized-light" }}
+{{ $rows := "30" }}
+
+<asciinema-player 
+    src="/ascrec/{{ .Get "cf" }}"
+    speed="{{or (.Get "speed") $speed }}"
+    theme="{{or (.Get "theme") $theme }}"
+    rows="{{or (.Get "rows") $rows }}"
+    idle-time-limit="2">
+</asciinema-player>
