@@ -6,6 +6,7 @@ license = "MIT"
 licenselink = "https://github.com/olOwOlo/hugo-theme-even/blob/master/LICENSE.md"
 description = "A super concise theme for Hugo"
 homepage = "https://github.com/olOwOlo/hugo-theme-even"
+demosite = "https://hugo-theme-even.netlify.app"
 tags = ["responsive", "blog", "simple", "clean", "highlight.js", "syntax highlighting"]
 features = ["responsive", "blog", "simple", "clean", "highlight.js", "syntax highlighting"]
 min_version = "0.60.0"
