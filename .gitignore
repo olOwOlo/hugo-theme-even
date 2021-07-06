@@ -1,4 +1,1 @@
-node_modules/
-.idea/
-*.iml
-exampleSite/resources/
+/themes
