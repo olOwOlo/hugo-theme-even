@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Shortcodes - Even - A super concise theme for Hugo</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="olOwOlo" /><meta name="description" content="Admonition I&amp;#39;m title!
+biu biu biu.
+note biu biu biu.
+ Without title.
+  1 2 3 4 5 6 7 8 9 10 11 12  {{% admonition note &amp;#34;I&amp;#39;m title!&amp;#34; false %}} biu biu biu. {{% admonition type=&amp;#34;note&amp;#34; title=&amp;#34;note&amp;#34; details=&amp;#34;true&amp;#34; %}} biu biu biu. {{% /admonition %}} {{% admonition example %}} Without title. {{% /admonition %}} {{% /admonition %}}   " /><meta name="keywords" content="Hugo, theme, even" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.79.0 with theme even" />
+
+
+<link rel="canonical" href="http://localhost:1313/post/shortcodes/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+<link href="/sass/main.min.2e81bbed97b8b282c1aeb57488cc71c8d8c8ec559f3931531bd396bf31e0d4dd.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="Shortcodes" />
+<meta property="og:description" content="Admonition
+I&#39;m title!
+biu biu biu.
+note
+  biu biu biu.
+
+
+  Without title.
+
+
+
+
+ 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+
+
+{{% admonition note &#34;I&#39;m title!&#34; false %}}
+biu biu biu.
+
+{{% admonition type=&#34;note&#34; title=&#34;note&#34; details=&#34;true&#34; %}}
+biu biu biu.
+{{% /admonition %}}
+
+{{% admonition example %}}
+Without title.
+{{% /admonition %}}
+
+{{% /admonition %}}
+
+
+" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://localhost:1313/post/shortcodes/" />
+<meta property="article:published_time" content="2016-08-30T16:01:23+08:00" />
+<meta property="article:modified_time" content="2018-02-01T18:01:23+08:00" />
+<meta itemprop="name" content="Shortcodes">
+<meta itemprop="description" content="Admonition
+I&#39;m title!
+biu biu biu.
+note
+  biu biu biu.
+
+
+  Without title.
+
+
+
+
+ 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+
+
+{{% admonition note &#34;I&#39;m title!&#34; false %}}
+biu biu biu.
+
+{{% admonition type=&#34;note&#34; title=&#34;note&#34; details=&#34;true&#34; %}}
+biu biu biu.
+{{% /admonition %}}
+
+{{% admonition example %}}
+Without title.
+{{% /admonition %}}
+
+{{% /admonition %}}
+
+
+">
+<meta itemprop="datePublished" content="2016-08-30T16:01:23+08:00" />
+<meta itemprop="dateModified" content="2018-02-01T18:01:23+08:00" />
+<meta itemprop="wordCount" content="338">
+
+
+
+<meta itemprop="keywords" content="shortcodes," />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Shortcodes"/>
+<meta name="twitter:description" content="Admonition
+I&#39;m title!
+biu biu biu.
+note
+  biu biu biu.
+
+
+  Without title.
+
+
+
+
+ 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+
+
+{{% admonition note &#34;I&#39;m title!&#34; false %}}
+biu biu biu.
+
+{{% admonition type=&#34;note&#34; title=&#34;note&#34; details=&#34;true&#34; %}}
+biu biu biu.
+{{% /admonition %}}
+
+{{% admonition example %}}
+Without title.
+{{% /admonition %}}
+
+{{% /admonition %}}
+
+
+"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">Even</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a><a href="/about/">
+        <li class="mobile-menu-item">About</li>
+      </a>
+  </ul>
+
+  
+
+
+</nav>
+
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">Even</a>
+</div>
+
+
+
+
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/about/">About</a>
+      </li>
+  </ul>
+</nav>
+
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">Shortcodes</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2016-08-30 </span>
+        <div class="post-category">
+            <a href="/categories/shortcodes/"> shortcodes </a>
+            </div>
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Contents</h2>
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#admonition">Admonition</a></li>
+    <li><a href="#center-right-left">center, right, left</a>
+      <ul>
+        <li><a href="#default">default</a></li>
+        <li><a href="#center">center</a></li>
+        <li><a href="#right">right</a></li>
+        <li><a href="#left">left</a></li>
+        <li><a href="#figure-with-class">figure with class</a></li>
+        <li><a href="#hybrid-in-center">hybrid in center</a></li>
+      </ul>
+    </li>
+    <li><a href="#music-163">Music 163</a>
+      <ul>
+        <li><a href="#params">Params</a></li>
+        <li><a href="#examples">Examples</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      <h1 id="admonition">Admonition</h1>
+<div class="admonition note"><p class="admonition-title">I&#39;m title!</p>
+<p>biu biu biu.</p>
+<details class="admonition note"><summary class="admonition-title">note</summary>
+  <p>biu biu biu.</p>
+</details>
+<div class="admonition example">
+  <p>Without title.</p>
+</div>
+</div>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-markdown" data-lang="markdown">{{% admonition note &#34;I&#39;m title!&#34; false %}}
+biu biu biu.
+
+{{% admonition type=&#34;note&#34; title=&#34;note&#34; details=&#34;true&#34; %}}
+biu biu biu.
+{{% /admonition %}}
+
+{{% admonition example %}}
+Without title.
+{{% /admonition %}}
+
+{{% /admonition %}}
+</code></pre></td></tr></table>
+</div>
+</div><div class="admonition abstract"><p class="admonition-title">abstract</p>
+<p>biu biu biu.</p>
+</div>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-markdown" data-lang="markdown">{{% admonition abstract abstract %}}
+biu biu biu.
+{{% /admonition %}}
+</code></pre></td></tr></table>
+</div>
+</div><div class="admonition info"><p class="admonition-title">info</p>
+<p>biu biu biu.</p>
+</div>
+<div class="admonition tip"><p class="admonition-title">tip</p>
+<p>biu biu biu.</p>
+</div>
+<div class="admonition success"><p class="admonition-title">success</p>
+<p>biu biu biu.</p>
+</div>
+<div class="admonition question"><p class="admonition-title">question</p>
+<p>biu biu biu.</p>
+</div>
+<div class="admonition warning"><p class="admonition-title">warning</p>
+<p>biu biu biu.</p>
+</div>
+<div class="admonition failure"><p class="admonition-title">failure</p>
+<p>biu biu biu.</p>
+</div>
+<div class="admonition danger"><p class="admonition-title">danger</p>
+<p>biu biu biu.</p>
+</div>
+<div class="admonition bug"><p class="admonition-title">bug</p>
+<p>biu biu biu.</p>
+</div>
+<div class="admonition example"><p class="admonition-title">example</p>
+<p>biu biu biu.</p>
+</div>
+<div class="admonition quote"><p class="admonition-title">quote</p>
+<p>biu biu biu.</p>
+</div>
+<h1 id="center-right-left">center, right, left</h1>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-markdown" data-lang="markdown"><span class="gu">## default
+</span><span class="gu"></span>![<span class="nt">img</span>](<span class="na">/path/to/img.gif &#34;img&#34;</span>)
+
+{{% center %}}
+<span class="gu">## center
+</span><span class="gu"></span>![<span class="nt">img</span>](<span class="na">/path/to/img.gif &#34;img&#34;</span>)
+{{% /center %}}
+
+{{% right %}}
+<span class="gu">## right
+</span><span class="gu"></span>![<span class="nt">img</span>](<span class="na">/path/to/img.gif &#34;img&#34;</span>)
+{{% /right %}}
+
+{{% left %}}
+<span class="gu">## left
+</span><span class="gu"></span>![<span class="nt">img</span>](<span class="na">/path/to/img.gif &#34;img&#34;</span>)
+{{% /left %}}
+</code></pre></td></tr></table>
+</div>
+</div><h2 id="default">default</h2>
+<p><img src="https://wx1.sinaimg.cn/small/006SToa6ly1fm07summ2gj30qo0qomzu.jpg" alt="img" title="img"></p>
+<div class='align-center'>
+<h2 id="center">center</h2>
+<p><img src="https://wx1.sinaimg.cn/small/006SToa6ly1fm07summ2gj30qo0qomzu.jpg" alt="img" title="img"></p>
+</div>
+<div class='align-right'>
+<h2 id="right">right</h2>
+<p><img src="https://wx1.sinaimg.cn/small/006SToa6ly1fm07summ2gj30qo0qomzu.jpg" alt="img" title="img"></p>
+</div>
+<div class='align-left'>
+<h2 id="left">left</h2>
+<p><img src="https://wx1.sinaimg.cn/small/006SToa6ly1fm07summ2gj30qo0qomzu.jpg" alt="img" title="img"></p>
+</div>
+<hr>
+<h2 id="figure-with-class">figure with class</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">{{% figure src=&#34;/path/to/img.gif&#34; title=&#34;default&#34; alt=&#34;img&#34; %}}
+{{% figure class=&#34;center&#34; src=&#34;/path/to/img.gif&#34; title=&#34;center&#34; alt=&#34;img&#34; %}}
+{{% figure class=&#34;right&#34; src=&#34;/path/to/img.gif&#34; title=&#34;right&#34; alt=&#34;img&#34; %}}
+{{% figure class=&#34;left&#34; src=&#34;/path/to/img.gif&#34; title=&#34;left&#34; alt=&#34;img&#34; %}}
+</code></pre></td></tr></table>
+</div>
+</div><figure>
+    <img src="https://wx1.sinaimg.cn/small/006SToa6ly1fm07summ2gj30qo0qomzu.jpg"
+         alt="img"/> <figcaption>
+            <h4>default</h4>
+        </figcaption>
+</figure>
+<figure class="center">
+    <img src="https://wx1.sinaimg.cn/small/006SToa6ly1fm07summ2gj30qo0qomzu.jpg"
+         alt="img"/> <figcaption>
+            <h4>center</h4>
+        </figcaption>
+</figure>
+<figure class="right">
+    <img src="https://wx1.sinaimg.cn/small/006SToa6ly1fm07summ2gj30qo0qomzu.jpg"
+         alt="img"/> <figcaption>
+            <h4>right</h4>
+        </figcaption>
+</figure>
+<figure class="left">
+    <img src="https://wx1.sinaimg.cn/small/006SToa6ly1fm07summ2gj30qo0qomzu.jpg"
+         alt="img"/> <figcaption>
+            <h4>left</h4>
+        </figcaption>
+</figure>
+<hr>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">{{% center %}}
+
+## hybrid in center
+{{% figure src=&#34;/path/to/img.gif&#34; title=&#34;default&#34; alt=&#34;img&#34; %}}
+{{% figure class=&#34;right&#34; src=&#34;/path/to/img.gif&#34; title=&#34;right&#34; alt=&#34;img&#34; %}}
+
+{{% left %}}
+{{% figure src=&#34;/path/to/img.gif&#34; title=&#34;default in left&#34; alt=&#34;img&#34; %}}
+{{% /left %}}
+
+{{% /center %}}
+</code></pre></td></tr></table>
+</div>
+</div><div class='align-center'>
+<h2 id="hybrid-in-center">hybrid in center</h2>
+<figure>
+    <img src="https://wx1.sinaimg.cn/small/006SToa6ly1fm07summ2gj30qo0qomzu.jpg"
+         alt="img"/> <figcaption>
+            <h4>default</h4>
+        </figcaption>
+</figure>
+<figure class="right">
+    <img src="https://wx1.sinaimg.cn/small/006SToa6ly1fm07summ2gj30qo0qomzu.jpg"
+         alt="img"/> <figcaption>
+            <h4>right</h4>
+        </figcaption>
+</figure>
+<div class='align-left'>
+  <figure>
+    <img src="https://wx1.sinaimg.cn/small/006SToa6ly1fm07summ2gj30qo0qomzu.jpg"
+         alt="img"/> <figcaption>
+            <h4>default in left</h4>
+        </figcaption>
+</figure>
+</div>
+</div>
+<hr>
+<h1 id="music-163">Music 163</h1>
+<h2 id="params">Params</h2>
+<ul>
+<li>
+<p><code>id</code></p>
+<ul>
+<li>required param</li>
+<li>you can extract from music url</li>
+<li>url format <a href="http://music.163.com/#/song?id=28196554">http://music.163.com/#/song?id=28196554</a></li>
+</ul>
+</li>
+<li>
+<p>Fiddle <code>auto</code></p>
+<ul>
+<li>optional param</li>
+<li>default value 0</li>
+<li>you can overwrite it with 1</li>
+</ul>
+</li>
+</ul>
+<h2 id="examples">Examples</h2>
+<ul>
+<li>Simple</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">{{% music &#34;28196554&#34; %}}
+{{% music &#34;28196554&#34; &#34;1&#34; %}}
+</code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>Named Params</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">{{% music id=&#34;28196554&#34; %}}
+{{% music id=&#34;28196554&#34; auto=&#34;1&#34; %}}
+</code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>Example</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">{{% music &#34;28196554&#34; %}}
+</code></pre></td></tr></table>
+</div>
+</div><p>{{% music &ldquo;28196554&rdquo; %}}</p>
+<style>
+.post-content img {
+  height: 64px;
+}
+</style>
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">Author</span>
+    <span class="item-content">olOwOlo</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">LastMod</span>
+    <span class="item-content">
+        2018-02-01
+        
+    </span>
+  </p>
+  
+  
+</div>
+<footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/shortcodes/">shortcodes</a>
+          </div>
+      <nav class="post-nav">
+        <a class="prev" href="/post/chinese-preview/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">[中文] 《长恨歌》</span>
+            <span class="prev-text nav-mobile">Prev</span>
+          </a>
+        <a class="next" href="/post/js-flowchart-diagrams/">
+            <span class="next-text nav-default">JS Flowchart Diagrams</span>
+            <span class="next-text nav-mobile">Next</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:your@email.com" class="iconfont icon-email" title="email"></a>
+      <a href="http://localhost:1313" class="iconfont icon-stack-overflow" title="stack-overflow"></a>
+      <a href="http://localhost:1313" class="iconfont icon-twitter" title="twitter"></a>
+      <a href="http://localhost:1313" class="iconfont icon-facebook" title="facebook"></a>
+      <a href="http://localhost:1313" class="iconfont icon-linkedin" title="linkedin"></a>
+      <a href="http://localhost:1313" class="iconfont icon-google" title="google"></a>
+      <a href="http://localhost:1313" class="iconfont icon-github" title="github"></a>
+      <a href="http://localhost:1313" class="iconfont icon-weibo" title="weibo"></a>
+      <a href="http://localhost:1313" class="iconfont icon-zhihu" title="zhihu"></a>
+      <a href="http://localhost:1313" class="iconfont icon-douban" title="douban"></a>
+      <a href="http://localhost:1313" class="iconfont icon-pocket" title="pocket"></a>
+      <a href="http://localhost:1313" class="iconfont icon-tumblr" title="tumblr"></a>
+      <a href="http://localhost:1313" class="iconfont icon-instagram" title="instagram"></a>
+      <a href="http://localhost:1313" class="iconfont icon-gitlab" title="gitlab"></a>
+      <a href="http://localhost:1313" class="iconfont icon-bilibili" title="bilibili"></a>
+  <a href="http://localhost:1313/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2017 - 
+    2021<span class="heart"><i class="iconfont icon-heart"></i></span><span>olOwOlo</span>
+  </span>
+</div>
+
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+
+
+
+<script type="text/javascript" src="/js/main.min.c12618f9a600c40bd024996677e951e64d3487006775aeb22e200c990006c5c7.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>
