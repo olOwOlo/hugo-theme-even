@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>中文 on Even - A super concise theme for Hugo</title>
+    <title>中文 on tech cafe 网络日志</title>
     <link>http://localhost:1313/tags/%E4%B8%AD%E6%96%87/</link>
-    <description>Recent content in 中文 on Even - A super concise theme for Hugo</description>
+    <description>Recent content in 中文 on tech cafe 网络日志</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Wed, 30 Aug 2017 01:37:56 +0800</lastBuildDate><atom:link href="http://localhost:1313/tags/%E4%B8%AD%E6%96%87/index.xml" rel="self" type="application/rss+xml" />
