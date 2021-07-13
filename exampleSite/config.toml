@@ -162,6 +162,19 @@ copyright = ""            # default: author.name ↓        # 默认为下面配
     placeholder = '说点什么吧...'
     visitor = false
 
+  # giscus（comments system)
+  [params.giscus]
+    enable = false
+    data_repo=""
+    data_repo_id=""
+    data_category=""
+    data_category_id=""
+    data_mapping=""
+    data_reactions_enabled=""
+    data_emit_metadata=""
+    data_theme=""
+    crossorigin=""
+    
   [params.flowchartDiagrams]# see https://blog.olowolo.com/example-site/post/js-flowchart-diagrams/
     enable = false
     options = ""
