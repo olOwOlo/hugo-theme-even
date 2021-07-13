@@ -134,5 +134,21 @@
     </script>
     <noscript>Please enable JavaScript to view the <a href="https://github.com/utterance">comments powered by utterances.</a></noscript>
   {{- end }}
-
+  
+   <!-- giscus -->
+  {{- if .Site.Params.giscus.enable -}}
+    <script src="https://giscus.app/client.js"
+            data-repo="{{ .Site.Params.giscus.data_repo }}"
+            data-repo-id="{{ .Site.Params.giscus.data_repo_id }}"
+            data-category="{{ .Site.Params.giscus.data_category }}"
+            data-category-id="{{ .Site.Params.giscus.data_category_id }}"
+            data-mapping="{{ .Site.Params.giscus.data_mapping }}"
+            data-reactions-enabled="{{ .Site.Params.giscus.data_reactions_enabled }}"
+            data-emit-metadata="{{ .Site.Params.giscus.data_emit_metadata }}"
+            data-theme="{{ .Site.Params.giscus.data_theme }}"
+            crossorigin="{{ .Site.Params.giscus.crossorigin }}"
+            async>
+    </script>
+  {{- end}}
+  
 {{- end }}
