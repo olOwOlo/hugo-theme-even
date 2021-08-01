@@ -19,7 +19,7 @@ $theme-color-map: (
 // Check theme color config.
 // if it does not exist, use default theme color.
 @if not(map-has-key($theme-color-map, $theme-color-config)) {
-  $theme-color-config: 'Default';
+  $theme-color-config: 'Cobalt Blue';
 }
 $theme-color-list: map-get($theme-color-map, $theme-color-config);
 
