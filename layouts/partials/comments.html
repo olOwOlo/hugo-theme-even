@@ -127,8 +127,8 @@
   {{- if .Site.Params.utterances.owner}}
     <script src="https://utteranc.es/client.js"
             repo="{{ .Site.Params.utterances.owner }}/{{ .Site.Params.utterances.repo }}"
-            issue-term="pathname"
-            theme="github-light"
+            issue-term="{{ .Site.Params.utterances.issueTerm }}"
+            theme="{{ .Site.Params.utterances.theme }}"
             crossorigin="anonymous"
             async>
     </script>
