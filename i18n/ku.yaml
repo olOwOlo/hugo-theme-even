@@ -1,0 +1,102 @@
+# ===== title =====
+archive:
+  other: "Arşîv"
+
+tags:
+  other: "Nîşanan"
+
+categories:
+  other: "Polan"
+
+# ===== footer =====
+powered:
+  other: "Bi %s-ê kar dike"
+
+theme:
+  other: "Theme"
+
+siteUV:
+  other: "site uv: %s"
+
+sitePV:
+  other: "site pv: %s"
+
+pagePV:
+  other: "%s caran hatiye xwendin"
+
+# ===== post =====
+prevPage:
+  other: "Berê"
+
+nextPage:
+  other: "Paşê"
+
+prevPost:
+  other: "Posta berê"
+
+nextPost:
+  other: "Posta bê"
+
+toc:
+  other: "Nêverokan"
+
+readMore:
+  other: "Bixwîne..."
+
+reward:
+  other: "Xelat"
+
+rewardAlipay:
+  other: "alipay"
+
+rewardWechat:
+  other: "wechat"
+
+wordCount:
+  one: "{{ .Count }} peyv"
+  other: "{{ .Count }} peyvan"
+
+readingTime:
+  one: "{{ .Count }} xulek"
+  other: "{{ .Count }} xulekan"
+
+outdatedInfoWarningBefore:
+  other: "[TÊBÎNÎ] Hatiye nû kirin "
+
+outdatedInfoWarningAfter:
+  other: ". Dibe ku vê gotarê bi ser ve çû be."
+
+# ===== content license =====
+author:
+  other: "Nivîskar"
+
+lastMod:
+  other: "Dawî sererast kirin"
+
+markdown:
+  other: "Markdown"
+
+seeMarkDown:
+  other: "Guhertoya Markdown-ê »"
+
+license:
+  other: "Lîsans"
+
+# ===== counter =====
+archiveCounter:
+  one: "{{ .Count }} post"
+  other: "{{ .Count }} postan"
+
+tagCounter:
+  one: "{{ .Count }} nîşan"
+  other: "{{ .Count }} nîşanan"
+
+zeroTagCounter:
+  other: "Tu nîşanan nînin"
+
+categoryCounter:
+  one: "{{ .Count }} pol"
+  other: "{{ .Count }} polan"
+
+zeroCategoryCounter:
+  other: "Tu polan nînin"
