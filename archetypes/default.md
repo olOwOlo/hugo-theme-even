@@ -9,6 +9,9 @@ tags: []
 categories: []
 author: ""
 
+# custom reading time(default Hugo estimated time)
+readingTime: 0
+
 # You can also close(false) or open(true) something for this content.
 # P.S. comment can only be closed
 comment: false

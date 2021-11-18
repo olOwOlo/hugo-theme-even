@@ -58,7 +58,7 @@ wordCount:
   many: "{{ .Count }} слов"
 
 readingTime:
-  other: "{{ .Count }} мин. на прочтение"
+  other: "{{ . }} мин. на прочтение"
 
 outdatedInfoWarningBefore:
   other: "[ВНИМАНИЕ] Обновлено "

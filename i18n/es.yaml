@@ -57,8 +57,8 @@ wordCount:
   other: "{{ .Count }} palabras"
 
 readingTime:
-  one: "{{ .Count }} min lectura"
-  other: "{{ .Count }} mins lectura"
+  one: "{{ . }} min lectura"
+  other: "{{ . }} mins lectura"
 
 outdatedInfoWarningBefore:
   other: "[NOTE] Updated "

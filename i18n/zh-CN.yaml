@@ -57,8 +57,8 @@ wordCount:
   other: "约 {{ .Count }} 字"
 
 readingTime:
-  one: "预计阅读 {{ .Count }} 分钟"
-  other: "预计阅读 {{ .Count }} 分钟"
+  one: "预计阅读 {{ . }} 分钟"
+  other: "预计阅读 {{ . }} 分钟"
 
 outdatedInfoWarningBefore:
   other: "【注意】最后更新于 "

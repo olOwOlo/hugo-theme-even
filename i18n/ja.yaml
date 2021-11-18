@@ -57,8 +57,8 @@ wordCount:
   other: "{{ .Count }} 文字"
 
 readingTime:
-  one: "読了時間: {{ .Count }} 分"
-  other: "読了時間: {{ .Count }} 分"
+  one: "読了時間: {{ . }} 分"
+  other: "読了時間: {{ . }} 分"
 
 outdatedInfoWarningBefore:
   other: "【注意】最後更新日は "

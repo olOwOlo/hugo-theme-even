@@ -2,3 +2,4 @@ node_modules/
 .idea/
 *.iml
 exampleSite/resources/
+.hugo_build.lock

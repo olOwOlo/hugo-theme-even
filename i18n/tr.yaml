@@ -57,8 +57,8 @@ wordCount:
   other: "{{ .Count }} kelime"
 
 readingTime:
-  one: "{{ .Count }} dakikalık okuma süresi"
-  other: "{{ .Count }} dakikalık okuma süresi"
+  one: "{{ . }} dakikalık okuma süresi"
+  other: "{{ . }} dakikalık okuma süresi"
 
 outdatedInfoWarningBefore:
   other: "[NOT] Güncellendi "
