@@ -56,7 +56,7 @@
     margin: 2em 0;
     padding: 10px 20px;
     position: relative;
-    color: rgba($content-blockquote-font, 0.8);
+    color: $content-blockquote-font;
     background-color: $content-blockquote-backgroud;
     border-left: $content-blockquote-border-left;
     box-shadow: 1px 1px 2px rgba(0,0,0,0.125);
