@@ -177,6 +177,9 @@ $content-headings-anchor: "" !default;
 // Border bottom of the link when hover it.
 $content-link-border: 1px solid $theme-color !default;
 
+// Font color of the blockquote
+$content-blockquote-font: rgba(#34495e, 0.8) !default;
+
 // Background color of the blockquote.
 $content-blockquote-backgroud: rgba($theme-color, 0.05) !default;
 
