@@ -37,7 +37,7 @@ copyright = ""            # default: author.name ↓        # 默认为下面配
   name = "Archives"
   weight = 20
   identifier = "archives"
-  url = "/post/"
+  url = "/posts/"
 [[menu.main]]
   name = "Tags"
   weight = 30
