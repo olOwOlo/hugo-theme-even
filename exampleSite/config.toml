@@ -161,7 +161,12 @@ copyright = ""            # default: author.name ↓        # 默认为下面配
     avatar = 'mm'
     placeholder = '说点什么吧...'
     visitor = false
-
+  [params.waline] #https://waline.js.org/     waline is better than valine
+    enable = false
+    placeholder = '说点什么吧...'
+    visitor = false
+    serverURL = 'Your server URL'
+    avatar = 'wavatar' #https://waline.js.org/guide/client/avatar.html#%E9%85%8D%E7%BD%AE%E6%96%B9%E5%BC%8F
   [params.flowchartDiagrams]# see https://blog.olowolo.com/example-site/post/js-flowchart-diagrams/
     enable = false
     options = ""

@@ -122,7 +122,20 @@
     });
   </script>
   {{- end }}
-
+<!--waline-->
+    {{- if .Site.Params.waline.enable -}}
+    <div id="waline-container"></div>
+    <script src="//cdn.jsdelivr.net/npm/@waline/client"></script>
+    <script>
+        Waline({
+            el: '#waline-container',
+            visitor: {{ .Site.Params.waline.visitor }},
+            serverURL: '{{ .Site.Params.waline.serverURL }}',
+            placeholder: '{{ .Site.Params.waline.placeholder }}',
+            avatar: '{{ .Site.Params.waline.avatar }}',
+        });
+    </script>
+    {{--end--}}
   <!-- utterances -->
   {{- if .Site.Params.utterances.owner}}
     <script src="https://utteranc.es/client.js"
