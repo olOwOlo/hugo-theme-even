@@ -211,7 +211,7 @@ figure.highlight {
     border-collapse: collapse;
   }
 
-  /* LineNumbersTable */  .lnt { color: $gray; }
+  /* LineNumbersTable */  .lnt { color: $gray; user-select: none; }
   /* LineHighlight */  .hl { display: block; width: 100%; background-color: #ffffcc }
 
   /* Keyword */  .k { color: #859900 }
