@@ -93,6 +93,18 @@ git pull
 
 Released under the [MIT](https://github.com/olOwOlo/hugo-theme-even/blob/master/LICENSE.md) License.
 
+
+ ## [add hugo contact form](https://fabform.io/a/hugo-contact-form)
+ 
+  ```
+ <form action="https://fabform.io/f/{form-id}" method="post">
+  <label for="email">Your Email</label>
+  <input name="email" type="email">
+  <button type="submit">Submit</button> 
+ </form>
+```
+
+
 ## Acknowledgements
 
 - [ananke](https://github.com/budparr/gohugo-theme-ananke)
