@@ -27,6 +27,9 @@ $ git clone https://github.com/olOwOlo/hugo-theme-even themes/even
 
 **NOTE:** For this theme, you should use **post** instead of **posts**, namely `hugo new post/some-content.md`.
 
+
+
+
 ## Language Support
 
 > Translations are collected from the [`themes/even/i18n/`](https://github.com/olOwOlo/hugo-theme-even/tree/master/i18n) folder (built into the theme), as well as translations present in `i18n/` at the root of your project. The translations will be merged and take precedence over what is in the theme folder.
@@ -50,7 +53,6 @@ To enable it, set `showLanguageSelector` parameter to `true`.
 ```toml
 showLanguageSelector = true
 ```
-
 ## Favicon
 
 In order to customize the favicon you need to place **all** the following files in the `static` folder at the root of your site, which will overwrite those files in the [`themes/even/static/`](https://github.com/olOwOlo/hugo-theme-even/tree/master/static) folder.
@@ -71,6 +73,17 @@ A [favicon generator](https://www.google.com/search?q=favicon+generator) can hel
 ## Front Matter
 
 You can customize something for a single content in the content's front-matter. The [`themes/even/archetypes/default.md`](https://github.com/olOwOlo/hugo-theme-even/tree/master/archetypes/default.md) shows all available params. Copy this file in the `archetypes` folder at the root of your project will be useful.
+
+
+## [Add hugo contact form](https://fabform.io/a/hugo-contact-form)
+
+```
+<form action="https://fabform.io/f/{form-id}" method="post">
+ <label for="email">Your Email</label>
+ <input name="email" type="email">
+ <button type="submit">Submit</button> 
+</form>
+```
 
 ## Shortcodes
 
