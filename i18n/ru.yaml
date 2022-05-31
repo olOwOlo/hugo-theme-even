@@ -86,7 +86,7 @@ license:
 archiveCounter:
   one: "{{ .Count }} публикация"
   few: "{{ .Count }} публикации"
-  many: "{{ .Count }} пибликаций"
+  many: "{{ .Count }} публикаций"
 
 tagCounter:
   one: "{{ .Count }} тег"
