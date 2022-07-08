@@ -31,6 +31,8 @@
       </div>
     </main>
 
+    {{ template "_internal/google_analytics.html" . }}
+
     {{ if not .Params.hideHeaderAndFooter -}}
     <footer id="footer" class="footer">
       {{ partial "footer.html" . }}
