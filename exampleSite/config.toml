@@ -197,7 +197,7 @@ copyright = ""            # default: author.name ↓        # 默认为下面配
     m-instagram = "http://localhost:1313"
     n-gitlab = "http://localhost:1313"
     o-bilibili = "http://localhost:1313"
-    o-youtube = "http://localhost:1313"
+    p-youtube = "http://localhost:1313"
 
 # See https://gohugo.io/about/hugo-and-gdpr/
 [privacy]
