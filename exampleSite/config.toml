@@ -148,6 +148,12 @@ copyright = ""            # default: author.name ↓        # 默认为下面配
     repo = ""               # The repo to store comments
     clientId = ""           # Your client ID
     clientSecret = ""       # Your client secret
+ 
+  [params.giscus]           # https://giscus.app/
+    repo = ""
+    repoId = ""
+    category = ""
+    categoryId = ""
 
   # Valine.
   # You can get your appid and appkey from https://leancloud.cn

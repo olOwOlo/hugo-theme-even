@@ -135,4 +135,25 @@
     <noscript>Please enable JavaScript to view the <a href="https://github.com/utterance">comments powered by utterances.</a></noscript>
   {{- end }}
 
+  <!-- utterances -->
+  {{- if .Site.Params.giscus.repo}}
+    <script src="https://giscus.app/client.js"
+            data-repo="{{ .Site.Params.giscus.repo}}"
+            data-repo-id="{{ .Site.Params.giscus.repoId}}"
+            data-category="{{ .Site.Params.giscus.category}}"
+            data-category-id="{{ .Site.Params.giscus.categoryId}}"
+            data-mapping="pathname"
+            data-strict="0"
+            data-reactions-enabled="1"
+            data-emit-metadata="0"
+            data-input-position="top"
+            data-theme="preferred_color_scheme"
+            data-lang="zh-CN"
+            data-loading="lazy"
+            crossorigin="anonymous"
+            async>
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://github.com/giscus/giscus">comments powered by giscus.</a></noscript>
+  {{- end }}
+
 {{- end }}
