@@ -22,6 +22,7 @@
     </header>
     {{- end }}
 
+    {{ block "main" . }}
     <main id="main" class="main">
       <div class="content-wrapper">
         <div id="content" class="content">
@@ -30,12 +31,15 @@
         {{ partial "comments.html" . }}
       </div>
     </main>
+    {{ end }}
 
+    {{ block "footer" . }}
     {{ if not .Params.hideHeaderAndFooter -}}
     <footer id="footer" class="footer">
       {{ partial "footer.html" . }}
     </footer>
     {{- end }}
+    {{ end }}
 
     <div class="back-to-top" id="back-to-top">
       <i class="iconfont icon-up"></i>
