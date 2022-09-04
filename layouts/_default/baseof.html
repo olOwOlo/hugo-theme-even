@@ -21,6 +21,16 @@
         {{ partial "header.html" . }}
     </header>
     {{- end }}
+	
+	{{ with .Site.Params.githubForkURL }}
+	  <!-- fork me on github --->
+	  <!-- see https://github.blog/2008-12-19-github-ribbons/ -->
+	  <a href="{{ . }}" title="{{ . }}" target="_blank">  
+	  <img style="position: fixed; top: 0; right: 0; border: 0; z-index:9999;" 
+		 src="/forkme_right_gray.png" 
+		 alt="Fork me on GitHub">
+	  </a>
+    {{ end }}
 
     <main id="main" class="main">
       <div class="content-wrapper">
