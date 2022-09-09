@@ -133,3 +133,38 @@
 {{ range .Site.Params.customJS -}}
   <script src="{{ "/js/" | relURL }}{{ . }}"></script>
 {{ end }}
+
+<!-- copy to clipboard -->
+{{- if .Site.Params.copyCode -}}
+<script>
+  function createCopyButton(highlightDiv) {
+    const div = document.createElement("div");
+    div.className = "copy-code";
+    div.innerText = "Copy";
+    div.addEventListener("click", () =>
+      copyCodeToClipboard(div, highlightDiv)
+    );
+    addCopyButtonToDom(div, highlightDiv);
+  }
+  
+  async function copyCodeToClipboard(button, highlightDiv) {
+    const codeToCopy = highlightDiv.querySelector(":last-child > .chroma > code")
+      .innerText;
+    await navigator.clipboard.writeText(codeToCopy);
+    button.blur();
+    button.innerText = "Copied!";
+    setTimeout(() => button.innerText = "Copy", 2000);
+  }
+
+  function addCopyButtonToDom(button, highlightDiv) {
+    highlightDiv.insertBefore(button, highlightDiv.firstChild);
+    const wrapper = document.createElement("div");
+    wrapper.className = "highlight-wrapper";
+    highlightDiv.parentNode.insertBefore(wrapper, highlightDiv);
+    wrapper.appendChild(highlightDiv);
+  }
+  
+  document.querySelectorAll(".highlight")
+    .forEach((highlightDiv) => createCopyButton(highlightDiv));
+</script>  
+{{ end }}

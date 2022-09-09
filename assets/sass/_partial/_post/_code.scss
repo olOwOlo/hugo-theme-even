@@ -15,6 +15,19 @@ pre > code {
   display: block;
 }
 
+.copy-code {
+  position: absolute;
+  right: 0;
+  z-index: 2;
+  font-size: .9em !important;
+  padding: 0px 1.5rem !important;
+  color: #b1b1b1;
+  font-family: Arial;
+  font-weight: bold;
+  cursor: pointer;
+  user-select: none;
+}
+
 // highlight.js
 figure.highlight {
   margin: 1em 0;
