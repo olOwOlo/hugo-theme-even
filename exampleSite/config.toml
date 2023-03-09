@@ -148,6 +148,7 @@ copyright = ""            # default: author.name ↓        # 默认为下面配
     repo = ""               # The repo to store comments
     clientId = ""           # Your client ID
     clientSecret = ""       # Your client secret
+    proxy = "https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token"  # GitHub oauth 请求到反向代理，为了支持 CORS。
 
   # Valine.
   # You can get your appid and appkey from https://leancloud.cn

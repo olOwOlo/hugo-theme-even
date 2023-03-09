@@ -89,7 +89,8 @@
         repo: '{{ .Site.Params.gitalk.repo }}',
         owner: '{{ .Site.Params.gitalk.owner }}',
         admin: ['{{ .Site.Params.gitalk.owner }}'],
-        body: decodeURI(location.href)
+        body: decodeURI(location.href),
+        proxy: '{{ .Site.Params.gitalk.proxy }}'
       });
       gitalk.render('gitalk-container');
     </script>
