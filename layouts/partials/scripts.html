@@ -94,7 +94,7 @@
 
 <!-- Analytics -->
 {{- if (in (slice (getenv "HUGO_ENV") hugo.Environment) "production") | and .Site.GoogleAnalytics -}}
-  {{ template "_internal/google_analytics_async.html" . }}
+  {{ template "_internal/google_analytics.html" . }}
 {{- end -}}
 
 {{- with .Site.Params.baiduAnalytics -}}
