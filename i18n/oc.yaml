@@ -1,0 +1,102 @@
+# ===== title =====
+archive:
+  other: "Archius"
+
+tags:
+  other: "Etiquetas"
+
+categories:
+  other: "Categorias"
+
+# ===== footer =====
+powered:
+  other: "Propulsat per %s"
+
+theme:
+  other: "Tèma"
+
+siteUV:
+  other: "site uv: %s"
+
+sitePV:
+  other: "site pv: %s"
+
+pagePV:
+  other: "%s temps de lectura"
+
+# ===== post =====
+prevPage:
+  other: "Prec."
+
+nextPage:
+  other: "Seguent"
+
+prevPost:
+  other: "Precedent"
+
+nextPost:
+  other: "Seguent"
+
+toc:
+  other: "Ensenhador"
+
+readMore:
+  other: "Ne legir mai..."
+
+reward:
+  other: "Reward"
+
+rewardAlipay:
+  other: "alipay"
+
+rewardWechat:
+  other: "wechat"
+
+wordCount:
+  one: "{{ .Count }} mot"
+  other: "{{ .Count }} mots"
+
+readingTime:
+  one: "{{ .Count }} minuta de lectura"
+  other: "{{ .Count }} minutas de lectura"
+
+outdatedInfoWarningBefore:
+  other: "[NOTE] Actualizat "
+
+outdatedInfoWarningAfter:
+  other: ". This article may have outdated content or subject matter."
+
+# ===== content license =====
+author:
+  other: "Autor"
+
+lastMod:
+  other: "LastMod"
+
+markdown:
+  other: "Markdown"
+
+seeMarkDown:
+  other: "Version de Markdown »"
+
+license:
+  other: "Licénsia"
+
+# ===== counter =====
+archiveCounter:
+  one: "{{ .Count }} publication al total"
+  other: "{{ .Count }} publicacions al total"
+
+tagCounter:
+  one: "{{ .Count }} etiqueta al total"
+  other: "{{ .Count }} etiquetas al total"
+
+zeroTagCounter:
+  other: "No tags"
+
+categoryCounter:
+  one: "{{ .Count }} categoria al total"
+  other: "{{ .Count }} categorias al total"
+
+zeroCategoryCounter:
+  other: "Cap de categoria"
