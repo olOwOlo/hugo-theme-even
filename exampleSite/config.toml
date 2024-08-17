@@ -148,6 +148,11 @@ copyright = ""            # default: author.name ↓        # 默认为下面配
     repo = ""               # The repo to store comments
     clientId = ""           # Your client ID
     clientSecret = ""       # Your client secret
+  
+  [params.twikoo]
+    envId = ""
+    path = "location.pathname"
+    lang = "zh-CN"
 
   # Valine.
   # You can get your appid and appkey from https://leancloud.cn
