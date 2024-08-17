@@ -151,8 +151,9 @@ copyright = ""            # default: author.name ↓        # 默认为下面配
   
   [params.twikoo]
     envId = ""
-    path = "location.pathname"
-    lang = "zh-CN"
+    region = ""                # 环境地域，默认为 ap-shanghai，腾讯云环境填 ap-shanghai 或 ap-guangzhou；Vercel/Hugging Face 部署不填
+    path = "location.pathname" # 用于区分不同文章的评论，默认路径 location.pathname
+    lang = "zh-CN"             # 用于手动设定评论区语言，支持的语言列表 https://github.com/twikoojs/twikoo/blob/main/src/client/utils/i18n/index.js
 
   # Valine.
   # You can get your appid and appkey from https://leancloud.cn
