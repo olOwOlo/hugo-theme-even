@@ -133,3 +133,8 @@
 {{ range .Site.Params.customJS -}}
   <script src="{{ "/js/" | relURL }}{{ . }}"></script>
 {{ end }}
+
+{{- if .Site.Params.showAdsense -}}
+     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9115315637620461"
+     crossorigin="anonymous"></script>
+{{- end -}}
