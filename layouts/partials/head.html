@@ -10,7 +10,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 <!-- author & description & keywords  -->
-<meta name="author" content="{{ if .Params.author }}{{ .Params.author | safeHTML }}{{ else }}{{ .Site.Author.name | safeHTML }}{{ end }}" />
+<meta name="author" content="{{ if .Params.author }}{{ .Params.author | safeHTML }}{{ else }}{{ .Site.Params.Author.name | safeHTML }}{{ end }}" />
 
 {{- if .Description -}}
   <meta name="description" content="{{ .Description | safeHTML }}" />

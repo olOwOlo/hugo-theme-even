@@ -8,7 +8,9 @@
   {{ if .Site.LanguagePrefix -}}
     <a href="{{ .Site.LanguagePrefix | absURL }}/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
   {{- else -}}
-    <a href="{{ .Site.RSSLink }}" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+  {{ with .OutputFormats.Get "RSS" }}
+    <a href="{{ .RelPermalink }}" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+  {{ end }}
   {{- end }}
 </div>
 
@@ -45,6 +47,6 @@
     {{ end }}
     {{- $current -}}
     <span class="heart"><i class="iconfont icon-heart"></i></span><!--
-    --><span>{{if .Site.Copyright }}{{ .Site.Copyright | safeHTML }}{{ else }}{{ .Site.Author.name | safeHTML }}{{ end }}</span>
+    --><span>{{if .Site.Copyright }}{{ .Site.Copyright | safeHTML }}{{ else }}{{ .Site.Params.Author.name | safeHTML }}{{ end }}</span>
   </span>
 </div>
