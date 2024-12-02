@@ -2,7 +2,7 @@
 <div class="post-copyright">
   <p class="copyright-item">
     <span class="item-title">{{ T "author" }}</span>
-    <span class="item-content">{{ if .Params.author }}{{ .Params.author | safeHTML }}{{ else }}{{ .Site.Author.name | safeHTML }}{{ end }}</span>
+    <span class="item-content">{{ if .Params.author }}{{ .Params.author | safeHTML }}{{ else }}{{ .Site.Params.Author.name | safeHTML }}{{ end }}</span>
   </p>
   <p class="copyright-item">
     <span class="item-title">{{ T "lastMod" }}</span>
