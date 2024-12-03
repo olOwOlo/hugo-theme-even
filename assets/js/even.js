@@ -277,3 +277,108 @@ Even.responsiveTable = function() {
   }
 };
 
+// 定义缓存变量，用于存储已加载的SVG内容
+let copyIconSVG = null;
+let copiedIconSVG = null;
+
+// 异步函数，用于加载并缓存 copy.svg
+async function loadCopyIconSVG() {
+  if (copyIconSVG) return copyIconSVG; // 如果已加载，直接返回
+
+  try {
+    const response = await fetch("../../icons/copy.svg"); // 确保路径正确
+    if (!response.ok) throw new Error("无法加载 copy.svg");
+
+    copyIconSVG = await response.text();
+    return copyIconSVG;
+  } catch (error) {
+    console.error("加载 copy.svg 失败:", error);
+    return null;
+  }
+}
+
+// 异步函数，用于加载并缓存 copied.svg
+async function loadCopiedIconSVG() {
+  if (copiedIconSVG) return copiedIconSVG; // 如果已加载，直接返回
+
+  try {
+    const response = await fetch("../../icons/copied.svg"); // 确保路径正确
+    if (!response.ok) throw new Error("无法加载 copied.svg");
+
+    copiedIconSVG = await response.text();
+    return copiedIconSVG;
+  } catch (error) {
+    console.error("加载 copied.svg 失败:", error);
+    return null;
+  }
+}
+
+Even.addCopyBtn = async function () {
+  // 加载SVG内容
+  const [svgContent, copiedSVGContent] = await Promise.all([
+    loadCopyIconSVG(),
+    loadCopiedIconSVG(),
+  ]);
+
+  if (!svgContent || !copiedSVGContent) return; // 如果加载失败，退出
+
+  // 选择所有 .highlight > .chroma 元素
+  document.querySelectorAll(".highlight > .chroma").forEach((chromaDiv) => {
+    // 找到 .highlight 容器
+    const highlightDiv = chromaDiv.parentElement;
+    if (!highlightDiv) return; // 如果未找到父容器，退出
+
+    // 创建 copy-button 容器
+    const svgContainer = document.createElement("div");
+    svgContainer.classList.add("copy-button");
+    svgContainer.setAttribute("role", "button");
+    svgContainer.setAttribute("tabindex", "0");
+    svgContainer.innerHTML = svgContent; // 设置初始为 copy.svg
+
+    // 添加点击事件以复制代码
+    svgContainer.addEventListener("click", async () => {
+      // 选择当前 .chromaDiv 内的 code 元素
+      const codeElement = chromaDiv.querySelector("code");
+      if (!codeElement) {
+        console.error("未找到要复制的代码块");
+        return;
+      }
+
+      const codeToCopy = codeElement.innerText;
+
+      try {
+        await navigator.clipboard.writeText(codeToCopy);
+        handleCopySuccess(svgContainer, copiedSVGContent, svgContent); // 显示复制成功的反馈
+      } catch (error) {
+        console.error("复制失败: ", error);
+      }
+    });
+
+    // 鼠标悬停时增加透明度
+    svgContainer.addEventListener("mouseenter", () => {
+      svgContainer.style.opacity = "1"; // 鼠标悬停时增加透明度
+    });
+
+    // 鼠标移出时恢复透明度
+    svgContainer.addEventListener("mouseleave", () => {
+      svgContainer.style.opacity = "0.5"; // 鼠标移出时恢复透明度
+    });
+
+    highlightDiv.appendChild(svgContainer);
+  });
+}
+
+// 处理复制成功后的用户反馈
+function handleCopySuccess(button, copiedSVGContent, originalSVGContent) {
+  // 将按钮的SVG内容切换为 copied.svg
+  button.innerHTML = copiedSVGContent;
+
+  // 添加 'copied' 类以应用额外样式（如果需要）
+  button.classList.add('copied');
+
+  // 2秒后恢复原始的 copy.svg 并移除 'copied' 类
+  setTimeout(() => {
+    button.innerHTML = originalSVGContent;
+    button.classList.remove('copied');
+  }, 1200);
+}
